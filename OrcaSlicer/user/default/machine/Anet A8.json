@@ -1,0 +1,48 @@
+{
+    "extruder_offset": [
+        "10x0"
+    ],
+    "from": "User",
+    "inherits": "MyKlipper 0.4 nozzle",
+    "is_custom_defined": "0",
+    "machine_end_gcode": "G28 X0",
+    "machine_start_gcode": "M104 S[nozzle_temperature_initial_layer]\nM140 S[bed_temperature_initial_layer_single]\nM109 S[nozzle_temperature_initial_layer]\nM190 S[bed_temperature_initial_layer_single]\nG28",
+    "name": "Anet A8",
+    "nozzle_diameter": [
+        "0.5"
+    ],
+    "nozzle_type": "brass",
+    "print_host": "192.168.0.105",
+    "print_host_webui": "192.168.0.105",
+    "printable_area": [
+        "0x0",
+        "220x0",
+        "220x220",
+        "0x220"
+    ],
+    "printable_height": "240",
+    "printer_settings_id": "Anet A8",
+    "printer_structure": "i3",
+    "retraction_length": [
+        "8"
+    ],
+    "retraction_minimum_travel": [
+        "0"
+    ],
+    "retraction_speed": [
+        "40"
+    ],
+    "version": "1.8.0.0",
+    "wipe": [
+        "0"
+    ],
+    "wipe_distance": [
+        "7"
+    ],
+    "z_hop": [
+        "1"
+    ],
+    "z_hop_types": [
+        "Slope Lift"
+    ]
+}

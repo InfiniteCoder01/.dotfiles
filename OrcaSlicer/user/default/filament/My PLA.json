@@ -1,0 +1,28 @@
+{
+    "fan_cooling_layer_time": [
+        "10"
+    ],
+    "fan_max_speed": [
+        "80"
+    ],
+    "fan_min_speed": [
+        "60"
+    ],
+    "filament_max_volumetric_speed": [
+        "20"
+    ],
+    "filament_settings_id": [
+        "My PLA"
+    ],
+    "from": "User",
+    "inherits": "My Generic PLA",
+    "is_custom_defined": "0",
+    "name": "My PLA",
+    "overhang_fan_speed": [
+        "80"
+    ],
+    "slow_down_layer_time": [
+        "1"
+    ],
+    "version": "1.8.0.0"
+}

@@ -1,0 +1,43 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.config/
+    - ~/.config/Code/User/
+    - ~/.config/OrcaSlicer/
+    - ~/.config/obs-studio/basic/profiles/Main/
+    - ~/.config/obs-studio/basic/scenes/
+
+- link:
+    ~/.config/fish: fish
+    ~/.config/alacritty: alacritty
+
+    # VS Code
+    ~/.config/Code/User/snippets: VSCode/snippets
+    ~/.config/Code/User/keybindings.json: VSCode/keybindings.json
+    ~/.config/Code/User/settings.json: VSCode/settings.json
+    ~/.config/.vscode: VSCode/Extensions
+
+    # OrcaSlicer
+    ~/.config/OrcaSlicer/user: OrcaSlicer/user
+    ~/.config/OrcaSlicer/OrcaSlicer.conf: OrcaSlicer/OrcaSlicer.conf
+
+    # OBS
+    ~/.config/obs-studio/basic/profiles/Main/basic.ini: /mnt/D/Channel/Private/OBS/basic/profiles/Main/basic.ini
+    ~/.config/obs-studio/basic/scenes/Streaming.json: /mnt/D/Channel/Private/OBS/basic/scenes/Streaming.json
+    ~/.config/obs-studio/global.ini: obs-studio/global.ini
+
+    # KDE
+    ~/.config/kdeglobals: KDE/kdeglobals
+    ~/.config/kglobalshortcutsrc: KDE/kglobalshortcutsrc
+    ~/.config/khotkeysrc: KDE/khotkeysrc
+    ~/.config/krunnerrc: KDE/krunnerrc
+    ~/.config/kscreenlockerrc: KDE/kscreenlockerrc
+    ~/.config/ktimezonedrc: KDE/ktimezonedrc
+    ~/.config/kwinrc: KDE/kwinrc
+    ~/.config/mimeapps.list: KDE/mimeapps.list
+    ~/.config/plasma-org.kde.plasma.desktop-appletsrc: KDE/plasma-org.kde.plasma.desktop-appletsrc
+    ~/.config/plasmashellrc: KDE/plasmashellrc
