@@ -82,10 +82,10 @@ DialogWidth=1920
 [Containments][2][General]
 AppletOrder=3;5;6;7;20;21
 
-[Containments][24]
+[Containments][25]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=dbb9d9b9-96ab-4f6a-9eb6-c35a58f8e06a
+activityId=7b62525e-80d9-4236-bece-4a787a868c86
 formfactor=0
 immutability=1
 lastScreen=0
