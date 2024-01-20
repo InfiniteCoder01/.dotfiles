@@ -1,0 +1,7 @@
+[Layout]
+DisplayNames=,
+LayoutList=us,by
+Options=grp:win_space_toggle
+ResetOldOptions=true
+Use=true
+VariantList=,ru
