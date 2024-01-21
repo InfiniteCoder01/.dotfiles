@@ -17,10 +17,11 @@ Rows=1
 
 [Plugins]
 kwin4_effect_fadedesktopEnabled=true
+poloniumEnabled=true
 slideEnabled=false
 
 [Tiling]
 padding=4
 
 [Tiling][213a9620-187e-58a6-b80b-85d8fb95dfce]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+tiles={"layoutDirection":"horizontal","tiles":[]}
