@@ -1,4 +1,5 @@
 [Added Associations]
+application/json=org.kde.kate.desktop;
 application/x-extension-htm=userapp-Waterfox-AOLZH2.desktop;
 application/x-extension-html=userapp-Waterfox-AOLZH2.desktop;
 application/x-extension-shtml=userapp-Waterfox-AOLZH2.desktop;
@@ -11,8 +12,12 @@ x-scheme-handler/chrome=userapp-Waterfox-AOLZH2.desktop;
 x-scheme-handler/geo=qwant-maps-geo-handler.desktop;
 x-scheme-handler/http=firefox.desktop;userapp-Waterfox-AOLZH2.desktop;
 x-scheme-handler/https=firefox.desktop;userapp-Waterfox-AOLZH2.desktop;
+x-scheme-handler/x-github-client=github-desktop.desktop;GitHub Desktop.desktop;
+x-scheme-handler/x-github-desktop-auth=github-desktop.desktop;GitHub Desktop.desktop;
+x-scheme-handler/gitkraken=GitKraken.desktop
 
 [Default Applications]
+application/json=org.kde.kate.desktop;
 application/x-extension-htm=userapp-Waterfox-AOLZH2.desktop
 application/x-extension-html=userapp-Waterfox-AOLZH2.desktop
 application/x-extension-shtml=userapp-Waterfox-AOLZH2.desktop
@@ -25,3 +30,6 @@ x-scheme-handler/chrome=userapp-Waterfox-AOLZH2.desktop
 x-scheme-handler/geo=qwant-maps-geo-handler.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/x-github-client=github-desktop.desktop
+x-scheme-handler/x-github-desktop-auth=github-desktop.desktop
+x-scheme-handler/gitkraken=GitKraken.desktop
