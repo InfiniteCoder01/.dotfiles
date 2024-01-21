@@ -20,6 +20,10 @@ kwin4_effect_fadedesktopEnabled=true
 poloniumEnabled=true
 slideEnabled=false
 
+[Script-polonium]
+FilterClientCaption=Chatry Overlay
+FilterProcessName=krunner, yakuake, kded, polkit, plasmashell,plasma-emojier
+
 [Tiling]
 padding=4
 
