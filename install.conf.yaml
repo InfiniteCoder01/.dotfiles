@@ -25,9 +25,9 @@
     ~/.config/OrcaSlicer/OrcaSlicer.conf: OrcaSlicer/OrcaSlicer.conf
 
     # OBS
+    ~/.config/obs-studio/global.ini: obs-studio/global.ini
     ~/.config/obs-studio/basic/profiles/Main/basic.ini: /mnt/D/Channel/Private/OBS/basic/profiles/Main/basic.ini
     ~/.config/obs-studio/basic/scenes/Streaming.json: /mnt/D/Channel/Private/OBS/basic/scenes/Streaming.json
-    ~/.config/obs-studio/global.ini: obs-studio/global.ini
 
     # KDE
     ~/.config/kdeglobals: KDE/kdeglobals
