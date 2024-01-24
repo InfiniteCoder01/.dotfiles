@@ -7,7 +7,7 @@
 - create:
     - ~/.config/
     - ~/.config/Code/User/
-    - ~/.config/OrcaSlicer/
+    - ~/.config/PrusaSlicer/
     - ~/.config/obs-studio/basic/profiles/Main/
     - ~/.config/obs-studio/basic/scenes/
 
@@ -20,9 +20,16 @@
     ~/.config/Code/User/keybindings.json: VSCode/keybindings.json
     ~/.config/Code/User/settings.json: VSCode/settings.json
 
-    # OrcaSlicer
-    ~/.config/OrcaSlicer/user: OrcaSlicer/user
-    ~/.config/OrcaSlicer/OrcaSlicer.conf: OrcaSlicer/OrcaSlicer.conf
+    # PrusaSlicer
+    ~/.config/PrusaSlicer/filament: PrusaSlicer/filament
+    ~/.config/PrusaSlicer/physical_printer: PrusaSlicer/physical_printer
+    ~/.config/PrusaSlicer/print: PrusaSlicer/print
+    ~/.config/PrusaSlicer/printer: PrusaSlicer/printer
+    ~/.config/PrusaSlicer/PrusaSlicer.ini: PrusaSlicer/PrusaSlicer.ini
+    ~/.config/PrusaSlicer/shapes: PrusaSlicer/shapes
+    ~/.config/PrusaSlicer/sla_material: PrusaSlicer/sla_material
+    ~/.config/PrusaSlicer/sla_print: PrusaSlicer/sla_print
+    ~/.config/PrusaSlicer/vendor: PrusaSlicer/vendor
 
     # OBS
     ~/.config/obs-studio/global.ini: obs-studio/global.ini
