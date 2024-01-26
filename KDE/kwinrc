@@ -21,8 +21,10 @@ poloniumEnabled=true
 slideEnabled=false
 
 [Script-polonium]
+DefaultEngine=1
 FilterClientCaption=Emoji Selector,Chatry Overlay
 FilterProcessName=krunner, yakuake,spectacle, kded, polkit, plasmashell
+InsertionPoint=1
 
 [Tiling]
 padding=4
