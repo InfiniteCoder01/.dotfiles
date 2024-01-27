@@ -25,4 +25,7 @@
     "todo.file.defaultContent": "Todo:  [ ] Item",
     "todo.symbols.box": "[ ]",
     "window.titleBarStyle": "custom",
+    "files.associations": {
+        "*.gdextension": "toml"
+    },
 }
