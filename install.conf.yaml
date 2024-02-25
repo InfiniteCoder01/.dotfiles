@@ -1,20 +1,14 @@
 - defaults:
     link:
+      create: true
       relink: true
 
 - clean: ['~']
-
-- create:
-    - ~/.config/
-    - ~/.config/Code/User/
-    - ~/.config/PrusaSlicer/
-    - ~/.config/obs-studio/basic/profiles/Main/
-    - ~/.config/obs-studio/basic/scenes/
-
 - link:
     ~/.config/fish: fish
     ~/.config/alacritty: alacritty
     ~/.config/lvim: lvim
+    ~/.config/konsave: konsave
 
     # VS Code
     ~/.config/Code/User/snippets: VSCode/snippets
@@ -33,19 +27,19 @@
     ~/.config/PrusaSlicer/vendor: PrusaSlicer/vendor
 
     # OBS
-    ~/.config/obs-studio/global.ini: obs-studio/global.ini
-    ~/.config/obs-studio/basic/profiles/Main/basic.ini: /mnt/D/Channel/Private/OBS/basic/profiles/Main/basic.ini
-    ~/.config/obs-studio/basic/scenes/Streaming.json: /mnt/D/Channel/Private/OBS/basic/scenes/Streaming.json
+    # ~/.config/obs-studio/global.ini: obs-studio/global.ini
+    # ~/.config/obs-studio/basic/profiles/Main/basic.ini: /mnt/D/Channel/Private/OBS/basic/profiles/Main/basic.ini
+    # ~/.config/obs-studio/basic/scenes/Streaming.json: /mnt/D/Channel/Private/OBS/basic/scenes/Streaming.json
+    ~/.var/app/com.obsproject.Studio/config/obs-studio/global.ini: obs-studio/global.ini
+    ~/.var/app/com.obsproject.Studio/config/obs-studio/basic/profiles/Main/basic.ini: /mnt/D/Channel/Private/OBS/basic/profiles/Main/basic.ini
+    ~/.var/app/com.obsproject.Studio/config/obs-studio/basic/scenes/Streaming.json: /mnt/D/Channel/Private/OBS/basic/scenes/Streaming.json
+    # ~/snap/obs-studio/current/.config/obs-studio/global.ini: obs-studio/global.ini
+    # ~/snap/obs-studio/current/.config/obs-studio/basic/profiles/Main/basic.ini: /mnt/D/Channel/Private/OBS/basic/profiles/Main/basic.ini
+    # ~/snap/obs-studio/current/.config/obs-studio/basic/scenes/Streaming.json: /mnt/D/Channel/Private/OBS/basic/scenes/Streaming.json
 
-    # KDE
-    ~/.config/kdeglobals: KDE/kdeglobals
-    ~/.config/kglobalshortcutsrc: KDE/kglobalshortcutsrc
-    ~/.config/khotkeysrc: KDE/khotkeysrc
-    ~/.config/krunnerrc: KDE/krunnerrc
-    ~/.config/kscreenlockerrc: KDE/kscreenlockerrc
-    ~/.config/ktimezonedrc: KDE/ktimezonedrc
-    ~/.config/kwinrc: KDE/kwinrc
-    ~/.config/mimeapps.list: KDE/mimeapps.list
-    ~/.config/plasma-org.kde.plasma.desktop-appletsrc: KDE/plasma-org.kde.plasma.desktop-appletsrc
-    ~/.config/plasmashellrc: KDE/plasmashellrc
-    ~/.config/kxkbrc: KDE/kxkbrc
+- shell:
+  -
+    command: konsave -a current
+    stdout: true
+    stderr: true
+    description: Load KDE config with konsave

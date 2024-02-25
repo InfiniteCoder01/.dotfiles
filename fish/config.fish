@@ -1,3 +1,2 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
+source /usr/share/cachyos-fish-config/cachyos-config.fish
+zoxide init fish | source
