@@ -9,6 +9,7 @@
     ~/.config/alacritty: alacritty
     ~/.config/lvim: lvim
     ~/.config/konsave: konsave
+    ~/.config/Ondsel: Ondsel
 
     # VS Code
     ~/.config/Code/User/snippets: VSCode/snippets

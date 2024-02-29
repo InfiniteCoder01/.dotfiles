@@ -131,7 +131,7 @@ Word Completion Remove Tail=true
 
 [KTextEditor::Search]
 Replace History=": 15\\,,": 12\\,,": 10\\,,": 9\\,,": 6\\,,": 3\\,,tex(model\\\\["textures"\\\\]\\, \\\\1),tex(model\\\\["textures"\\\\]\\, ["[a-z]+"],]\\, model\\,,"\\,,parent,,model
-Search History=;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves,"green_lamp","grass_block","grass","dirt",dirt,water,glass,DESTDIR,target_link_libraries,LUAJIT_VERSION,LUA,lua
+Search History=dirt,ladder,birch,;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves,"green_lamp","grass_block","grass","dirt",water,glass,DESTDIR,target_link_libraries,LUAJIT_VERSION,LUA,lua
 
 [MainWindow]
 1920x1080 screen: Height=1010
