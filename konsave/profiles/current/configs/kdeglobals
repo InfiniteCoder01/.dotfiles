@@ -135,6 +135,10 @@ ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
+[DirSelect Dialog]
+DirSelectDialog Size=818,584
+History Items[$e]=file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
+
 [General]
 BrowserApplication=firefox.desktop
 ColorSchemeHash=cb4c6ee5cc9a59dbe09fb467a529af1bf5c55c97
@@ -144,21 +148,17 @@ TerminalService=Alacritty.desktop
 shadeSortColumn=true
 widgetStyle=Breeze
 
-[Icons]
-Theme=breeze-dark
-
 [KDE]
 AnimationDurationFactor=0.25
 ColorScheme=BreezeLight
 LookAndFeelPackage=org.kde.breezedark.desktop
 SingleClick=false
 contrast=4
-widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5

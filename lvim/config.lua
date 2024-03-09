@@ -25,9 +25,9 @@ lvim.plugins = {
 vim.wo.relativenumber = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
-lvim.builtin.project.active = false
+-- lvim.builtin.project.active = false
 
-vim.cmd("cd %")
+-- vim.cmd("cd %")
 
 local crates = require("crates")
 local opts = { silent = true }
