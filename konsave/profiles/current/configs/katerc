@@ -8,8 +8,8 @@ Show Tab Bar=true
 Show Url Nav Bar=true
 
 [KFileDialog Settings]
-Recent Files[$e]=file:///mnt/Dev/Rust/Tools/voxel-engine-cpp-launcher/versions/Latest (Git)/res/content/minecraft_decor_blocks/convert.py
-Recent URLs[$e]=file:///mnt/Dev/Python/LitematicaToMeownatica/minecraft_decor_blocks/,file:///mnt/Dev/Rust/Tools/voxel-engine-cpp-launcher/versions/Latest (Git)/res/content/minecraft_decor_blocks/
+Recent Files[$e]=file:///mnt/D/Channel/Videos/Games/Regex/Texts/the-game-itself.txt
+Recent URLs[$e]=file:///mnt/Dev/Rust/Tools/voxel-engine-cpp-launcher/versions/Latest (Git)/res/content/minecraft_decor_blocks/,file:///mnt/D/Channel/Videos/Games/Regex/Texts/,file:///mnt/D/Channel/Videos/Games/Regex/
 detailViewIconSize=16
 
 [KTextEditor Document]
@@ -105,7 +105,7 @@ Scroll Bar Mini Map Width=60
 Scroll Bar MiniMap=true
 Scroll Bar Preview=true
 Scroll Past End=false
-Search/Replace Flags=1036
+Search/Replace Flags=140
 Shoe Line Ending Type in Statusbar=false
 Show Documentation With Completion=true
 Show File Encoding=true
@@ -130,13 +130,12 @@ Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
 [KTextEditor::Search]
-Replace History=sleep(milliseconds(500)); // MessageBox,": 15\\,,": 12\\,,": 10\\,,": 9\\,,": 6\\,,": 3\\,,tex(model\\\\["textures"\\\\]\\, \\\\1),tex(model\\\\["textures"\\\\]\\, ["[a-z]+"],]\\, model\\,,"\\,,parent,,model
-Search History=// MessageBox,MessageBox,dirt,ladder,birch,;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves,"green_lamp","grass_block","grass","dirt",water,glass,DESTDIR,target_link_libraries,LUAJIT_VERSION,LUA,lua
+Replace History=\\\\s, ,sleep(milliseconds(500)); // MessageBox,": 15\\,,": 12\\,,": 10\\,,": 9\\,,": 6\\,,": 3\\,,tex(model\\\\["textures"\\\\]\\, \\\\1),tex(model\\\\["textures"\\\\]\\, ["[a-z]+"],]\\, model\\,,"\\,,parent,,model
+Search History=cgroup_bpf_get, ,\\\\s,sk_clone_lock,cgroup_sk_alloc,sk_alloc,// MessageBox,MessageBox,dirt,ladder,birch,;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves,"green_lamp","grass_block","grass","dirt",water,glass,DESTDIR,target_link_libraries,LUAJIT_VERSION,LUA,lua
 
 [MainWindow]
-1920x1080 screen: Height=1010
-1920x1080 screen: Width=959
-1920x1080 screen: Window-Maximized=true
+1920x1080 screen: Height=351
+1920x1080 screen: Width=1912
 
 [filetree]
 editShade=31,81,106

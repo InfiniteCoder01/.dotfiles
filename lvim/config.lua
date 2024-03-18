@@ -8,11 +8,6 @@ lvim.plugins = {
     { 'wakatime/vim-wakatime',   lazy = false },
     { 'Exafunction/codeium.vim', event = 'BufEnter' },
     { 'qnighy/lalrpop.vim' },
-    -- {
-    --   'mrcjkb/rustaceanvim',
-    --   version = '^4', -- Recommended
-    --   ft = { 'rust' },
-    -- },
     {
         'saecki/crates.nvim',
         config = function()

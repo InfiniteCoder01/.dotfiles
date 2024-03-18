@@ -136,17 +136,19 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=818,584
-History Items[$e]=file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
+DirSelectDialog Size=820,566
+History Items[$e]=file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
 
 [General]
 BrowserApplication=firefox.desktop
 ColorSchemeHash=cb4c6ee5cc9a59dbe09fb467a529af1bf5c55c97
 Name=Breeze Dark
-TerminalApplication=alacritty
-TerminalService=Alacritty.desktop
+accentColorFromWallpaper=false
 shadeSortColumn=true
 widgetStyle=Breeze
+
+[Icons]
+Theme=Papirus
 
 [KDE]
 AnimationDurationFactor=0.25

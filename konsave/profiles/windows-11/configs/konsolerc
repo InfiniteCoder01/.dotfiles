@@ -1,0 +1,9 @@
+[General]
+ConfigVersion=1
+
+[MainWindow]
+RestorePositionForNextInstance=false
+ToolBarsMovable=Disabled
+
+[UiSettings]
+ColorScheme=

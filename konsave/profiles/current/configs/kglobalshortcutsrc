@@ -1,5 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-1824655f-ccf5-42f7-9b1a-1f6d5980d876=none,none,Switch to activity "Default"
 switch-to-activity-a5b298fb-9124-404d-876c-cc2c4ebcb71a=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -51,6 +52,8 @@ show_kt=Alt+Shift+T,Alt+Shift+T,Show/Hide KTorrent
 
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Activate Window Demanding Attention
+ClearLastMouseMark=Meta+Shift+F12,Meta+Shift+F12,Clear Last Mouse Mark
+ClearMouseMarks=Meta+Shift+F11,Meta+Shift+F11,Clear All Mouse Marks
 Cycle Overview=none,none,Cycle through Overview and Grid View
 Cycle Overview Opposite=none,none,Cycle through Grid View and Overview
 Decrease Opacity=none,,Decrease Opacity of Active Window by 5%
@@ -245,28 +248,52 @@ activate task manager entry 6=none,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=none,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=none,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=none,Meta+9,Activate Task Manager Entry 9
+activate widget 167=none,none,Activate Application Launcher Widget
+activate widget 169=none,none,Activate Digital Clock Widget
+activate widget 171=none,none,Activate System Tray Widget
+activate widget 196=Meta,none,Activate Application Dashboard Widget
+activate widget 199=none,none,Activate Application Dashboard Widget
+activate widget 222=none,none,Activate Application Launcher Widget
 activate widget 44=Alt+F1,none,Activate Application Launcher Widget
 activate widget 70=none,none,Activate Application Launcher Widget
-clear-history=none,,Clear Clipboard History
+clear-history=none,none,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
-cycleNextAction=none,,Next History Item
-cyclePrevAction=none,,Previous History Item
+cycleNextAction=none,none,Next History Item
+cyclePrevAction=none,none,Previous History Item
 edit_clipboard=none,none,Edit Contents…
 manage activities=Meta+Q,Meta+Q,Show Activity Switcher
 next activity=Meta+A,none,Walk through activities
 previous activity=Meta+Shift+A,none,Walk through activities (Reverse)
 repeat_action=Meta+Ctrl+R,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
-show-barcode=none,,Show Barcode…
+show-barcode=none,none,Show Barcode…
 show-on-mouse-pos=Meta+V,Meta+V,Show Clipboard Items at Mouse Position
 stop current activity=Meta+S,Meta+S,Stop Current Activity
 switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
-[services][Alacritty.desktop]
-New=Meta+T
+[services][applications-applications-applications-applications-applications-applications-org.kde.dolphin.desktop]
+_launch=none
+
+[services][applications-applications-applications-applications-applications-org.kde.dolphin.desktop]
+_launch=none
+
+[services][applications-applications-applications-applications-org.kde.dolphin.desktop]
+_launch=none
+
+[services][applications-applications-applications-org.kde.dolphin.desktop]
+_launch=none
+
+[services][applications-applications-org.kde.dolphin.desktop]
+_launch=none
+
+[services][applications-org.kde.dolphin.desktop]
+_launch=none
+
+[services][org.kde.konsole.desktop]
+_launch=Ctrl+Alt+T\tMeta+T
 
 [services][org.kde.spectacle.desktop]
 RecordWindow=none
