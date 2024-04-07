@@ -5,4 +5,4 @@ cp ~/.config/obs-studio/basic/scenes/Streaming.json /mnt/D/Channel/Private/OBS/b
 # cp ~/snap/obs-studio/current/.config/obs-studio/global.ini obs-studio
 # cp ~/snap/obs-studio/current/.config/obs-studio/basic/scenes/Streaming.json /mnt/D/Channel/Private/OBS/basic/scenes/
 
-konsave -s current -f
+konsave -s coders-kde -f

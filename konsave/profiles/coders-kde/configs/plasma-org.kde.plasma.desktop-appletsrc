@@ -16,6 +16,11 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
+[Containments][220][General]
+ToolBoxButtonState=topcenter
+ToolBoxButtonX=384
+ToolBoxButtonY=43
+
 [Containments][227]
 activityId=
 formfactor=2
@@ -153,6 +158,14 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.icontasks
 
+[Containments][255][Applets][260][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][255][Applets][260][Configuration][General]
+fill=false
+launchers=
+
 [Containments][255][Applets][261]
 immutability=1
 plugin=org.kde.plasma.panelspacer
@@ -161,16 +174,27 @@ plugin=org.kde.plasma.panelspacer
 immutability=1
 plugin=org.kde.plasma.notifications
 
+[Containments][255][Applets][263][Configuration]
+PreloadWeight=85
+popupHeight=432
+popupWidth=324
+
 [Containments][255][Applets][264]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][255][Applets][264][Configuration]
+PreloadWeight=100
 SystrayContainmentId=265
 
 [Containments][255][Applets][281]
 immutability=1
 plugin=org.kde.plasma.digitalclock
+
+[Containments][255][Applets][281][Configuration]
+PreloadWeight=75
+popupHeight=450
+popupWidth=560
 
 [Containments][255][Applets][281][Configuration][Appearance]
 dateDisplayFormat=BesideTime
@@ -188,9 +212,19 @@ plugin=org.kde.plasma.panelspacer
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
+[Containments][255][Applets][283][Configuration]
+PreloadWeight=100
+popupHeight=360
+popupWidth=374
+
 [Containments][255][Applets][286]
 immutability=1
 plugin=org.kde.plasma.volume
+
+[Containments][255][Applets][286][Configuration]
+PreloadWeight=100
+popupHeight=378
+popupWidth=432
 
 [Containments][255][Applets][286][Configuration][General]
 migrated=true
@@ -199,6 +233,11 @@ migrated=true
 immutability=1
 plugin=org.kde.plasma.brightness
 
+[Containments][255][Applets][287][Configuration]
+PreloadWeight=60
+popupHeight=180
+popupWidth=360
+
 [Containments][255][General]
 AppletOrder=260;282;281;261;286;287;283;264;263
 
@@ -206,9 +245,11 @@ AppletOrder=260;282;281;261;286;287;283;264;263
 activityId=
 formfactor=2
 immutability=1
-lastScreen=-1
+lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
+popupHeight=432
+popupWidth=432
 wallpaperplugin=org.kde.image
 
 [Containments][265][Applets][266]
@@ -228,6 +269,9 @@ PreloadWeight=42
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
+[Containments][265][Applets][270][Configuration]
+PreloadWeight=100
+
 [Containments][265][Applets][271][Configuration]
 PreloadWeight=42
 
@@ -237,6 +281,9 @@ PreloadWeight=42
 [Containments][265][Applets][273]
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
+
+[Containments][265][Applets][273][Configuration]
+PreloadWeight=100
 
 [Containments][265][Applets][274][Configuration]
 PreloadWeight=42
@@ -252,12 +299,18 @@ PreloadWeight=42
 immutability=1
 plugin=org.kde.plasma.battery
 
+[Containments][265][Applets][277][Configuration]
+PreloadWeight=0
+
 [Containments][265][Applets][278][Configuration]
 PreloadWeight=42
 
 [Containments][265][Applets][279]
 immutability=1
 plugin=org.kde.plasma.bluetooth
+
+[Containments][265][Applets][279][Configuration]
+PreloadWeight=100
 
 [Containments][265][Applets][280][Configuration]
 PreloadWeight=42
@@ -267,9 +320,10 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][265][General]
-extraItems=org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,firewall-applet,TelegramDesktop,Yakuake
+extraItems=org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator
 hiddenItems=firewall-applet,TelegramDesktop,Yakuake
 knownItems=org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator
+shownItems=org.kde.plasma.battery
 
 [ScreenMapping]
 itemsOnDisabledScreens=

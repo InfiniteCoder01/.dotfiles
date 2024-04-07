@@ -141,7 +141,7 @@ History Items[$e]=file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,
 
 [General]
 BrowserApplication=firefox.desktop
-ColorSchemeHash=08cac4ecfc76a0bd1f36e701f1a7c405b27a44ab
+ColorSchemeHash=cb4c6ee5cc9a59dbe09fb467a529af1bf5c55c97
 Name=Breeze Dark
 accentColorFromWallpaper=false
 shadeSortColumn=true

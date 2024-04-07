@@ -8,5 +8,8 @@ ConfigVersion=1
 RestorePositionForNextInstance=false
 ToolBarsMovable=Disabled
 
+[Notification Messages]
+CloseAllTabs=true
+
 [UiSettings]
 ColorScheme=

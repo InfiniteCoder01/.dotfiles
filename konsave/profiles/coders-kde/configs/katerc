@@ -8,8 +8,8 @@ Show Tab Bar=true
 Show Url Nav Bar=true
 
 [KFileDialog Settings]
-Recent Files[$e]=file:///mnt/Dev/Rust/Tools/voxel-engine-cpp-launcher/versions/Latest (Git)/res/content/minecraft_decor_blocks/convert.py
-Recent URLs[$e]=file:///mnt/Dev/Python/LitematicaToMeownatica/minecraft_decor_blocks/,file:///mnt/Dev/Rust/Tools/voxel-engine-cpp-launcher/versions/Latest (Git)/res/content/minecraft_decor_blocks/
+Recent Files[$e]=file:///mnt/Dev/Arduino/libraries/microDS3231/src/buildTime.h
+Recent URLs[$e]=file:///mnt/Dev/Arduino/libraries/DS1307RTC/,file:///mnt/Dev/Rust/Tools/voxel-engine-cpp-launcher/versions/Latest (Git)/res/content/minecraft_decor_blocks/,file:///mnt/D/Channel/Videos/Games/Regex/,file:///mnt/Dev/Arduino/libraries/microDS3231/src/
 detailViewIconSize=16
 
 [KTextEditor Document]
@@ -131,12 +131,11 @@ Word Completion Remove Tail=true
 
 [KTextEditor::Search]
 Replace History=\\\\s, ,sleep(milliseconds(500)); // MessageBox,": 15\\,,": 12\\,,": 10\\,,": 9\\,,": 6\\,,": 3\\,,tex(model\\\\["textures"\\\\]\\, \\\\1),tex(model\\\\["textures"\\\\]\\, ["[a-z]+"],]\\, model\\,,"\\,,parent,,model
-Search History=cgroup_bpf_get, ,\\\\s,sk_clone_lock,cgroup_sk_alloc,sk_alloc,// MessageBox,MessageBox,dirt,ladder,birch,;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves,"green_lamp","grass_block","grass","dirt",water,glass,DESTDIR,target_link_libraries,LUAJIT_VERSION,LUA,lua
+Search History=forma,menu_pause,timeutil.cpp,network.h,cgroup_bpf_get, ,\\\\s,sk_clone_lock,cgroup_sk_alloc,sk_alloc,// MessageBox,MessageBox,dirt,ladder,birch,;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves,"green_lamp","grass_block","grass","dirt",water,glass,DESTDIR,target_link_libraries,LUAJIT_VERSION,LUA,lua
 
 [MainWindow]
-1920x1080 screen: Height=1010
-1920x1080 screen: Width=959
-1920x1080 screen: Window-Maximized=true
+1920x1080 screen: Height=1021
+1920x1080 screen: Width=745
 
 [filetree]
 editShade=31,81,106
@@ -152,7 +151,7 @@ viewShade=81,49,95
 AllowedServerCommandLines=
 AutoHover=true
 AutoImport=true
-BlockedServerCommandLines=/home/infinitecoder/.local/share/lvim/mason/bin/rust-analyzer,/usr/bin/clangd -log=error --background-index --limit-results=500 --completion-style=bundled
+BlockedServerCommandLines=/home/infinitecoder/.cargo/bin/rust-analyzer,/home/infinitecoder/.local/share/lvim/mason/bin/clangd -log=error --background-index --limit-results=500 --completion-style=bundled,/home/infinitecoder/.local/share/lvim/mason/bin/rust-analyzer,/usr/bin/clangd -log=error --background-index --limit-results=500 --completion-style=bundled
 CompletionDocumentation=true
 CompletionParens=true
 Diagnostics=true
