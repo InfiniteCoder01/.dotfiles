@@ -1,6 +1,7 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-1824655f-ccf5-42f7-9b1a-1f6d5980d876=none,none,Switch to activity "Default"
+switch-to-activity-3759b3f8-900f-4ecb-850a-0a5dd92c1dd1=none,none,Switch to activity "Default"
 switch-to-activity-a5b298fb-9124-404d-876c-cc2c4ebcb71a=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -297,6 +298,17 @@ _launch=Ctrl+Alt+T\tMeta+T
 
 [services][org.kde.spectacle.desktop]
 RecordWindow=none
+
+[wacomtablet]
+Map to fullscreen=Meta+Ctrl+F,Meta+Ctrl+F,Map to fullscreen
+Map to screen 1=Meta+Ctrl+1,Meta+Ctrl+1,Map to screen 1
+Map to screen 2=Meta+Ctrl+2,Meta+Ctrl+2,Map to screen 2
+Next Profile=Meta+Ctrl+N,Meta+Ctrl+N,Next profile
+Previous Profile=Meta+Ctrl+P,Meta+Ctrl+P,Previous Profile
+Toggle screen map selection=Meta+Ctrl+M,Meta+Ctrl+M,Toggle between all screens
+Toggle stylus mode=Meta+Ctrl+S,Meta+Ctrl+S,Toggle the Stylus Tool Relative/Absolute
+Toggle touch tool=Meta+Ctrl+T,Meta+Ctrl+T,Enable/Disable the Touch Tool
+_k_friendly_name=Wacom Tablet
 
 [yakuake]
 _k_friendly_name=Yakuake

@@ -51,8 +51,4 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 InputMethod[$e]=/usr/share/applications/com.github.maliit.keyboard.desktop
 
 [Xwayland]
-Scale=1
-
-[org.kde.kdecoration2]
-library=org.kde.kwin.aurorae
-theme=__aurorae__svg__Mkos-BigSur-Night
+Scale=1.25

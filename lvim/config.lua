@@ -6,8 +6,8 @@
 
 lvim.plugins = {
     { 'wakatime/vim-wakatime',   lazy = false },
-    { 'Exafunction/codeium.vim', event = 'BufEnter' },
-    { 'qnighy/lalrpop.vim' },
+    -- { 'Exafunction/codeium.vim', event = 'BufEnter' },
+    -- { 'qnighy/lalrpop.vim' },
     {
         'saecki/crates.nvim',
         config = function()
