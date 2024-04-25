@@ -167,7 +167,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][255][Applets][263][Configuration]
-PreloadWeight=85
+PreloadWeight=90
 popupHeight=432
 popupWidth=324
 
@@ -184,7 +184,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][255][Applets][281][Configuration]
-PreloadWeight=75
+PreloadWeight=100
 popupHeight=450
 popupWidth=560
 
@@ -226,7 +226,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][255][Applets][287][Configuration]
-PreloadWeight=60
+PreloadWeight=80
 popupHeight=180
 popupWidth=360
 
@@ -323,10 +323,11 @@ DialogWidth=720
 extraItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.vault
 hiddenItems=firewall-applet,TelegramDesktop,Yakuake
 knownItems=org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.vault
-shownItems=org.kde.plasma.battery
+shownItems=org.kde.plasma.battery,org.kde.plasma.bluetooth
 
 [Containments][290]
 ItemGeometries-1536x864=
+ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=3759b3f8-900f-4ecb-850a-0a5dd92c1dd1
 formfactor=0

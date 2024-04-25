@@ -5,16 +5,21 @@
 
 - clean: ['~']
 - link:
-    ~/.config/fish: fish
+    ~/.config/plasma-workspace/env/path.sh: path.sh
     ~/.config/lvim: lvim
+    ~/.config/nvim: nvim
     ~/.config/konsave: konsave
     ~/.config/Ondsel: Ondsel
 
+    # ZSH
     ~/.zshrc: zsh/.zshrc
     ~/.oh-my-zsh/custom: zsh/.oh-my-zsh/custom
+    
+      # Nix
+    ~/.config/nix: nix/nix
+    ~/.config/nixpkgs: nix/nixpkgs
 
     # VS Code
-    ~/.config/Code/User/snippets: VSCode/snippets
     ~/.config/Code/User/keybindings.json: VSCode/keybindings.json
     ~/.config/Code/User/settings.json: VSCode/settings.json
 
@@ -24,7 +29,6 @@
     ~/.config/PrusaSlicer/print: PrusaSlicer/print
     ~/.config/PrusaSlicer/printer: PrusaSlicer/printer
     ~/.config/PrusaSlicer/PrusaSlicer.ini: PrusaSlicer/PrusaSlicer.ini
-    ~/.config/PrusaSlicer/shapes: PrusaSlicer/shapes
     ~/.config/PrusaSlicer/sla_material: PrusaSlicer/sla_material
     ~/.config/PrusaSlicer/sla_print: PrusaSlicer/sla_print
     ~/.config/PrusaSlicer/vendor: PrusaSlicer/vendor

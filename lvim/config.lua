@@ -3,11 +3,10 @@
 -- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
-
 lvim.plugins = {
     { 'wakatime/vim-wakatime',   lazy = false },
-    -- { 'Exafunction/codeium.vim', event = 'BufEnter' },
-    -- { 'qnighy/lalrpop.vim' },
+    { 'Exafunction/codeium.vim', event = 'BufEnter' },
+    { 'qnighy/lalrpop.vim' },
     {
         'saecki/crates.nvim',
         config = function()
@@ -20,9 +19,16 @@ lvim.plugins = {
 vim.wo.relativenumber = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
--- lvim.builtin.project.active = false
 
--- vim.cmd("cd %")
+vim.opt.fillchars = { fold = " " }
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+vim.opt.foldlevel = 99
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { "*.lalrpop" },
+    command = "set syntax=rust",
+});
 
 local crates = require("crates")
 local opts = { silent = true }
