@@ -6,7 +6,6 @@
 - clean: ['~']
 - link:
     ~/.config/plasma-workspace/env/path.sh: path.sh
-    ~/.config/lvim: lvim
     ~/.config/nvim: nvim
     ~/.config/konsave: konsave
     ~/.config/Ondsel: Ondsel
@@ -15,10 +14,6 @@
     ~/.zshrc: zsh/.zshrc
     ~/.oh-my-zsh/custom: zsh/.oh-my-zsh/custom
     
-      # Nix
-    ~/.config/nix: nix/nix
-    ~/.config/nixpkgs: nix/nixpkgs
-
     # VS Code
     ~/.config/Code/User/keybindings.json: VSCode/keybindings.json
     ~/.config/Code/User/settings.json: VSCode/settings.json

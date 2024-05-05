@@ -17,10 +17,10 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	zsh-syntax-highlighting
-	zsh-completions
-	nix-zsh-completions
+  git
+  zsh-syntax-highlighting
+  zsh-completions
+  nix-zsh-completions
   zsh-eza
 )
 
@@ -31,4 +31,3 @@ alias clear-desktop-cache=sudo rm -rf /usr/share/mime/mime.cache /usr/share/appl
 
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
-source <(llvmenv zsh)
