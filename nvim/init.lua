@@ -28,6 +28,12 @@ require('lazy').setup({
   { 'L3MON4D3/LuaSnip' },
   { 'nvim-treesitter/nvim-treesitter' },
   { 'numToStr/Comment.nvim', lazy = false, config = true },
+  {
+    "folke/trouble.nvim",
+    branch = "dev",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+  },
 
   -- Themes & Tools (Panes)
   { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true },
@@ -60,6 +66,7 @@ require('lazy').setup({
     }
   },
   { 'akinsho/toggleterm.nvim', version = '*', config = true },
+  { 'numToStr/BufOnly.nvim' },
 
   -- Tools
   { 'ahmedkhalf/project.nvim', config = function() require('project_nvim').setup {} end },
@@ -74,6 +81,14 @@ vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
+
+vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
+vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
+vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
+vim.keymap.set("n", "gr", function() require("trouble").toggle("lsp_references") end)
+
 vim.keymap.set({ 'n', 'v', 'i', 't' }, '<C-\\>', '<cmd>ToggleTerm direction=float<cr>', {})
 vim.keymap.set({ 'n', 'v' }, '<leader>e', '<cmd>Neotree toggle<cr>', {})
 vim.keymap.set({ 'n', 'v' }, '<leader>/', 'gcc', { remap = true })
@@ -114,6 +129,30 @@ require('lspconfig').lua_ls.setup {
     },
   }
 }
+
+local crates = require("crates")
+
+vim.keymap.set("n", "<leader>ct", crates.toggle, {})
+vim.keymap.set("n", "<leader>cr", crates.reload, {})
+
+vim.keymap.set("n", "<leader>cv", crates.show_versions_popup, {})
+vim.keymap.set("n", "<leader>cf", crates.show_features_popup, {})
+vim.keymap.set("n", "<leader>cd", crates.show_dependencies_popup, {})
+
+vim.keymap.set("n", "<leader>cu", crates.update_crate, {})
+vim.keymap.set("v", "<leader>cu", crates.update_crates, {})
+vim.keymap.set("n", "<leader>ca", crates.update_all_crates, {})
+vim.keymap.set("n", "<leader>cU", crates.upgrade_crate, {})
+vim.keymap.set("v", "<leader>cU", crates.upgrade_crates, {})
+vim.keymap.set("n", "<leader>cA", crates.upgrade_all_crates, {})
+
+vim.keymap.set("n", "<leader>cx", crates.expand_plain_crate_to_inline_table, {})
+vim.keymap.set("n", "<leader>cX", crates.extract_crate_into_table, {})
+
+vim.keymap.set("n", "<leader>cH", crates.open_homepage, {})
+vim.keymap.set("n", "<leader>cR", crates.open_repository, {})
+vim.keymap.set("n", "<leader>cD", crates.open_documentation, {})
+vim.keymap.set("n", "<leader>cC", crates.open_crates_io, {})
 
 -- configs
 vim.cmd.colorscheme('gruvbox')

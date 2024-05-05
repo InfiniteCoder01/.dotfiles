@@ -1,0 +1,215 @@
+Name:               [1mappimagekit[0m
+Flake attribute:    legacyPackages.x86_64-linux.appimagekit
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/d6b3ddd253c578a7ab98f8011e59990f21dc3932?narHash=sha256-kR7C7Fqt3JP40h0mzmSZeWI5pk1iwqj4CSeGjnUbVHc%3D
+Store paths:        /nix/store/l5gnczmm0f7pf08h0jdphyhxm0lg0dxd-appimagekit-unstable-2020-12-31
+
+Name:               [1marp-scan[0m
+Flake attribute:    legacyPackages.x86_64-linux.arp-scan
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/f173d0881eff3b21ebb29a2ef8bedbc106c86ea5?narHash=sha256-flQtf/ZPJgkLY/So3Fd%2BdGilw2DKIsiwgMEn7BbBHL0%3D
+Store paths:        /nix/store/s7n5kyj4l9cbh6gkqsd338rlchzf5kdj-arp-scan-1.10.0
+
+Name:               [1maseprite[0m
+Flake attribute:    legacyPackages.x86_64-linux.aseprite
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/f173d0881eff3b21ebb29a2ef8bedbc106c86ea5?narHash=sha256-flQtf/ZPJgkLY/So3Fd%2BdGilw2DKIsiwgMEn7BbBHL0%3D
+Store paths:        /nix/store/07jmd3lik5d8mma35nxnn5jsxdhq2d5k-aseprite-1.3.2
+
+Name:               [1mbat[0m
+Store paths:        /nix/store/d3pmkfcw9kq1jwdrdazbmy19nv4r6bhx-bat-0.24.0
+
+Name:               [1mbtop[0m
+Flake attribute:    legacyPackages.x86_64-linux.btop
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/d764f230634fa4f86dc8d01c6af9619c7cc5d225?narHash=sha256-LoExypse3c/uun/39u4bPTN4wejIF7hNsdITZO41qTw%3D
+Store paths:        /nix/store/82qq5h9a0l6rrr50pp55kinb0fgabnn5-btop-1.3.2
+
+Name:               [1mcmake[0m
+Flake attribute:    legacyPackages.x86_64-linux.cmake
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/062fc6cf99d809921ecef47317752fc92468e6ae?narHash=sha256-puFPFSa/RC83JilUgB48/VL387eu2QN066Jv6X971LY%3D
+Store paths:        /nix/store/mbw6qprvn80p8k7z3lq44hnz6b332xf6-cmake-3.28.3
+
+Name:               [1mdirenv[0m
+Store paths:        /nix/store/h960xs3n0qh0809620kp9955sh56rgp1-direnv-2.34.0
+
+Name:               [1mdiscord[0m
+Store paths:        /nix/store/rishszfbqqlplc850mq0f8k8js2g3215-discord-0.0.47
+
+Name:               [1mdotbot[0m
+Store paths:        /nix/store/mqd6q39acrc3yppfwmhfkgcj7b4q69gr-dotbot-1.20.1
+
+Name:               [1meza[0m
+Store paths:        /nix/store/z04108s0fs1r5wfgdniz2m7gb4jk033f-eza-0.18.9
+
+Name:               [1mf3d[0m
+Flake attribute:    legacyPackages.x86_64-linux.f3d
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/2fd19c8be2551a61c1ddc3d9f86d748f4db94f00?narHash=sha256-0TZIsfDbHG5zibtlw6x0yOp3jkInIGaJ35B7Y4G8Pec%3D
+Store paths:        /nix/store/2hyalgpkw8xzi09gwvxcrhlap2xlm75g-f3d-2.4.0 /nix/store/fzrql9h2wpvmc8qg2szaz8fjddwyh2x8-f3d-2.4.0-man
+
+Name:               [1mfastfetch[0m
+Flake attribute:    legacyPackages.x86_64-linux.fastfetch
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/bcd44e224fd68ce7d269b4f44d24c2220fd821e7?narHash=sha256-Mr3U37Rh6tH0FbaDFu0aZDwk9mPAe7ASaqDOGgLqqLU%3D
+Store paths:        /nix/store/4k9hxh997gs7h8d8aq3ny784hskwfkcl-fastfetch-2.10.2-man /nix/store/dqa7v5kdsi8yqbk12cs4kph1wsprdw3c-fastfetch-2.10.2
+
+Name:               [1mfzf[0m
+Store paths:        /nix/store/psmylmimp0023yibdx1w76hf8zds0sjj-fzf-0.49.0
+
+Name:               [1mgcc-wrapper[0m
+Store paths:        /nix/store/ac1hb5dc2z4biwgy8mjrhlifffkkrvdq-gcc-wrapper-13.2.0
+
+Name:               [1mgh[0m
+Store paths:        /nix/store/zi9y245zdpjl7liw08g31j7saa7hzwgq-gh-2.47.0
+
+Name:               [1mgimp[0m
+Flake attribute:    legacyPackages.x86_64-linux.gimp
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/698fd43e541a6b8685ed408aaf7a63561018f9f8?narHash=sha256-/VyiyGD2q6qN/uAvotKxXuQJWLlmSckAdf7S8jj4Q5c%3D
+Store paths:        /nix/store/b8zizw6nrszjlvh6jy02na9i2490npg3-gimp-2.10.36
+
+Name:               [1mgit[0m
+Store paths:        /nix/store/y56vmnczakd9p0dsjl6jgnqrkqv04yxx-git-2.44.0
+
+Name:               [1mgitkraken[0m
+Flake attribute:    legacyPackages.x86_64-linux.gitkraken
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/a0c9e3aee1000ac2bfb0e5b98c94c946a5d180a9?narHash=sha256-icE1IJE9fHcbDfJ0%2BqWoDdcBXUoZCcIJxME4lMHwvSM%3D
+Store paths:        /nix/store/pmv7zlqc5q7ypqvy1l4zvj9gyqc09jn7-gitkraken-9.13.0
+
+Name:               [1mgnome-disk-utility[0m
+Store paths:        /nix/store/z415nimcn6rw9l35qlhyzb0mwa4qc9d0-gnome-disk-utility-45.1
+
+Name:               [1mgnumake[0m
+Store paths:        /nix/store/0glhx5lz5iphmz7dqfv5sa903z3adzpv-gnumake-4.4.1
+
+Name:               [1mgraphicsmagick[0m
+Flake attribute:    legacyPackages.x86_64-linux.graphicsmagick
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/698fd43e541a6b8685ed408aaf7a63561018f9f8?narHash=sha256-/VyiyGD2q6qN/uAvotKxXuQJWLlmSckAdf7S8jj4Q5c%3D
+Store paths:        /nix/store/8zag5cy3dczkdf3z71k12yrjf3zf4x4w-graphicsmagick-1.3.43 /nix/store/mx8nlabg48id9lac808qxm9dp8z0ab8d-graphicsmagick-1.3.43-man
+
+Name:               [1mjdk[0m
+Flake attribute:    legacyPackages.x86_64-linux.jdk
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/2b1f64b358f2cab62617f26b3870fd0ee375d848?narHash=sha256-9P2M0%2Btf1TE7Z5PwDVwhheuD2mFf6/phPr0Jvl7cxcc%3D
+Store paths:        /nix/store/w0jdfkacnzn1ijckp8h822nxi93vcp61-openjdk-21+35
+
+Name:               [1mkonsave[0m
+Store paths:        /nix/store/mqm8v3bjpwp8ww5wz9lcrw9gmsmch3h6-konsave-2.2.0
+
+Name:               [1mlazygit[0m
+Flake attribute:    legacyPackages.x86_64-linux.lazygit
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/d764f230634fa4f86dc8d01c6af9619c7cc5d225?narHash=sha256-LoExypse3c/uun/39u4bPTN4wejIF7hNsdITZO41qTw%3D
+Store paths:        /nix/store/39sn90pby0xhy5pahf32lfmppqq6py2d-lazygit-0.41.0
+
+Name:               [1mlibreoffice[0m
+Flake attribute:    legacyPackages.x86_64-linux.libreoffice
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/d32560238207b8e26d88b265207b216ee46b8450?narHash=sha256-hfBmnYFyz9I1mdrC3tX1A%2BdF9cOUcds5PIMPxrT%2BcRk%3D
+Store paths:        /nix/store/dvcg1niq2mg4p0l9d8nv2cdb2apyqwq0-libreoffice-7.5.9.2-wrapped
+
+Name:               [1mlunarvim[0m
+Flake attribute:    legacyPackages.x86_64-linux.lunarvim
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/a0c9e3aee1000ac2bfb0e5b98c94c946a5d180a9?narHash=sha256-icE1IJE9fHcbDfJ0%2BqWoDdcBXUoZCcIJxME4lMHwvSM%3D
+Store paths:        /nix/store/nzdmca88zvxdjxf8iwf5kgydyb9ryrdd-lunarvim-1.3.0
+
+Name:               [1mneovim[0m
+Flake attribute:    legacyPackages.x86_64-linux.neovim
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/1e1dc66fe68972a76679644a5577828b6a7e8be4?narHash=sha256-YgSEan4CcrjivCNO5ZNzhg7/8ViLkZ4CB/GrGBVSudo%3D
+Store paths:        /nix/store/dr53sp25hyfsnzjpm8mh3r3y36vrw3ng-neovim-0.9.5
+
+Name:               [1mnix[0m
+Store paths:        /nix/store/qmn396qsswazb8gqwjg1nj1jc226q8j4-nix-2.21.1
+
+Name:               [1mnix-direnv[0m
+Store paths:        /nix/store/w3li3d0lyma5ra3nqdamgfjz9f79ij3s-nix-direnv-3.0.4
+
+Name:               [1mnixGL[0m
+Flake attribute:    packages.x86_64-linux.default
+Original flake URL: github:guibou/nixGL
+Locked flake URL:   github:guibou/nixGL/d709a8abcde5b01db76ca794280745a43c8662be?narHash=sha256-V1o2bCZdeYKP/0zgVp4EN0KUjMItAMk6J7SvCXUI5IU%3D
+Store paths:        /nix/store/6f8y0kd8jrl9jkknpc9aippcr7l3yibj-nixGL
+
+Name:               [1mnodejs[0m
+Flake attribute:    legacyPackages.x86_64-linux.nodejs
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/cf8cc1201be8bc71b7cbbbdaf349b22f4f99c7ae?narHash=sha256-yNAevSKF4krRWacmLUsLK7D7PlfuY3zF0lYnGYNi9vQ%3D
+Store paths:        /nix/store/92njxgwsp23zbirp054rz7v9ls0shjwc-nodejs-20.12.2
+
+Name:               [1mobs-studio[0m
+Store paths:        /nix/store/1qqs4hvvs12ca8wwif452hydjwzc0a69-obs-studio-30.1.2
+
+Name:               [1mopenssl[0m
+Flake attribute:    legacyPackages.x86_64-linux.openssl
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/d6b3ddd253c578a7ab98f8011e59990f21dc3932?narHash=sha256-kR7C7Fqt3JP40h0mzmSZeWI5pk1iwqj4CSeGjnUbVHc%3D
+Store paths:        /nix/store/af81s49bcy6mxr2l1wi59jazm6qflg4a-openssl-3.0.13-bin /nix/store/cdshsv39c9sb3k6swmfx2zj1c5hxfkla-openssl-3.0.13-man
+
+Name:               [1mpipx[0m
+Flake attribute:    legacyPackages.x86_64-linux.pipx
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/2b1f64b358f2cab62617f26b3870fd0ee375d848?narHash=sha256-9P2M0%2Btf1TE7Z5PwDVwhheuD2mFf6/phPr0Jvl7cxcc%3D
+Store paths:        /nix/store/dkk4h90gsnwgvjwc0f6r901kab14bn7s-python3.11-pipx-1.4.3
+
+Name:               [1mpodman[0m
+Flake attribute:    legacyPackages.x86_64-linux.podman
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/698fd43e541a6b8685ed408aaf7a63561018f9f8?narHash=sha256-/VyiyGD2q6qN/uAvotKxXuQJWLlmSckAdf7S8jj4Q5c%3D
+Store paths:        /nix/store/80bdln16pipya7ybaw85zyfx68v55107-podman-5.0.2-man /nix/store/fiwb4kcxj74dvfwnwhksvi4m2wp0ma3m-podman-5.0.2
+
+Name:               [1mprusa-slicer[0m
+Store paths:        /nix/store/hckjqsc2rw57sgryxkhdrkq4b17qpmjb-prusa-slicer-2.7.3
+
+Name:               [1mqpwgraph[0m
+Flake attribute:    legacyPackages.x86_64-linux.qpwgraph
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/94035b482d181af0a0f8f77823a790b256b7c3cc?narHash=sha256-kjQkA98lMcsom6Gbhw8SYzmwrSo%2B2nruiTcTZp5jK7o%3D
+Store paths:        /nix/store/7pv15dhjq8mkfqypfg7xzpbysqnhl2yr-qpwgraph-0.7.1
+
+Name:               [1mreaper[0m
+Flake attribute:    legacyPackages.x86_64-linux.reaper
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/2b1f64b358f2cab62617f26b3870fd0ee375d848?narHash=sha256-9P2M0%2Btf1TE7Z5PwDVwhheuD2mFf6/phPr0Jvl7cxcc%3D
+Store paths:        /nix/store/z88f26csm173f8vrc53r3gny1n14szdn-reaper-7.15
+
+Name:               [1mripgrep[0m
+Store paths:        /nix/store/jm4dzsc9rp6l3wvf0wmh6nj8xfh23mg5-ripgrep-14.1.0
+
+Name:               [1mrustup[0m
+Store paths:        /nix/store/pz7rb86xdq7jk4z5lrn0qlbs63pcsg4m-rustup-1.26.0
+
+Name:               [1mstrace[0m
+Flake attribute:    legacyPackages.x86_64-linux.strace
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/f173d0881eff3b21ebb29a2ef8bedbc106c86ea5?narHash=sha256-flQtf/ZPJgkLY/So3Fd%2BdGilw2DKIsiwgMEn7BbBHL0%3D
+Store paths:        /nix/store/spwkdwxkn7r0bjzmx71c3jblzq3rikg0-strace-6.8
+
+Name:               [1mtelegram-desktop[0m
+Store paths:        /nix/store/h6hgwgdp77y566hvfr46qys9q0a9ggs0-telegram-desktop-4.16.4
+
+Name:               [1mtigervnc[0m
+Flake attribute:    legacyPackages.x86_64-linux.tigervnc
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/f173d0881eff3b21ebb29a2ef8bedbc106c86ea5?narHash=sha256-flQtf/ZPJgkLY/So3Fd%2BdGilw2DKIsiwgMEn7BbBHL0%3D
+Store paths:        /nix/store/kyrrvlsyds11m4x9m6fzw05fqfydvb06-tigervnc-1.13.1
+
+Name:               [1munzip[0m
+Flake attribute:    legacyPackages.x86_64-linux.unzip
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/1e1dc66fe68972a76679644a5577828b6a7e8be4?narHash=sha256-YgSEan4CcrjivCNO5ZNzhg7/8ViLkZ4CB/GrGBVSudo%3D
+Store paths:        /nix/store/awd6bmx4i7z2izj8ri5qjddpbw65lnnq-unzip-6.0
+
+Name:               [1mvscode[0m
+Flake attribute:    legacyPackages.x86_64-linux.vscode
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/cf8cc1201be8bc71b7cbbbdaf349b22f4f99c7ae?narHash=sha256-yNAevSKF4krRWacmLUsLK7D7PlfuY3zF0lYnGYNi9vQ%3D
+Store paths:        /nix/store/s7accqb6id4p71p56mr5hb4vay0cnj1c-vscode-1.88.1
+
+Name:               [1mzoxide[0m
+Store paths:        /nix/store/q8j56cl3s1hd4mr41rx5j7454vsda515-zoxide-0.9.4

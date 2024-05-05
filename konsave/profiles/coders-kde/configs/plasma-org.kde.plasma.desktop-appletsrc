@@ -167,7 +167,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][255][Applets][263][Configuration]
-PreloadWeight=95
+PreloadWeight=100
 popupHeight=432
 popupWidth=324
 
@@ -219,6 +219,7 @@ popupHeight=378
 popupWidth=432
 
 [Containments][255][Applets][286][Configuration][General]
+currentTab=streams
 migrated=true
 
 [Containments][255][Applets][287]
@@ -226,7 +227,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][255][Applets][287][Configuration]
-PreloadWeight=80
+PreloadWeight=100
 popupHeight=180
 popupWidth=360
 
@@ -302,7 +303,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][265][Applets][279][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 
 [Containments][265][Applets][280][Configuration]
 PreloadWeight=42

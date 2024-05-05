@@ -8,8 +8,8 @@ Show Tab Bar=true
 Show Url Nav Bar=true
 
 [KFileDialog Settings]
-Recent Files[$e]=file:///run/media/infinitecoder/A793-2D2D/txt.txt
-Recent URLs[$e]=file:///mnt/Dev/Arduino/libraries/DS1307RTC/,file:///mnt/Dev/Rust/Tools/voxel-engine-cpp-launcher/versions/Latest (Git)/res/content/minecraft_decor_blocks/,file:///mnt/D/Channel/Videos/Games/Regex/,file:///mnt/Dev/Arduino/libraries/microDS3231/src/,file:///run/media/infinitecoder/A793-2D2D/
+Recent Files[$e]=file:///mnt/Dev/Tools/build/orco/orco/orco-lang/samples/calc.orco
+Recent URLs[$e]=file:///mnt/Dev/Arduino/libraries/DS1307RTC/,file:///mnt/D/Channel/Videos/Games/Regex/,file:///mnt/Dev/Arduino/libraries/microDS3231/src/,file:///mnt/Dev/Tools/build/orco/orco/orco-lang/samples/
 detailViewIconSize=16
 
 [KTextEditor Document]

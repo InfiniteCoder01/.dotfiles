@@ -11,8 +11,15 @@ Id_3=53ea4cdd-cd37-4112-b51d-c1aa1d277fa4
 Id_4=19284492-0aec-4077-87a1-2b1c1fe6347a
 Id_5=1bef9d9a-a0e0-4625-b787-1f840a246562
 Id_6=b3c13acf-a141-4bf0-b4eb-4b31153d1d62
-Number=6
-Rows=2
+Id_7=b4c994e8-ce21-449b-826f-149738e31ea8
+Id_8=32b5cca3-1a54-444f-8143-80e7071ed8e7
+Id_9=aea878e7-0d29-4597-92b2-a3c1a6cc2d0a
+Name_4=Desktop 5
+Name_5=Desktop 6
+Name_6=Desktop 7
+Name_7=Desktop 4
+Number=9
+Rows=3
 
 [Effect-kwin4_effect_tv]
 Duration=1600
@@ -30,6 +37,9 @@ scaleEnabled=false
 slideEnabled=false
 squashEnabled=false
 wobblywindowsEnabled=true
+
+[Script-desktopchangeosd]
+TextOnly=true
 
 [SubSession: 93baa7d0-57ff-4411-87da-3262d87b99a3]
 active=-1
@@ -49,6 +59,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Wayland]
 InputMethod[$e]=/usr/share/applications/com.github.maliit.keyboard.desktop
+
+[Windows]
+RollOverDesktops=true
 
 [Xwayland]
 Scale=1
