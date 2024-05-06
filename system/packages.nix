@@ -1,51 +1,68 @@
 ({ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
+    # Save
     dotbot
     konsave
     appimagekit
+
+    # CLI Tools
     arp-scan
-    aseprite
     bat
     btop
-    cmake
     direnv
-    discord
-    dotbot
     eza
-    f3d
     fastfetch
     fzf
     gh
-    gimp
     git
-    gitkraken
-    gnome.gnome-disk-utility
     gnumake
     graphicsmagick
-    jdk
-    konsave
     lazygit
-    libreoffice
-    lunarvim
     neovim
+    podman
+    ripgrep
+    strace
+    unzip
+    zoxide
+
+    # Apps
+    gitkraken
+    gnome.gnome-disk-utility
+    libreoffice
     neovide
-    nix
+    obs-studio
+    qpwgraph
+    tigervnc
+    vscode
+
+    # Art
+    aseprite
+    gimp
+    prusa-slicer
+    reaper
+    (freecad.overrideAttrs (finalAttrs: previousAttrs: {
+      version = "link-daily";
+      src = fetchFromGitHub {
+        owner = "realthunder";
+        repo = "FreeCAD";
+        rev = finalAttrs.version;
+        hash = "sha256-OX4s9rbGsAhH7tLJkUJYyq2A2vCdkq/73iqYo9adogs=";
+      };
+    }))
+
+    # Social
+    discord
+    telegram-desktop
+
+    # Libraries, environments and build systems
+    cmake
+    gcc
+    jdk
     nix-direnv
     nodejs
-    obs-studio
     openssl
     pipx
-    podman
-    prusa-slicer
-    qpwgraph
-    reaper
-    ripgrep
     rustup
-    strace
-    telegram-desktop
-    tigervnc
-    unzip
-    vscode
-    zoxide
+    wl-clipboard
   ];
 })

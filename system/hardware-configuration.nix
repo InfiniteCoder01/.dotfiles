@@ -23,6 +23,21 @@
       fsType = "vfat";
     };
 
+  fileSystems."/mnt/D" =
+    { device = "/dev/disk/by-label/D";
+      fsType = "ntfs";
+    };
+
+  fileSystems."/mnt/Dev" =
+    { device = "/dev/disk/by-label/Dev";
+      fsType = "btrfs";
+    };
+
+  fileSystems."/mnt/Twitch" =
+    { device = "/dev/disk/by-label/Twitch";
+      fsType = "ext4";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

@@ -19,7 +19,8 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   zsh-syntax-highlighting
-  zsh-completions
+  zsh-autosuggestions
+  zsh-autocomplete
   nix-zsh-completions
   zsh-eza
 )

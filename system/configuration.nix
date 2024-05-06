@@ -16,6 +16,9 @@
   networking.hostName = "InfiniteCoders-System";
   networking.networkmanager.enable = true;
 
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+
   # i18n & l10n
   time.timeZone = "Europe/Minsk";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -48,10 +51,18 @@
     pulse.enable = true;
     jack.enable = true;
   };
+  
+  # Some fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
+  # ZSH, obviously
+  programs.zsh.enable = true;
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
   users.users.infinitecoder = {
     isNormalUser = true;
     description = "InfiniteCoder";
