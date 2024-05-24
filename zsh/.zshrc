@@ -20,7 +20,7 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
-  zsh-autocomplete
+  # zsh-autocomplete
   nix-zsh-completions
   zsh-eza
 )

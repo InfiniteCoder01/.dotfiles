@@ -17,6 +17,7 @@
     git
     gnumake
     graphicsmagick
+    hugo
     lazygit
     neovim
     podman
@@ -26,18 +27,32 @@
     zoxide
 
     # Apps
+    arduino
+    arduino-ide
+    chromium
+    cutecom
+    floorp
     gitkraken
     gnome.gnome-disk-utility
     libreoffice
     neovide
-    obs-studio
     qpwgraph
+    rpi-imager
+    scrcpy
     tigervnc
     vscode
+    (wrapOBS {
+      plugins = with obs-studio-plugins; [
+        obs-multi-rtmp
+      ];
+    })
 
     # Art
     aseprite
+    blender
     gimp
+    inkscape
+    krita
     prusa-slicer
     reaper
     (freecad.overrideAttrs (finalAttrs: previousAttrs: {
@@ -58,11 +73,15 @@
     cmake
     gcc
     jdk
+    qemu_kvm
+    lua-language-server
+    nil
     nix-direnv
     nodejs
     openssl
     pipx
     rustup
+    wineWowPackages.stable
     wl-clipboard
   ];
 })

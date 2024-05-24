@@ -19,6 +19,25 @@
   # Bluetooth
   hardware.bluetooth.enable = true;
 
+  # GPU
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+    extraPackages = [ pkgs.mesa.drivers ];
+  };
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = true;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
+
   # i18n & l10n
   time.timeZone = "Europe/Minsk";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -41,7 +60,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -62,13 +80,14 @@
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
 
+  virtualisation.docker.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.infinitecoder = {
     isNormalUser = true;
     description = "InfiniteCoder";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "docker" ];
     packages = with pkgs; [
-      firefox
       kate
       yakuake
       partition-manager
@@ -84,11 +103,17 @@
 
   # List packages installed in system profile. To search, run:
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = [];
   environment.systemPackages = with pkgs; [
     vim
     git
     wget
   ];
+  programs.firefox = {
+    enable = true;
+    package = pkgs.firefox-wayland;
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
