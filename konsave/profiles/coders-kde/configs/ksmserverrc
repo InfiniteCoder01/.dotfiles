@@ -5,9 +5,4 @@ update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_valu
 count=0
 
 [Session: saved at previous logout]
-clientId1=1033b3393022d9000171493026100000008370002
-count=1
-program1=firefox
-restartCommand1=/usr/lib/firefox/firefox,--sm-client-id,1033b3393022d9000171493026100000008370002
-restartStyleHint1=0
-userId1=infinitecoder
+count=0

@@ -1,5 +1,4 @@
 [ActionPlugins][0]
-MiddleButton;NoModifier=org.kde.paste
 RightButton;NoModifier=org.kde.contextmenu
 
 [ActionPlugins][1]
@@ -114,7 +113,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][227][Applets][242][Configuration]
-PreloadWeight=42
+PreloadWeight=2
 
 [Containments][227][Applets][243]
 immutability=1
@@ -134,8 +133,8 @@ PreloadWeight=42
 PreloadWeight=42
 
 [Containments][227][General]
-extraItems=org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.vault
-knownItems=org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.vault
+extraItems=org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.bluetooth
+knownItems=org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.bluetooth
 
 [Containments][255]
 activityId=
@@ -191,6 +190,7 @@ popupWidth=560
 [Containments][255][Applets][281][Configuration][Appearance]
 dateDisplayFormat=BesideTime
 dateFormat=longDate
+fontWeight=400
 
 [Containments][255][Applets][281][Configuration][ConfigDialog]
 DialogHeight=540
@@ -303,7 +303,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][265][Applets][279][Configuration]
-PreloadWeight=92
+PreloadWeight=97
 
 [Containments][265][Applets][280][Configuration]
 PreloadWeight=42
@@ -321,22 +321,32 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][265][General]
-extraItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.vault
+extraItems=org.kde.plasma.battery,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.bluetooth
 hiddenItems=firewall-applet,TelegramDesktop,Yakuake
-knownItems=org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.vault
+knownItems=org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.bluetooth
 shownItems=org.kde.plasma.battery,org.kde.plasma.bluetooth
 
-[Containments][290]
-ItemGeometries-1536x864=
+[Containments][291]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=3759b3f8-900f-4ecb-850a-0a5dd92c1dd1
+activityId=290fbf93-579e-4986-88ff-ea502fc4f4f5
 formfactor=0
 immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][291][General]
+ToolBoxButtonState=topcenter
+ToolBoxButtonX=499
+ToolBoxButtonY=43
+
+[Containments][291][Wallpaper][org.kde.image][General]
+Image=/mnt/Dev/Art/Wallpapers/wallpaper_minecraft_15th-anniversary/wallpaper_minecraft_15th-anniversary_2560x1440.png
+
+[Containments][8][Applets][21][Configuration]
+PreloadWeight=47
 
 [Containments][8][Applets][22][Configuration]
 PreloadWeight=42
@@ -346,3 +356,4 @@ PreloadWeight=42
 
 [ScreenMapping]
 itemsOnDisabledScreens=
+screenMapping=
