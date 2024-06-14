@@ -48,6 +48,7 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
+  # services.displayManager.defaultSession = "plasmax11";
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
@@ -97,9 +98,6 @@
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "infinitecoder";
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

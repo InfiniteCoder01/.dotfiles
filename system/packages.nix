@@ -1,4 +1,4 @@
-({ pkgs, ... }: {
+{ pkgs, system, fh, nix-snapd, ... }: {
   environment.systemPackages = with pkgs; [
     # Save
     dotbot
@@ -12,6 +12,7 @@
     direnv
     eza
     fastfetch
+    fh.packages.${system}.default
     fzf
     gh
     git
@@ -55,15 +56,20 @@
     krita
     prusa-slicer
     reaper
-    (freecad.overrideAttrs (finalAttrs: previousAttrs: {
-      version = "link-daily";
-      src = fetchFromGitHub {
-        owner = "realthunder";
-        repo = "FreeCAD";
-        rev = finalAttrs.version;
-        hash = "sha256-OX4s9rbGsAhH7tLJkUJYyq2A2vCdkq/73iqYo9adogs=";
-      };
-    }))
+    # (freecad.overrideAttrs (finalAttrs: previousAttrs: {
+    #   version = "master";
+    #   src = fetchFromGitHub {
+    #     owner = "FreeCAD";
+    #     repo = "FreeCAD";
+    #     rev = "3b4598ce04d7aaec69feeb560c29ae18f0236e0c";
+    #     hash = "sha256-NW3Ngpy3r+HBsXneMxZVtaHtA3+G2yfmFJDVdomlKrQ=";
+    #     fetchSubmodules = true;
+    #   };
+    #   buildInputs = previousAttrs.buildInputs ++ [ yaml-cpp ];
+    #   patches = [];
+    # }))
+    freecad
+    kicad-testing
 
     # Social
     discord
@@ -73,15 +79,17 @@
     cmake
     gcc
     jdk
-    qemu_kvm
     lua-language-server
     nil
     nix-direnv
     nodejs
     openssl
     pipx
+    qemu_kvm
     rustup
+    nix-snapd.packages.${system}.default
+    winetricks
     wineWowPackages.stable
     wl-clipboard
   ];
-})
+}
