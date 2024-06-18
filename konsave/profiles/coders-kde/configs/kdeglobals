@@ -136,8 +136,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=820,566
-History Items[$e]=file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
+DirSelectDialog Size=818,584
+History Items[$e]=file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/datasets/samples,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples/stop,file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
 
 [General]
 BrowserApplication=firefox.desktop

@@ -24,6 +24,7 @@
     podman
     ripgrep
     strace
+    tmux
     unzip
     zoxide
 
@@ -35,6 +36,7 @@
     floorp
     gitkraken
     gnome.gnome-disk-utility
+    godot_4
     libreoffice
     neovide
     qpwgraph
@@ -78,6 +80,7 @@
     # Libraries, environments and build systems
     cmake
     gcc
+    go
     jdk
     lua-language-server
     nil
