@@ -2,7 +2,11 @@
 update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_value_default_enum
 
 [LegacySession: saved at previous logout]
-count=0
+clientMachine1=localhost
+clientMachine2=localhost
+command1=prusa-slicer
+command2=orca-slicer
+count=2
 
 [Session: saved at previous logout]
 count=0

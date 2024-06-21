@@ -1,0 +1,254 @@
+clear
+ls
+nvim ~/.dotfiles/system/packages.nix
+z ~/Arduino/
+nvim ls
+ls
+la
+ls -la
+eza
+eza -a
+clear
+tree
+tee
+ls
+nvim .zshrc
+nvim ~/.dotfiles/nvim/init.lua
+exit
+nvim ~/.dotfiles/nvim/init.lua
+exit
+nvim ~/.config/nushell/env.nu
+nvim ~/.dotfiles/nvim/init.lua
+nvim ~/.config/nushell/env.nu
+nvim ~/.dotfiles/nvim/init.lua
+nvim ~/.config/nushell/env.nu
+exit
+;s
+ls
+clear
+sudo nixos-rebuild switch
+nvim ~/.config/nushell/env.nu
+sudo nixos-rebuild switch
+ls
+sl
+ls
+ls -a
+la
+clear
+ls -a
+eza
+eza --icons
+eza --list --icons
+eza -l --icons
+eza -l --icons -a
+eza -la --icons
+nvim ~/.config/nushell/config.nu
+exit
+ls
+ll
+l
+la
+clear
+ls | select 
+\ls
+nvim ~/.config/nushell/config.nu
+exit
+core-ls
+ls
+clear
+core-ls
+core-ls | select type=dir
+core-ls | select type="dir"
+core-ls | select type
+42 | describe
+core-ls
+core-ls -a
+core-ls -a | where type
+core-ls -a | where type == dir
+core-ls -a | where type == symlink
+core-ls -a | where type != symlink
+core-ls -a | where type =~ i
+core-ls -a | where type =~ r
+core-ls -a | where type =~ i
+core-ls -a | where type =~ l
+core-ls -a | where size > 1KiB
+clear
+[{a:1 b:2} {b:1}]
+git config --global http.postBuffer 4096M 
+z orco
+git config --global http.postBuffer 8192M 
+git config --global http.postBuffer 1M
+zoxide init
+zoxide init --help
+direnv hook
+direnv hook --help
+direnv --help
+direnv --help | rg hook
+nvim ~/.zshrc ~/.config/nushell/config.nu
+new-flake
+flake-new
+exit
+flake-new
+rm -rf flake.nix
+$nu.env-path
+nvim ~/.config/nushell/config.nu
+exit
+z game
+pwd
+clear
+ls
+z fine
+z -
+clear
+ls
+z game
+git config --global http.postBuffer 4096M 
+git config --global http.postBuffer 1M
+nvim ~/.dotfiles/system/packages.nix
+clear
+sudo nixos-rebuild switch
+nix-collect-garbage -d
+clear
+rm -rf ~/.cache/k*
+clear
+sudo nixos-rebuild switch
+nix-collect-garbage -d
+./run.sh
+df -h
+fastfetch
+df -h
+sudo nixos-rebuild switch
+nvim ~/.dotfiles/system/packages.nix
+df -h
+sudo nixos-rebuild switch
+z .dot
+exit
+exit
+nvim ~/.dotfiles/system/packages.nix
+exit
+z .
+z .dot
+git status
+git restore flake.lock
+git status
+clear
+df -h
+sudo nixos-rebuild switch
+clear
+sudo nixos-rebuild switch
+clear
+sudo 
+clear
+sudo nixos-rebuild switch
+ondsel
+Ondsel
+clear
+sudo nixos-rebuild switch
+clea
+clear
+sudo nixos-rebuild switch
+ls /nix/store/vc947b96yhf5vvk0qhcj57g7j4m7xbns-ondsel-weekly-extracted/
+clear
+nix-collect-garbage -d
+clear
+sudo nixos-rebuild switch
+clear
+sudo nixos-rebuild switch
+clear
+sudo nixos-rebuild switch
+ondsel
+nvim ~/.dotfiles/system/packages.nix
+flake update
+clear
+nvim ~/.dotfiles/system/packages.nix
+sudo nixos-rebuild switch
+clear
+./run.sh
+git mv coders util/coders
+clear
+./run.sh
+cleaar
+clear
+./run.sh
+nix develop -c nu
+clear
+./run.sh
+clear
+./run.sh
+clear
+./run.sh
+clear
+./run.sh
+celar
+clear
+./run.sh
+clear
+./run.sh
+clear
+./run.sh
+clear
+./run.sh
+clear
+./run.sh
+clear
+./run.sh
+btop
+z .orf
+z .org
+clear
+ls
+orestaty build
+~/.cargo/bin/orestaty build
+git add .
+git commit -m "Finally fix twitter (crossed) X"
+git push
+git pull
+git push
+~/.cargo/bin/orestaty build
+git add .
+git commit -m "Website link fix"
+git push
+git add .
+~/.cargo/bin/orestaty build
+git add .
+git commit -m "+Reddit -[Needs links]"
+git push
+nvim src
+nvim ~/.config/nushell/config.nu
+exi
+exit
+exit
+nvim ~/.config/nushell/config.nu
+exit
+cargo
+nvim ~/.config/nushell/config.nu
+bash
+sh
+exi
+exit
+$env.PATH
+$env.PATH | describe
+$env.PATH | append ""
+$env.PATH | append ''
+$env.PATH | append "~/.cargo/bin"
+$env.PATH = $env.PATH | append "~/.cargo/bin"
+$env.PATH = ($env.PATH | append "~/.cargo/bin")
+$env.PATH
+config nu --default | nu-highlight | lines<\n>
+exit
+zoxide
+$env.PATH
+exit
+$env.PATH
+orestaty --version
+carapace
+exit
+carapace
+config nu --default | nu-highlight
+z .dot
+ls
+mv -r ~/.config/nushell .
+z ,dot
+z .dot
+git add .
+./fetch.sh

@@ -14,6 +14,9 @@
     ~/.zshrc: zsh/.zshrc
     ~/.oh-my-zsh/custom: zsh/.oh-my-zsh/custom
     
+    # NuShell
+    ~/.config/nushell: nushell
+
     # VS Code
     ~/.config/Code/User/keybindings.json: VSCode/keybindings.json
     ~/.config/Code/User/settings.json: VSCode/settings.json

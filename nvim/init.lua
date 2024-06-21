@@ -26,6 +26,7 @@ require('lazy').setup({
   { 'hrsh7th/cmp-nvim-lsp' },
   { 'hrsh7th/nvim-cmp' },
   { 'L3MON4D3/LuaSnip' },
+  { 'LhKipp/nvim-nu' },
   { 'nvim-treesitter/nvim-treesitter' },
   { 'numToStr/Comment.nvim', lazy = false, config = true },
   {
@@ -118,6 +119,7 @@ require('mason-lspconfig').setup({
 })
 
 require('lspconfig').nil_ls.setup{}
+require('lspconfig').nushell.setup{}
 require('lspconfig').lua_ls.setup {
   settings = {
     Lua = {
