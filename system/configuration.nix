@@ -1,13 +1,5 @@
 { pkgs, ... }:
-let
-  nvidia-offload = pkgs.writeScriptBin "nvidia-offload" ''
-    export __NV_PRIME_RENDER_OFFLOAD=1
-    export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
-    export __GLX_VENDOR_LIBRARY_NAME=nvidia
-    export __VK_LAYER_NV_optimus=NVIDIA_only
-    exec "$@"
-  '';
-in {
+{
   imports = [ ./hardware-configuration.nix ];
 
   nix.settings.auto-optimise-store = true;
@@ -34,7 +26,18 @@ in {
     extraPackages = [ pkgs.mesa.drivers ];
   };
 
-  nixpkgs.config.allowUnfree = true;
+  hardware.nvidia = {
+    modesetting.enable = true;
+    nvidiaSettings = true;
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      nvidiaBusId = "PCI:1:0:0";
+      amdgpuBusId = "PCI:4:0:0";
+    };
+  };
 
   environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -45,7 +48,7 @@ in {
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+  services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -54,10 +57,10 @@ in {
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
-  # services.xserver.xkb = {
-  #   layout = "us";
-  #   variant = "";
-  # };
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -80,9 +83,8 @@ in {
 
   # ZSH, obviously
   programs.zsh.enable = true;
-  environment.shells = with pkgs; [ zsh nushell ];
-  # users.defaultUserShell = pkgs.zsh;
-  users.defaultUserShell = pkgs.nushell;
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
 
   virtualisation.docker.enable = true;
 
@@ -110,7 +112,6 @@ in {
     vim
     git
     wget
-    nvidia-offload
   ];
   programs.firefox = {
     enable = true;
