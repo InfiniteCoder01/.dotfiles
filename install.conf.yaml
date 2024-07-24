@@ -18,6 +18,9 @@
     # NuShell
     ~/.config/nushell: nushell
 
+    # Starship
+    ~/.config/starship.toml: starship/starship.toml
+
     # VS Code
     ~/.config/Code/User/keybindings.json: VSCode/keybindings.json
     ~/.config/Code/User/settings.json: VSCode/settings.json
