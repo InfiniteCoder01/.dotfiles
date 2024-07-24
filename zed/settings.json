@@ -13,9 +13,9 @@
   "soft_wrap": "none",
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_family": "CommitMono Nerd Font Mono",
   "terminal": {
-    "font_family": "FiraCode Nerd Font Mono"
+    "font_family": "CommitMono Nerd Font Mono"
   },
   "inlay_hints": {
     "enabled": true,

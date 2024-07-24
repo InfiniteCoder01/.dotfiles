@@ -88,6 +88,7 @@
   # Some fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override { fonts = [ "CommitMono" ]; })
   ];
 
   # ZSH, obviously
