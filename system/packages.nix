@@ -28,6 +28,7 @@
     helix
     direnv
     tmux
+    zellij
     arp-scan
     fh.packages.${system}.default
     nix-index

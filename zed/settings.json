@@ -13,9 +13,9 @@
   "soft_wrap": "none",
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "buffer_font_family": "FiraCodeMono NerdFont",
+  "buffer_font_family": "FiraCode Nerd Font Mono",
   "terminal": {
-    "font_family": "FiraCodeMono NerdFont"
+    "font_family": "FiraCode Nerd Font Mono"
   },
   "inlay_hints": {
     "enabled": true,
