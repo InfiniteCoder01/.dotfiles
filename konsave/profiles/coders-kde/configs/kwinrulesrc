@@ -7,7 +7,10 @@ above=true
 aboverule=2
 desktops=\\0
 desktopsrule=2
-wmclass=chatry
+title=chatry (DEBUG)
+titlematch=1
+wmclass=Godot_Engine chatry
+wmclasscomplete=true
 wmclassmatch=1
 
 [2f293602-5d9c-49b6-9d5a-563992284be2]

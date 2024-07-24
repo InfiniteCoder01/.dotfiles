@@ -120,6 +120,7 @@ require('mason-lspconfig').setup({
 
 require('lspconfig').nil_ls.setup{}
 require('lspconfig').nushell.setup{}
+require('lspconfig').zls.setup{}
 require('lspconfig').lua_ls.setup {
   settings = {
     Lua = {

@@ -8,8 +8,14 @@
   nix.gc.options = "--delete-older-than +5"; 
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    enable = true;
+    devices = [ "nodev" ];
+    efiSupport = true;
+    useOSProber = true;
+  };
 
   # Networking
   networking.hostName = "InfiniteCoders-System";
@@ -26,18 +32,21 @@
     extraPackages = [ pkgs.mesa.drivers ];
   };
 
-  hardware.nvidia = {
-    modesetting.enable = true;
-    nvidiaSettings = true;
-    prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
-      nvidiaBusId = "PCI:1:0:0";
-      amdgpuBusId = "PCI:4:0:0";
-    };
-  };
+  # nixpkgs.config.allowUnfree = true;
+  # services.xserver.videoDrivers = [ "nvidia" ];
+  boot.blacklistedKernelModules = ["nouveau"];
+  # hardware.nvidia = {
+  #   # modesetting.enable = true;
+  #   nvidiaSettings = true;
+  #   prime = {
+  #     offload = {
+  #       enable = true;
+  #       enableOffloadCmd = true;
+  #     };
+  #     nvidiaBusId = "PCI:1:0:0";
+  #     amdgpuBusId = "PCI:4:0:0";
+  #   };
+  # };
 
   environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -83,8 +92,8 @@
 
   # ZSH, obviously
   programs.zsh.enable = true;
-  environment.shells = with pkgs; [ zsh ];
-  users.defaultUserShell = pkgs.zsh;
+  environment.shells = with pkgs; [ zsh nushell ];
+  users.defaultUserShell = pkgs.nushell;
 
   virtualisation.docker.enable = true;
 

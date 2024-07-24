@@ -33,3 +33,4 @@ alias flake-new="wget https://gist.githubusercontent.com/InfiniteCoder01/e3b8f14
 
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
+eval "$(starship init zsh)"

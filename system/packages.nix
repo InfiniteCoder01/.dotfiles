@@ -1,4 +1,4 @@
-{ pkgs, system, fh, nix-snapd, ... }: {
+{ system, pkgs, fh, nix-snapd, ... }: {
   environment.systemPackages = with pkgs; [
     # Save
     dotbot
@@ -6,26 +6,34 @@
     appimagekit
 
     # CLI Tools
+    starship
+
+    trashy
     eza
     bat
     fzf
     ripgrep
     zoxide
+    file
+
     fastfetch
     btop
-    unzip
     gh
     git
     lazygit
+
+    unzip
+    cloudflared
     neovim
+    helix
     direnv
     tmux
     arp-scan
     fh.packages.${system}.default
+    nix-index
 
     gnumake
     graphicsmagick
-    podman
     strace
 
     # Apps
@@ -34,6 +42,7 @@
     cutecom
     tigervnc
     rpi-imager
+    steam
     chromium
     floorp
     libreoffice
@@ -43,19 +52,32 @@
         obs-multi-rtmp
       ];
     })
+    audacity
 
     arduino
     arduino-ide
     vscode
+    zed-editor
     neovide
-    godot_4
+    (godot_4.overrideAttrs  rec {
+      version = "4.3";
+      commitHash = "97b8ad1af0f2b4a216f6f1263bef4fbc69e56c7b";
+      src = fetchFromGitHub {
+        owner = "godotengine";
+        repo = "godot";
+        rev = commitHash;
+        hash = "sha256-Q8Y6tHASBA47e/61GrKX1IXR6l9msufJ2bFSgkaE4VQ=";
+      };
+    })
+
 
     # Art
-    # aseprite
+    aseprite
     gimp
     krita
     inkscape
     blender
+    vlc
     # (appimageTools.wrapType2 {
     #   pname = "freecad";
     #   version = "weekly";
@@ -141,6 +163,7 @@
     nix-direnv
     nodejs
     pipx
+    python3
     carapace
 
     openssl

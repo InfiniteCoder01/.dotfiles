@@ -15,7 +15,7 @@
         pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
       in [
         ./configuration.nix
-        (import ./packages.nix (inputs // { inherit pkgs system; }))
+        (import ./packages.nix (inputs // { inherit system pkgs; }))
       ];
     };
   };

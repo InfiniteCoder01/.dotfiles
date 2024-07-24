@@ -1,0 +1,9 @@
+[
+  {
+    "bindings": {
+      "ctrl-e": "workspace::ToggleLeftDock",
+      "f4": "workspace::ToggleBottomDock",
+      "shift-c": "project_panel::CollapseAllEntries"
+    }
+  },
+]
