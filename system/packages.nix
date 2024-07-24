@@ -15,27 +15,29 @@
     ripgrep
     zoxide
     file
+    unzip
 
+    cloudflared
+    arp-scan
+    nix-index
+
+    graphicsmagick
+    strace
+    
     fastfetch
     btop
     gh
     git
     lazygit
 
-    unzip
-    cloudflared
-    neovim
-    helix
-    direnv
     tmux
     zellij
-    arp-scan
-    fh.packages.${system}.default
-    nix-index
 
-    gnumake
-    graphicsmagick
-    strace
+    neovim
+    helix
+
+    direnv
+    devenv
 
     # Apps
     gnome.gnome-disk-utility
@@ -155,6 +157,7 @@
 
     # Libraries, environments and build systems
     gcc
+    gnumake
     cmake
     rustup
     go
