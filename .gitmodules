@@ -1,0 +1,12 @@
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/.oh-my-zsh/custom/plugins/nix-zsh-completions"]
+	path = zsh/.oh-my-zsh/custom/plugins/nix-zsh-completions
+	url = https://github.com/nix-community/nix-zsh-completions.git
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-eza"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-eza
+	url = https://github.com/z-shell/zsh-eza.git
