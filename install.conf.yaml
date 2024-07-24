@@ -27,7 +27,9 @@
     ~/.config/PrusaSlicer/physical_printer: PrusaSlicer/physical_printer
     ~/.config/PrusaSlicer/print: PrusaSlicer/print
     ~/.config/PrusaSlicer/printer: PrusaSlicer/printer
-    ~/.config/PrusaSlicer/PrusaSlicer.ini: PrusaSlicer/PrusaSlicer.ini
+    ~/.config/PrusaSlicer/PrusaSlicer.ini:
+      force: true
+      path: PrusaSlicer/PrusaSlicer.ini
     ~/.config/PrusaSlicer/sla_material: PrusaSlicer/sla_material
     ~/.config/PrusaSlicer/sla_print: PrusaSlicer/sla_print
     ~/.config/PrusaSlicer/vendor: PrusaSlicer/vendor
