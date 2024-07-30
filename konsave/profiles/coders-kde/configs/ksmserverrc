@@ -2,7 +2,9 @@
 update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_value_default_enum
 
 [LegacySession: saved at previous logout]
-count=0
+clientMachine1=localhost
+command1=/nix/store/8r6lgsfyak1mr2gg3ka6zkffxswkj3wv-emacs-29.3/bin/emacs,--fg-daemon
+count=1
 
 [Session: saved at previous logout]
 count=0

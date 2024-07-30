@@ -3,8 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
-    nix-snapd.url = "https://flakehub.com/f/io12/nix-snapd/*.tar.gz";
+    emacs-overlay.url = "github:nix-community/emacs-overlay/master";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -12,7 +11,11 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = let
-        pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+          overlays = [ (import self.inputs.emacs-overlay) ];
+        };
       in [
         ./configuration.nix
         (import ./packages.nix (inputs // { inherit system pkgs; }))

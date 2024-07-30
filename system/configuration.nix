@@ -102,7 +102,7 @@
   users.users.infinitecoder = {
     isNormalUser = true;
     description = "InfiniteCoder";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "docker" "uinput" ];
     packages = with pkgs; [
       kate
       yakuake
@@ -126,6 +126,18 @@
   programs.firefox = {
     enable = true;
     package = pkgs.firefox-wayland;
+  };
+
+  services.kanata = {
+    enable = true;
+    keyboards = {
+      internalKeyboard = {
+        devices = [
+          "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+        ];
+        configFile = ./kanata.kbd;
+      };
+    };
   };
 
   # This value determines the NixOS release from which the default

@@ -21,6 +21,10 @@
     # Starship
     ~/.config/starship.toml: starship/starship.toml
 
+    # Emacs
+    ~/.emacs.d: emacs/.emacs.d
+    ~/.doom.d: emacs/.doom.d
+
     # VS Code
     ~/.config/Code/User/keybindings.json: VSCode/keybindings.json
     ~/.config/Code/User/settings.json: VSCode/settings.json

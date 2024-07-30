@@ -1,4 +1,4 @@
-{ system, pkgs, fh, nix-snapd, ... }: {
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     # Save
     dotbot
@@ -37,7 +37,6 @@
     helix
 
     direnv
-    devenv
 
     # Apps
     gnome.gnome-disk-utility
@@ -64,12 +63,12 @@
     neovide
     (godot_4.overrideAttrs  rec {
       version = "4.3";
-      commitHash = "97b8ad1af0f2b4a216f6f1263bef4fbc69e56c7b";
+      commitHash = "0e9caa2d9cb20737f8dcf08b75fcf2a78d980569";
       src = fetchFromGitHub {
         owner = "godotengine";
         repo = "godot";
         rev = commitHash;
-        hash = "sha256-Q8Y6tHASBA47e/61GrKX1IXR6l9msufJ2bFSgkaE4VQ=";
+        hash = "sha256-tRY/ztF9y1qyJLPzXVKVZD/8vzIRMaZuEJO7T0k9174=";
       };
     })
 
@@ -149,7 +148,7 @@
     kicad-testing
     prusa-slicer
     orca-slicer
-    reaper
+    lmms
 
     # Social
     discord
@@ -172,9 +171,17 @@
 
     openssl
     qemu_kvm
-    nix-snapd.packages.${system}.default
     winetricks
     wineWowPackages.stable
     wl-clipboard
   ];
+
+  services.emacs = {
+    enable = true;
+    package = with pkgs; (
+      (emacsPackagesFor emacs).emacsWithPackages (
+        epkgs: [ epkgs.vterm ]
+      )
+    );
+  };
 }

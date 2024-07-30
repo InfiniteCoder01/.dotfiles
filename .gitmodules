@@ -10,3 +10,6 @@
 [submodule "zsh/.oh-my-zsh/custom/plugins/zsh-eza"]
 	path = zsh/.oh-my-zsh/custom/plugins/zsh-eza
 	url = https://github.com/z-shell/zsh-eza.git
+[submodule "emacs/.emacs.d"]
+	path = emacs/.emacs.d
+	url = https://github.com/doomemacs/doomemacs
