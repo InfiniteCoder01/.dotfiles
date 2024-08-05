@@ -136,8 +136,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=818,584
-History Items[$e]=file:///mnt/D/Channel/Github/Emotes/hi,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/datasets/samples,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples/stop,file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
+DirSelectDialog Size=980,600
+History Items[$e]=file:///mnt/Dev/Tools/build/orco/orco,file:$HOME/.dotfiles/,file:///mnt/D/Channel/Github/Emotes/hi,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/datasets/samples,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples/stop,file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
 
 [General]
 BrowserApplication=firefox.desktop

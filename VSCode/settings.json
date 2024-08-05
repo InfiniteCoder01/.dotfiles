@@ -36,4 +36,5 @@
         "base16-darktooth-dark"
     ],
     "editor.formatOnSave": true,
+    "editor.fontSize": 21,
 }
