@@ -1,0 +1,128 @@
+zsh
+exit
+x
+x ying
+clear
+nix develop
+nix develop --show-trace
+nix develop
+export NIXPKGS_ALLOW_INSECURE=1
+nvim flake.nix 
+poetry --help
+poetry
+poetry run
+flake-new
+rm -rf flake.nix
+flake-new
+ping github.com
+flake-new
+nvim flake.nix 
+nix develop
+ping google.com
+nvim /home/infinitecoder/Documents/finelauncher/instances/play-me/game/src/coders/png.cpp
+fg
+./conversions.sh
+clear
+exit
+./conversions.sh
+exit
+./conversions.sh
+rg --help
+clear
+./conversions.sh
+cat src/graphics/render/BlocksRenderer.cpp
+rg '#include' src/graphics/render/BlocksRenderer.cpp
+./conversions.sh
+sd --help
+./conversions.sh
+rg assetload_funcs.hpp
+./conversions.sh
+rg AssetsLoader.hpp
+./conversions.sh
+rg AssetsLoader.hpp
+./run.sh
+x src
+x src/coders
+./run.sh
+./conversions.sh
+./run.sh
+./conversions.sh
+nix develop -c zsh
+bash
+z Verboe
+z Verbose
+z /mnt/Dev/Vendor/Verbose/
+nix develop -c zsh
+./run.sh
+nix develop -c zsh
+\
+nix develop -c zsh
+nix develop -c zsh --impure
+nix develop --impure -c zsh
+nix develop -c zsh
+bat flake.nix 
+nvim ~/.dotfiles/nushell/config.nu 
+nvim ~/.zshrc
+nix develop -c zsh
+nix develop --show-trace -c zsh
+x src
+x src/content
+x src/content/*.hpp
+nix develop -c zsh
+rg content_fwd.hpp
+./conversions.sh
+./run.sh
+./conversions.sh
+nix develop -c zsh
+./run.sh
+x src
+x src/debug
+rg Logger.hpp
+./conversions.sh
+x src
+x src/files
+rg engine_paths.hpp
+x src/files
+./conversions.sh
+./run.sh
+nix develop -c zsh
+x src
+x graphics
+x src/graphics
+nvim flake.nix 
+z yin
+clear
+nvim flake.nix 
+git pull
+git status
+git stash
+git pull
+git stash pop
+git status
+git add .
+git pull
+git stash
+git pull
+git stash pop
+git reset
+git reset --hard
+parsita run pytest
+poetry run pytest
+nix develop -c zsh
+git add .
+poetry run pytest
+exit
+nix develop -c zsh
+z game
+x src
+x src/graphics/core/
+./conversions.sh
+nvim conversions.sh 
+./r
+./run.sh
+xa
+mv * /mnt/D/BKP/home/
+mkdir /mnt/D/BKP/home
+x
+xa
+rm -rf .arduino* .bash* .codeium .cache

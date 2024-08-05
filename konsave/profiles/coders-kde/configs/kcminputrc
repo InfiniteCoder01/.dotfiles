@@ -12,7 +12,6 @@ Enabled=true
 
 [Mouse]
 X11LibInputXAccelProfileFlat=true
-cursorTheme=Bibata-Modern-Ice
 
 [Tmp]
 update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize

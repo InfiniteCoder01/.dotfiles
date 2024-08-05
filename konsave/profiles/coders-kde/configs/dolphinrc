@@ -1,6 +1,11 @@
 [$Version]
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
 
+[ExtractDialog]
+1920x1080 screen: Height=540
+1920x1080 screen: Width=1260
+DirHistory[$e]=$HOME/Downloads/
+
 [General]
 Version=202
 ViewPropsTimestamp=2024,5,5,23,23,13.771
@@ -11,7 +16,6 @@ PreviewSize=176
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=16
-detailViewIconSize=16
 
 [MainWindow]
 MenuBar=Disabled

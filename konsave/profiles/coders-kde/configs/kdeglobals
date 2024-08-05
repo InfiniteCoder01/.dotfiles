@@ -137,11 +137,11 @@ ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
 DirSelectDialog Size=818,584
-History Items[$e]=file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/datasets/samples,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples/stop,file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
+History Items[$e]=file:///mnt/D/Channel/Github/Emotes/hi,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/datasets/samples,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples/stop,file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:///mnt/Dev
 
 [General]
 BrowserApplication=firefox.desktop
-ColorSchemeHash=b3e34bc12d2f6584da133e558e5fb5ddfbae1540
+ColorSchemeHash=38f350e0530aaa58cc20a2cf2011a8a2d0c7a4fc
 Name=Breeze Dark
 accentColorFromWallpaper=false
 shadeSortColumn=true

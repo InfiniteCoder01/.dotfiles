@@ -28,4 +28,12 @@
     "files.associations": {
         "*.gdextension": "toml"
     },
+    "workbench.colorTheme": "GapStyle VS",
+    "editor.minimap.enabled": false,
+    "terminal.integrated.fontFamily": "\"CommitMono Nerd Font Mono\"",
+    "editor.fontFamily": "\"CommitMono Nerd Font Mono\"",
+    "base16.generator.activatedThemes": [
+        "base16-darktooth-dark"
+    ],
+    "editor.formatOnSave": true,
 }

@@ -1,9 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-stable, ... }: {
   environment.systemPackages = with pkgs; [
     # Save
-    dotbot
+    pkgs-stable.dotbot
     konsave
-    appimagekit
 
     # CLI Tools
     starship
@@ -16,30 +15,30 @@
     zoxide
     file
     unzip
+    ffmpeg
 
-    cloudflared
     arp-scan
-    nix-index
+    qbittorrent
+    wget
+    git
+    gh
+    cloudflared
+    twitch-cli
 
     graphicsmagick
-    strace
     
     fastfetch
     btop
-    gh
-    git
-    lazygit
 
-    tmux
     zellij
 
+    vim
     neovim
     helix
 
     direnv
 
     # Apps
-    gnome.gnome-disk-utility
     qpwgraph
     cutecom
     tigervnc
@@ -60,72 +59,32 @@
     arduino-ide
     vscode
     zed-editor
-    neovide
     (godot_4.overrideAttrs  rec {
       version = "4.3";
-      commitHash = "0e9caa2d9cb20737f8dcf08b75fcf2a78d980569";
+      commitHash = "3978628c6cc1227250fc6ed45c8d854d24c30c30";
       src = fetchFromGitHub {
         owner = "godotengine";
         repo = "godot";
         rev = commitHash;
-        hash = "sha256-tRY/ztF9y1qyJLPzXVKVZD/8vzIRMaZuEJO7T0k9174=";
+        hash = "sha256-NovdSjwA2h7I7HpY57ZxCXwBh9KBU0xKQkigmQAx04A=";
       };
     })
 
 
     # Art
     aseprite
-    gimp
     krita
     inkscape
     blender
     vlc
-    # (appimageTools.wrapType2 {
-    #   pname = "freecad";
-    #   version = "weekly";
-    #
-    #   src = fetchurl {
-    #     url = "https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-37819-conda-Linux-x86_64-py311.AppImage";
-    #     hash = "sha256-7FLtYdLmKLOF6L7ilg12RrLlIlkG83Vz/Atd3PbrJIk=";
-    #   };
-    #
-    #   # extraInstallCommands = ''
-    #   #   install -Dm444 ${appimageContents}/${pname}.desktop -t $out/share/applications/
-    #   #   install -Dm444 ${appimageContents}/${pname}.png -t $out/share/pixmaps/
-    #   #   substituteInPlace $out/share/applications/${pname}.desktop --replace-fail 'Exec=AppRun --no-sandbox %U' 'Exec=${pname} %U'
-    #   # '';
-    #
-    #   meta = with lib; {
-    #     homepage = "https://www.freecad.org";
-    #     description = "General purpose Open Source 3D CAD/MCAD/CAx/CAE/PLM modeler";
-    #     longDescription = ''
-    #       FreeCAD is an open-source parametric 3D modeler made primarily to design
-    #       real-life objects of any size. Parametric modeling allows you to easily
-    #       modify your design by going back into your model history and changing its
-    #       parameters.
-    #
-    #       FreeCAD allows you to sketch geometry constrained 2D shapes and use them
-    #       as a base to build other objects. It contains many components to adjust
-    #       dimensions or extract design details from 3D models to create high quality
-    #       production ready drawings.
-    #
-    #       FreeCAD is designed to fit a wide range of uses including product design,
-    #       mechanical engineering and architecture. Whether you are a hobbyist, a
-    #       programmer, an experienced CAD user, a student or a teacher, you will feel
-    #       right at home with FreeCAD.
-    #     '';
-    #     license = lib.licenses.lgpl2Plus;
-    #     maintainers = with lib.maintainers; [ viric gebner AndersonTorres ];
-    #     platforms = lib.platforms.linux;
-    #   };
-    # })
     (appimageTools.wrapType2 rec {
       pname = "ondsel-es";
       version = "weekly";
 
-      src = fetchurl {
-        url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-37829-Linux-x86_64.AppImage";
-        hash = "sha256-AJ99gy4wZ5zzW9kNN79i3YUiVMFqXhqxd8XoPvDhjd8=";
+      src = requireFile {
+        name = "Ondsel_ES_2024.2.2.37240-Linux-aarch64.AppImage";
+        url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-aarch64.AppImage";
+        sha256 = "424a106e17815fc77a0a229b302da892aea799caf9890450c54f6f61536bcfad";
       };
 
       extraInstallCommands = let
@@ -145,9 +104,8 @@
       };
     })
 
-    kicad-testing
+    # kicad-testing
     prusa-slicer
-    orca-slicer
     lmms
 
     # Social
@@ -156,32 +114,51 @@
 
     # Libraries, environments and build systems
     gcc
-    gnumake
-    cmake
     rustup
     go
     jdk
     lua-language-server
     nil
     nix-direnv
-    nodejs
-    pipx
     python3
     carapace
 
-    openssl
-    qemu_kvm
+    appimagekit
     winetricks
     wineWowPackages.stable
     wl-clipboard
   ];
 
-  services.emacs = {
+  # services.emacs = {
+  #   enable = true;
+  #   package = with pkgs; (
+  #     (emacsPackagesFor emacs).emacsWithPackages (
+  #       epkgs: [ epkgs.vterm ]
+  #     )
+  #   );
+  # };
+
+  services.kanata = {
     enable = true;
-    package = with pkgs; (
-      (emacsPackagesFor emacs).emacsWithPackages (
-        epkgs: [ epkgs.vterm ]
-      )
-    );
+    keyboards = {
+      internalKeyboard = {
+        devices = [
+          "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+        ];
+        configFile = ./kanata.kbd;
+      };
+    };
   };
+  # Some fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override { fonts = [ "CommitMono" ]; })
+  ];
+
+  # Shells
+  programs.zsh.enable = true;
+  environment.shells = with pkgs; [ zsh nushell ];
+  users.defaultUserShell = pkgs.zsh;
+
+  virtualisation.docker.enable = true;
 }

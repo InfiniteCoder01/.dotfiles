@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ ./hardware-configuration.nix ];
 
@@ -6,16 +6,21 @@
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
   nix.gc.options = "--delete-older-than +5"; 
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # print build logs
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
+  };
 
   # Bootloader.
-  # boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub = {
-    enable = true;
-    devices = [ "nodev" ];
-    efiSupport = true;
-    useOSProber = true;
-  };
 
   # Networking
   networking.hostName = "InfiniteCoders-System";
@@ -25,28 +30,12 @@
   hardware.bluetooth.enable = true;
 
   # GPU
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
     extraPackages = [ pkgs.mesa.drivers ];
   };
 
-  # nixpkgs.config.allowUnfree = true;
-  # services.xserver.videoDrivers = [ "nvidia" ];
   boot.blacklistedKernelModules = ["nouveau"];
-  # hardware.nvidia = {
-  #   # modesetting.enable = true;
-  #   nvidiaSettings = true;
-  #   prime = {
-  #     offload = {
-  #       enable = true;
-  #       enableOffloadCmd = true;
-  #     };
-  #     nvidiaBusId = "PCI:1:0:0";
-  #     amdgpuBusId = "PCI:4:0:0";
-  #   };
-  # };
 
   environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -64,6 +53,20 @@
   services.displayManager.sddm.wayland.enable = true;
   # services.displayManager.defaultSession = "plasmax11";
   services.desktopManager.plasma6.enable = true;
+
+  # Emacs WM
+  # services.xserver.windowManager.session = lib.singleton {
+  #   name = "exwm";
+  #   start = ''
+  #     xhost +SI:localuser:$USER
+  #     exec emacs -l ${pkgs.writeText "emacs-exwm-load" ''
+  #       (require 'exwm)
+  #       (require 'exwm-config)
+  #       (exwm-config-example)
+  #   ''}
+  #   '';
+  # };
+  # services.xserver.displayManager.lightdm.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -85,19 +88,6 @@
     jack.enable = true;
   };
   
-  # Some fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-    (nerdfonts.override { fonts = [ "CommitMono" ]; })
-  ];
-
-  # ZSH, obviously
-  programs.zsh.enable = true;
-  environment.shells = with pkgs; [ zsh nushell ];
-  users.defaultUserShell = pkgs.nushell;
-
-  virtualisation.docker.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.infinitecoder = {
     isNormalUser = true;
@@ -118,27 +108,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [];
-  environment.systemPackages = with pkgs; [
-    vim
-    git
-    wget
-  ];
-  programs.firefox = {
-    enable = true;
-    package = pkgs.firefox-wayland;
-  };
-
-  services.kanata = {
-    enable = true;
-    keyboards = {
-      internalKeyboard = {
-        devices = [
-          "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
-        ];
-        configFile = ./kanata.kbd;
-      };
-    };
-  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
