@@ -37,4 +37,5 @@
     ],
     "editor.formatOnSave": true,
     "editor.fontSize": 21,
+    "workbench.iconTheme": "Monokai Pro Icons",
 }

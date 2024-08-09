@@ -77,32 +77,32 @@
     inkscape
     blender
     vlc
-    (appimageTools.wrapType2 rec {
-      pname = "ondsel-es";
-      version = "weekly";
-
-      src = requireFile {
-        name = "Ondsel_ES_2024.2.2.37240-Linux-aarch64.AppImage";
-        url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-aarch64.AppImage";
-        sha256 = "424a106e17815fc77a0a229b302da892aea799caf9890450c54f6f61536bcfad";
-      };
-
-      extraInstallCommands = let
-        appimageContents = appimageTools.extractType2 { inherit pname version src; };
-      in ''
-        install -Dm444 ${appimageContents}/com.ondsel.ES.desktop -t $out/share/applications/
-        install -Dm444 ${appimageContents}/Ondsel.svg -t $out/share/pixmaps/
-      '';
-
-      extraPkgs = pkgs: [ pkgs.python313 ];
-
-      meta = with lib; {
-        homepage = "https://www.ondsel.com";
-        license = lib.licenses.lgpl2Plus;
-        maintainers = with lib.maintainers; [ viric gebner AndersonTorres ];
-        platforms = lib.platforms.linux;
-      };
-    })
+    # ondsel
+    # (appimageTools.wrapType2 rec {
+    #   pname = "ondsel-es";
+    #   version = "weekly";
+    #
+    #   src = fetchurl {
+    #     url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.0/Ondsel_ES_2024.2.0.37191-Linux-x86_64.AppImage";
+    #     sha256 = "";
+    #   };
+    #
+    #   extraInstallCommands = let
+    #     appimageContents = appimageTools.extractType2 { inherit pname version src; };
+    #   in ''
+    #     install -Dm444 ${appimageContents}/com.ondsel.ES.desktop -t $out/share/applications/
+    #     install -Dm444 ${appimageContents}/Ondsel.svg -t $out/share/pixmaps/
+    #   '';
+    #
+    #   extraPkgs = pkgs: [ pkgs.python313 ];
+    #
+    #   meta = with lib; {
+    #     homepage = "https://www.ondsel.com";
+    #     license = lib.licenses.lgpl2Plus;
+    #     maintainers = with lib.maintainers; [ viric gebner AndersonTorres ];
+    #     platforms = lib.platforms.linux;
+    #   };
+    # })
 
     # kicad-testing
     prusa-slicer
