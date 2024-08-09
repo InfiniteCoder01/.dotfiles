@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Gruvbox Dark",
+  "theme": "One Dark",
   "vim_mode": true,
   "hard_tabs": true,
   "soft_wrap": "none",
