@@ -29,6 +29,12 @@
     ~/.config/Code/User/keybindings.json: VSCode/keybindings.json
     ~/.config/Code/User/settings.json: VSCode/settings.json
 
+    # Aseprite
+    ~/.config/aseprite/aseprite.ini: aseprite/aseprite.ini
+    ~/.config/aseprite/palettes: aseprite/palettes
+    ~/.config/aseprite/scripts: aseprite/scripts
+    ~/.config/aseprite/user.aseprite-brushes: aseprite/user.aseprite-brushes
+
     # PrusaSlicer
     ~/.config/PrusaSlicer/filament: PrusaSlicer/filament
     ~/.config/PrusaSlicer/physical_printer: PrusaSlicer/physical_printer
