@@ -127,6 +127,9 @@
     winetricks
     wineWowPackages.stable
     wl-clipboard
+
+    avrdude
+    android-tools
   ];
 
   # services.emacs = {

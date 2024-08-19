@@ -92,7 +92,7 @@
   users.users.infinitecoder = {
     isNormalUser = true;
     description = "InfiniteCoder";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "docker" "uinput" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" "docker" "uinput" ];
     packages = with pkgs; [
       kate
       yakuake

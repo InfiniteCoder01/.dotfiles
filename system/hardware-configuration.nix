@@ -30,7 +30,7 @@
 
   fileSystems."/mnt/Dev" =
     { device = "/dev/disk/by-label/Dev";
-      fsType = "btrfs";
+      fsType = "ext4";
     };
 
   fileSystems."/mnt/Twitch" =
