@@ -1,0 +1,11 @@
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = " " }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = " " } 
+
+[[language]]
+name = "bash"
+indent = { tab-width = 4, unit = "t" } 
