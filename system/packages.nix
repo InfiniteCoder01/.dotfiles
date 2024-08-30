@@ -15,6 +15,7 @@
     zoxide
     file
     unzip
+    unrar
     ffmpeg
 
     arp-scan
@@ -43,6 +44,7 @@
     cutecom
     tigervnc
     rpi-imager
+    gparted
     steam
     chromium
     floorp
@@ -59,19 +61,11 @@
     arduino-ide
     vscode
     zed-editor
-    (godot_4.overrideAttrs  rec {
-      version = "4.3";
-      commitHash = "3978628c6cc1227250fc6ed45c8d854d24c30c30";
-      src = fetchFromGitHub {
-        owner = "godotengine";
-        repo = "godot";
-        rev = commitHash;
-        hash = "sha256-NovdSjwA2h7I7HpY57ZxCXwBh9KBU0xKQkigmQAx04A=";
-      };
-    })
+    godot_4
 
 
     # Art
+    ldtk
     aseprite
     krita
     inkscape

@@ -2,10 +2,10 @@
 {
   imports = [ ./hardware-configuration.nix ];
 
-  nix.settings.auto-optimise-store = true;
   nix.gc.automatic = true;
-  nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than +5"; 
+  nix.gc.options = "--delete-older-than 3d"; 
+  nix.optimise.automatic = true;
+  # nix.settings.auto-optimise-store = true;
   system.autoUpgrade = {
     enable = true;
     flake = inputs.self.outPath;
@@ -51,22 +51,7 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
-  # services.displayManager.defaultSession = "plasmax11";
   services.desktopManager.plasma6.enable = true;
-
-  # Emacs WM
-  # services.xserver.windowManager.session = lib.singleton {
-  #   name = "exwm";
-  #   start = ''
-  #     xhost +SI:localuser:$USER
-  #     exec emacs -l ${pkgs.writeText "emacs-exwm-load" ''
-  #       (require 'exwm)
-  #       (require 'exwm-config)
-  #       (exwm-config-example)
-  #   ''}
-  #   '';
-  # };
-  # services.xserver.displayManager.lightdm.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {

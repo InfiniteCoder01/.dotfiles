@@ -7,17 +7,17 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "One Dark",
-  "vim_mode": true,
-  "hard_tabs": true,
-  "soft_wrap": "none",
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "buffer_font_family": "CommitMono Nerd Font Mono",
-  "terminal": {
-    "font_family": "CommitMono Nerd Font Mono"
-  },
-  "inlay_hints": {
-    "enabled": true,
-  }
+    "theme": "One Dark",
+    "vim_mode": true,
+    "tab_size": 4,
+    "soft_wrap": "none",
+    "ui_font_size": 16,
+    "buffer_font_size": 16,
+    "buffer_font_family": "CommitMono Nerd Font Mono",
+    "terminal": {
+        "font_family": "CommitMono Nerd Font Mono"
+    },
+    "inlay_hints": {
+        "enabled": true
+    }
 }

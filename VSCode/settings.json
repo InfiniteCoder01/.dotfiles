@@ -28,7 +28,6 @@
     "files.associations": {
         "*.gdextension": "toml"
     },
-    "workbench.colorTheme": "GapStyle VS",
     "editor.minimap.enabled": false,
     "terminal.integrated.fontFamily": "\"CommitMono Nerd Font Mono\"",
     "editor.fontFamily": "\"CommitMono Nerd Font Mono\"",
@@ -37,5 +36,6 @@
     ],
     "editor.formatOnSave": true,
     "editor.fontSize": 21,
-    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "GapStyle VS",
 }
