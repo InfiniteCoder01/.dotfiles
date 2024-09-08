@@ -7,6 +7,7 @@
     # CLI Tools
     starship
 
+    caligula
     trashy
     eza
     bat
@@ -62,6 +63,7 @@
     vscode
     zed-editor
     godot_4
+    minetest
 
 
     # Art
