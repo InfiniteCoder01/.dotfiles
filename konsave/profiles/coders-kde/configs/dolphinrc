@@ -4,14 +4,14 @@ update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detai
 [ExtractDialog]
 1920x1080 screen: Height=540
 1920x1080 screen: Width=1260
-DirHistory[$e]=$HOME/Downloads/
+DirHistory[$e]=/mnt/Dev/Android/Vendors/Xiaomi/RedmiNote4MTK/ROMs/[ROM]_Project_x_aosp_android_6.0.1_(NIKEL)-by_Developers_3.0_201711220496866448484752230079895030999/,/mnt/Dev/Android/Vendors/Xiaomi/RedmiNote4MTK/ROMs/New Folder/,$HOME/Downloads/
 
 [General]
 Version=202
 ViewPropsTimestamp=2024,5,5,23,23,13.771
 
 [IconsMode]
-PreviewSize=176
+PreviewSize=208
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false

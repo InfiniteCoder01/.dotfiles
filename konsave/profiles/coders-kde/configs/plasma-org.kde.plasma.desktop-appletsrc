@@ -230,8 +230,17 @@ PreloadWeight=100
 popupHeight=180
 popupWidth=360
 
+[Containments][255][Applets][292]
+immutability=1
+plugin=org.kde.plasma.clipboard
+
+[Containments][255][Applets][292][Configuration]
+PreloadWeight=60
+popupHeight=432
+popupWidth=432
+
 [Containments][255][General]
-AppletOrder=260;282;281;261;286;287;283;264;263
+AppletOrder=260;282;281;261;286;287;292;283;264;263
 
 [Containments][265]
 activityId=
@@ -302,7 +311,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][265][Applets][279][Configuration]
-PreloadWeight=62
+PreloadWeight=92
 
 [Containments][265][Applets][280][Configuration]
 PreloadWeight=42
@@ -343,6 +352,15 @@ ToolBoxButtonY=43
 
 [Containments][291][Wallpaper][org.kde.image][General]
 Image=/mnt/Dev/Art/Wallpapers/wallpaper_minecraft_15th-anniversary/wallpaper_minecraft_15th-anniversary_2560x1440.png
+
+[Containments][293]
+activityId=290fbf93-579e-4986-88ff-ea502fc4f4f5
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
 
 [Containments][8][Applets][21][Configuration]
 PreloadWeight=47

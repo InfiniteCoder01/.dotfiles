@@ -39,8 +39,8 @@ Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
 
 [KFileDialog Settings]
-Recent Files[$e]=file:///mnt/D/ISO/Mobile/Vendors/Xiaomi/RedmiNote4MTK/MT6797_Android_scatter-altered.txt,file:///mnt/D/ISO/Mobile/Vendors/Xiaomi/RedmiNote4MTK/MT6797_Android_scatter.txt
-Recent URLs[$e]=file:///mnt/D/ISO/Mobile/Vendors/Xiaomi/RedmiNote4MTK/
+Recent Files[$e]=file:///mnt/D/ISO/Mobile/Vendors/Xiaomi/RedmiNote4MTK/MT6797_Android_scatter.txt,file:///mnt/D/Channel/Github/Pastas/android.txt,file:///mnt/Dev/Games/garbage_collector3/apps/placeholder.py,file:///mnt/Dev/Games/garbage_collector3/apps/terminal.py
+Recent URLs[$e]=file:///mnt/Dev/Games/garbage_collector3/,file:///mnt/Dev/Games/garbage_collector3/src/watch/,file:///mnt/D/ISO/Mobile/Vendors/Xiaomi/RedmiNote4MTK/,file:///mnt/Dev/Games/garbage_collector3/src/watch/interpreter/,file:///mnt/Dev/Games/garbage_collector3/apps/,file:///mnt/D/Channel/Github/Pastas/
 detailViewIconSize=16
 
 [KTextEditor Document]
@@ -161,8 +161,8 @@ Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
 [KTextEditor::Search]
-Replace History=(target == 'X' ? "X wins!" : "O wins!"), ,⠀,https,#owlkaline__,lcolonq,owlkaline__,/project,.mp4,offsetLine,,\\\\t,\\\\n,\\, ,\\\\s,sleep(milliseconds(500)); // MessageBox,": 15\\,,": 12\\,,": 10\\,,": 9\\,,": 6\\,,": 3\\,,tex(model\\\\["textures"\\\\]\\, \\\\1),tex(model\\\\["textures"\\\\]\\, ["[a-z]+"],]\\, model\\,,"\\,,parent,model
-Search History=color,cust,tee1,logo,boot,8000,("X wins!"),6,4.3,format,format = , = 6,is,deep inside,⠀,  ,expect,icon,versions,http,#lcolonq,owlkaline__ ,metameeee,closeRegFile,getRepositories,getRegFile,useRegFile,regFilesCv,glew,onnx,/mnt/Dev/Tools/voxel-engine-cpp-launcher/versions/Git,/mnt/,GLEW,nix,obstacle,)l,\\, VideoWriter::fourcc('M'\\, 'J'\\, 'P'\\, 'G')\\, 30\\, Size(640\\, 480),.avi,offset_line,static ,Z82.8,Z8[0-9].5[^s],Z8[0-9].5[^5],Z8[0-9].5[^5,Z8[0-9].5\\\\s,Z8[0-9].5 ,Z8[0-9].5,Z8[0-9].,Z8[0-9],Z8[0-5].5 ,Z83.5,Z82.5,    ,\\\\n, ,StartBtn.png,forma,menu_pause,timeutil.cpp,network.h,cgroup_bpf_get,\\\\s,sk_clone_lock,cgroup_sk_alloc,sk_alloc,// MessageBox,MessageBox,dirt,ladder,birch,;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves,"green_lamp","grass_block","grass","dirt",water,glass,DESTDIR,target_link_libraries,LUAJIT_VERSION,LUA
+Replace History=at the start of the,[will only be ran before next frame],(target == 'X' ? "X wins!" : "O wins!"), ,⠀,https,#owlkaline__,lcolonq,owlkaline__,/project,.mp4,offsetLine,,\\\\t,\\\\n,\\, ,\\\\s,sleep(milliseconds(500)); // MessageBox,": 15\\,,": 12\\,,": 10\\,,": 9\\,,": 6\\,,": 3\\,,tex(model\\\\["textures"\\\\]\\, \\\\1),tex(model\\\\["textures"\\\\]\\, ["[a-z]+"],]\\, model\\,,"\\,,parent,model
+Search History=2016.1,Note 44,Note 4,Redmi Note ,before,(will only be ran before next frame),pixels,draw_line,EntityObject,.debug,color,cust,tee1,logo,boot,8000,("X wins!"),6,4.3,format,format = , = 6,is,deep inside,⠀,  ,expect,icon,versions,http,#lcolonq,owlkaline__ ,metameeee,closeRegFile,getRepositories,getRegFile,useRegFile,regFilesCv,glew,onnx,/mnt/Dev/Tools/voxel-engine-cpp-launcher/versions/Git,/mnt/,GLEW,nix,obstacle,)l,\\, VideoWriter::fourcc('M'\\, 'J'\\, 'P'\\, 'G')\\, 30\\, Size(640\\, 480),.avi,offset_line,static ,Z82.8,Z8[0-9].5[^s],Z8[0-9].5[^5],Z8[0-9].5[^5,Z8[0-9].5\\\\s,Z8[0-9].5 ,Z8[0-9].5,Z8[0-9].,Z8[0-9],Z8[0-5].5 ,Z83.5,Z82.5,    ,\\\\n, ,StartBtn.png,forma,menu_pause,timeutil.cpp,network.h,cgroup_bpf_get,\\\\s,sk_clone_lock,cgroup_sk_alloc,sk_alloc,// MessageBox,MessageBox,dirt,ladder,birch,;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves
 
 [Konsole]
 AutoSyncronizeMode=0
