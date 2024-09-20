@@ -18,6 +18,7 @@
     unzip
     unrar
     ffmpeg
+    inetutils
 
     arp-scan
     qbittorrent
@@ -62,7 +63,20 @@
     arduino-ide
     vscode
     zed-editor
-    godot_4
+
+    # Quick fix for my overlay, which requires openssl
+    (symlinkJoin {
+      name = "godot_4+openssl";
+      paths = with pkgs; [
+        godot_4
+      ];
+      buildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        wrapProgram $out/bin/godot4 \
+          --set LD_LIBRARY_PATH ${lib.makeLibraryPath [ openssl ]}:\$LD_LIBRARY_PATH
+      '';
+      inherit (pkgs.emacs) meta;
+    })
     minetest
 
 
@@ -150,8 +164,8 @@
   };
   # Some fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-    (nerdfonts.override { fonts = [ "CommitMono" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" "CommitMono" ]; })
+    times-newer-roman
   ];
 
   # Shells
