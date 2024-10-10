@@ -6,6 +6,8 @@
 
     # CLI Tools
     starship
+    kitty
+    warp-beta.warp-terminal
 
     caligula
     trashy
@@ -15,11 +17,13 @@
     ripgrep
     zoxide
     file
+    ffmpeg
+
     unzip
     unrar
-    ffmpeg
-    inetutils
+    appimagekit
 
+    inetutils
     arp-scan
     qbittorrent
     wget
@@ -34,11 +38,14 @@
     btop
 
     zellij
+    tmux
+    yazi
 
     vim
     neovim
     helix
 
+    cloc
     direnv
 
     # Apps
@@ -48,13 +55,15 @@
     rpi-imager
     gparted
     steam
+    firefox
     chromium
-    floorp
+    brave
     libreoffice
     gitkraken
     (wrapOBS {
       plugins = with obs-studio-plugins; [
         obs-multi-rtmp
+        obs-backgroundremoval
       ];
     })
     audacity
@@ -68,6 +77,13 @@
     (symlinkJoin {
       name = "godot_4+openssl";
       paths = with pkgs; [
+        # (godot_4.overrideAttrs (old: rec {
+        #   src = fetchFromGitHub {
+        #     owner = "pkowal1982";
+        #     repo = "godot";
+        #     hash = "";
+        #   };
+        # }))
         godot_4
       ];
       buildInputs = [ pkgs.makeWrapper ];
@@ -133,7 +149,7 @@
     python3
     carapace
 
-    appimagekit
+    appimage-run
     winetricks
     wineWowPackages.stable
     wl-clipboard

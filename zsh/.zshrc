@@ -5,6 +5,9 @@ source $HOME/.config/plasma-workspace/env/path.sh
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export VISUAL=hx
+export EDITOR="$VISUAL"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -37,6 +40,14 @@ alias xla="eza --icons always --long --all"
 alias xt="eza --icons always --tree"
 alias xta="eza --icons always --tree --all"
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
