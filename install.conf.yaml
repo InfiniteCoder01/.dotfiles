@@ -11,6 +11,7 @@
     ~/.config/zed: zed
     ~/.config/konsave: konsave
     ~/.config/Ondsel: Ondsel
+    ~/.config/kitty: kitty
 
     # ZSH
     ~/.zshrc: zsh/.zshrc
