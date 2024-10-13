@@ -307,7 +307,7 @@ RecordScreen=none
 RecordWindow=none
 RectangularRegionScreenShot=none
 WindowUnderCursorScreenShot=none
-_launch=none
+_launch=Meta+Shift+S
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F,Meta+Ctrl+F,Map to fullscreen

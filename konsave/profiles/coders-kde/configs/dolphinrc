@@ -23,3 +23,6 @@ ToolBarsMovable=Disabled
 
 [PlacesPanel]
 IconSize=16
+
+[Search]
+What=Content

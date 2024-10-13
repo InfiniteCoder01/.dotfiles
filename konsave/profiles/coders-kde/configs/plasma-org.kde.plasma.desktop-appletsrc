@@ -209,6 +209,9 @@ PreloadWeight=100
 popupHeight=360
 popupWidth=374
 
+[Containments][255][Applets][283][Configuration][General]
+currentDetailsTab=details
+
 [Containments][255][Applets][286]
 immutability=1
 plugin=org.kde.plasma.volume
@@ -235,7 +238,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][255][Applets][292][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 popupHeight=432
 popupWidth=432
 

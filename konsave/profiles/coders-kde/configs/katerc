@@ -39,8 +39,8 @@ Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
 
 [KFileDialog Settings]
-Recent Files[$e]=file:///mnt/D/ISO/Mobile/Vendors/Xiaomi/RedmiNote4MTK/MT6797_Android_scatter.txt,file:///mnt/D/Channel/Github/Pastas/android.txt,file:///mnt/Dev/Games/garbage_collector3/apps/placeholder.py,file:///mnt/Dev/Games/garbage_collector3/apps/terminal.py
-Recent URLs[$e]=file:///mnt/Dev/Games/garbage_collector3/,file:///mnt/Dev/Games/garbage_collector3/src/watch/,file:///mnt/D/ISO/Mobile/Vendors/Xiaomi/RedmiNote4MTK/,file:///mnt/Dev/Games/garbage_collector3/src/watch/interpreter/,file:///mnt/Dev/Games/garbage_collector3/apps/,file:///mnt/D/Channel/Github/Pastas/
+Recent Files[$e]=file:///mnt/D/Channel/Github/Pastas/android.txt,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-godot/Cargo.toml,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/modules/eventsub.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/modules/token.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-structs/src/subscriptions.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/lib.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-structs/src/solid_structs.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-structs/src/lib.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-structs/src/api_types.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/modules/consts.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/modules/twitch_http.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/modules/mod.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-godot/src/lib.rs,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/modules/irc_bot.rs,file:///mnt/Dev/TipsAndTricks/MusicTheory.txt,file:///mnt/Dev/Games/garbage_collector3/apps/placeholder.py
+Recent URLs[$e]=file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-godot/,file:///mnt/Dev/Games/garbage_collector3/src/watch/,file:///mnt/Dev/Games/garbage_collector3/src/watch/interpreter/,file:///mnt/Dev/Games/garbage_collector3/apps/,file:///mnt/D/Channel/Github/Pastas/,file:///mnt/Dev/TipsAndTricks/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/modules/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/src/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-godot/src/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-structs/src/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub-structs/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/twitcheventsub/
 detailViewIconSize=16
 
 [KTextEditor Document]
@@ -162,7 +162,7 @@ Word Completion Remove Tail=true
 
 [KTextEditor::Search]
 Replace History=at the start of the,[will only be ran before next frame],(target == 'X' ? "X wins!" : "O wins!"), ,⠀,https,#owlkaline__,lcolonq,owlkaline__,/project,.mp4,offsetLine,,\\\\t,\\\\n,\\, ,\\\\s,sleep(milliseconds(500)); // MessageBox,": 15\\,,": 12\\,,": 10\\,,": 9\\,,": 6\\,,": 3\\,,tex(model\\\\["textures"\\\\]\\, \\\\1),tex(model\\\\["textures"\\\\]\\, ["[a-z]+"],]\\, model\\,,"\\,,parent,model
-Search History=2016.1,Note 44,Note 4,Redmi Note ,before,(will only be ran before next frame),pixels,draw_line,EntityObject,.debug,color,cust,tee1,logo,boot,8000,("X wins!"),6,4.3,format,format = , = 6,is,deep inside,⠀,  ,expect,icon,versions,http,#lcolonq,owlkaline__ ,metameeee,closeRegFile,getRepositories,getRegFile,useRegFile,regFilesCv,glew,onnx,/mnt/Dev/Tools/voxel-engine-cpp-launcher/versions/Git,/mnt/,GLEW,nix,obstacle,)l,\\, VideoWriter::fourcc('M'\\, 'J'\\, 'P'\\, 'G')\\, 30\\, Size(640\\, 480),.avi,offset_line,static ,Z82.8,Z8[0-9].5[^s],Z8[0-9].5[^5],Z8[0-9].5[^5,Z8[0-9].5\\\\s,Z8[0-9].5 ,Z8[0-9].5,Z8[0-9].,Z8[0-9],Z8[0-5].5 ,Z83.5,Z82.5,    ,\\\\n, ,StartBtn.png,forma,menu_pause,timeutil.cpp,network.h,cgroup_bpf_get,\\\\s,sk_clone_lock,cgroup_sk_alloc,sk_alloc,// MessageBox,MessageBox,dirt,ladder,birch,;,.json,model\\\\["textures"\\\\]\\\\[("[a-z]+")\\\\],model\\\\["textures"\\\\]\\\\[("[a-z]+")],model\\\\["textures"\\\\]\\\\["[a-z]+"],model\\\\["textures"\\\\],model["textures"],model\\\\["textures"\\\\]["east"],]\\,,model["parent"],minecraft:,\\, model,glazed,child,add_texture,blockid,"stone","sand",leaves,"leaves
+Search History=inherits,get_users,TwitchHttpRequest,regen_token_if_401,fn new,twitch_keys,struct User,User,struct user,user,new,TwitchKeys,events,construct_data,EventSubError,refresh,BIG ERROR,wget,.asc,xz.asc,DEVICE_TARBALL,build,dt,KERNEL_OBJ,deviceinfo_dtb,dtb,dtbo,TMPDOWN,${TMPDOWN},kernel_obj,TwitchEventSubApi,twitch_eventsub_st,twitch_eventsub_stu,twitch_eventsub,twitch_eventsub_structs,eventsubstructs,emit_signal,BIG ERROR!\n,Bage,so,shoutout,connect,2016.1,Note 44,Note 4,Redmi Note ,before,(will only be ran before next frame),pixels,draw_line,EntityObject,.debug,color,cust,tee1,logo,boot,8000,("X wins!"),6,4.3,format,format = , = 6,is,deep inside,⠀,  ,expect,icon,versions,http,#lcolonq,owlkaline__ ,metameeee,closeRegFile,getRepositories,getRegFile,useRegFile,regFilesCv,glew,onnx,/mnt/Dev/Tools/voxel-engine-cpp-launcher/versions/Git,/mnt/,GLEW,nix,obstacle,)l,\\, VideoWriter::fourcc('M'\\, 'J'\\, 'P'\\, 'G')\\, 30\\, Size(640\\, 480),.avi,offset_line,static ,Z82.8,Z8[0-9].5[^s],Z8[0-9].5[^5],Z8[0-9].5[^5,Z8[0-9].5\\\\s,Z8[0-9].5 ,Z8[0-9].5,Z8[0-9].
 
 [Konsole]
 AutoSyncronizeMode=0
@@ -176,6 +176,37 @@ SetEditor=false
 1920x1080 screen: Height=807
 1920x1080 screen: Width=1024
 1920x1080 screen: Window-Maximized=true
+
+[Printing][HeaderFooter]
+FooterBackground=211,211,211
+FooterBackgroundEnabled=false
+FooterEnabled=true
+FooterForeground=0,0,0
+FooterFormatCenter=
+FooterFormatLeft=
+FooterFormatRight=%U
+HeaderBackground=211,211,211
+HeaderBackgroundEnabled=false
+HeaderEnabled=true
+HeaderFooterFont=Hack,10,-1,7,50,0,0,0,0,0
+HeaderForeground=0,0,0
+HeaderFormatCenter=%f
+HeaderFormatLeft=%y
+HeaderFormatRight=%p
+
+[Printing][Layout]
+BackgroundColorEnabled=false
+BoxColor=invalid
+BoxEnabled=false
+BoxMargin=6
+BoxWidth=1
+ColorScheme=Printing
+Font=Hack,10,-1,7,50,0,0,0,0,0
+
+[Printing][Text]
+DontPrintFoldedCode=true
+Legend=false
+LineNumbers=false
 
 [UiSettings]
 ColorScheme=Breeze Dark
