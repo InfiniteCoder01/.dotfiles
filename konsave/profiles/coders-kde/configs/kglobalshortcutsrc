@@ -296,7 +296,7 @@ _launch=none
 [services][applications-org.kde.dolphin.desktop]
 _launch=none
 
-[services][org.kde.konsole.desktop]
+[services][kitty.desktop]
 _launch=Meta+T
 
 [services][org.kde.spectacle.desktop]

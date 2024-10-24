@@ -10,11 +10,9 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-ondsel, nix-index-database, ... }@inputs: {
-    nixosConfigurations."InfiniteCoders-System" = nixpkgs.lib.nixosSystem rec {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = let
+  outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-ondsel, nix-index-database, ... }@attrs: {
+    nixosConfigurations."InfiniteCoders-System" = let
+        system = "x86_64-linux";
         pkgs = import nixpkgs {
           inherit system;
           config = {
@@ -46,10 +44,13 @@
           inherit system;
           config.allowUnfree = true;
         };
-      in [
-        (import ./configuration.nix { inherit inputs pkgs; })
+      in nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = attrs;
+      modules = [
+        ./configuration.nix
         nix-index-database.nixosModules.nix-index
-        (import ./packages.nix (inputs // { inherit system pkgs pkgs-stable; }))
+        (import ./packages.nix (attrs // { inherit system pkgs pkgs-stable; }))
       ];
     };
   };

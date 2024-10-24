@@ -9,6 +9,9 @@
     kitty
     warp-beta.warp-terminal
 
+    man-pages
+    man-pages-posix
+
     caligula
     trashy
     eza
@@ -63,6 +66,7 @@
     (wrapOBS {
       plugins = with obs-studio-plugins; [
         obs-multi-rtmp
+        droidcam-obs
         obs-backgroundremoval
       ];
     })
@@ -188,6 +192,11 @@
   programs.zsh.enable = true;
   environment.shells = with pkgs; [ zsh nushell ];
   users.defaultUserShell = pkgs.zsh;
+
+  documentation = {
+    dev.enable = true;
+    # man.generateCaches = true;
+  };
 
   virtualisation.docker.enable = true;
 }

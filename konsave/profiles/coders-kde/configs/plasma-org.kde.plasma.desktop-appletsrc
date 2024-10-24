@@ -238,7 +238,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][255][Applets][292][Configuration]
-PreloadWeight=65
+PreloadWeight=100
 popupHeight=432
 popupWidth=432
 
@@ -304,7 +304,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][265][Applets][277][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][265][Applets][278][Configuration]
 PreloadWeight=42
@@ -314,7 +314,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][265][Applets][279][Configuration]
-PreloadWeight=92
+PreloadWeight=97
 
 [Containments][265][Applets][280][Configuration]
 PreloadWeight=42

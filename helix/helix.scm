@@ -14,5 +14,5 @@
 (define (open-init-scm)
   (helix.open (helix.static.get-init-scm-path)))
 
-(require (only-in "cogs/game-of-life.scm" game-of-life))
-(provide game-of-life)
+(require (only-in "cogs/game-of-life.scm" game-of-life gol-update))
+(provide game-of-life gol-update)

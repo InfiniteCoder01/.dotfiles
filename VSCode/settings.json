@@ -38,4 +38,11 @@
     "editor.fontSize": 21,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "GapStyle VS",
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
 }
