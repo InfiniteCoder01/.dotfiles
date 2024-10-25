@@ -12,16 +12,16 @@
     ~/.config/konsave: konsave
     ~/.config/Ondsel: Ondsel
     ~/.config/kitty: kitty
+    ~/.config/nushell: nushell
+    ~/.config/starship.toml: starship/starship.toml
 
     # ZSH
     ~/.zshrc: zsh/.zshrc
     ~/.oh-my-zsh/custom: zsh/.oh-my-zsh/custom
-    
-    # NuShell
-    ~/.config/nushell: nushell
 
-    # Starship
-    ~/.config/starship.toml: starship/starship.toml
+    # Tmux
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux: tmux/.tmux
 
     # Emacs
     ~/.emacs.d: emacs/.emacs.d
