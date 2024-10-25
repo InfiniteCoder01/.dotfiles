@@ -7,7 +7,6 @@
     # CLI Tools
     starship
     kitty
-    warp-beta.warp-terminal
 
     man-pages
     man-pages-posix
@@ -160,6 +159,7 @@
 
     avrdude
     android-tools
+    openrgb-with-all-plugins
   ];
 
   # services.emacs = {
@@ -170,6 +170,10 @@
   #     )
   #   );
   # };
+
+  services.udev.packages = with pkgs; [
+    openrgb-with-all-plugins
+  ];
 
   services.kanata = {
     enable = true;

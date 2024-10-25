@@ -1,9 +1,5 @@
 { self, config, pkgs, ... }:
-let
-  openrgb-rules = builtins.fetchurl {
-    url = "https://gitlab.com/CalcProgrammer1/OpenRGB/-/raw/master/60-openrgb.rules";
-  };
-in {
+{
   imports = [ ./hardware-configuration.nix ];
 
   nix.gc.automatic = true;
@@ -32,9 +28,6 @@ in {
     "v4l2loopback"
     "i2c-dev" "i2c-piix4"
   ];
-
-  # OpenRGB
-  services.udev.extraRules =  builtins.readFile openrgb-rules;
 
   # Networking
   networking.hostName = "InfiniteCoders-System";

@@ -17,22 +17,6 @@
           inherit system;
           config = {
             allowUnfree = true;
-            packageOverrides = pkgs: {
-                warp-beta = import (fetchTarball {
-                  url = "https://github.com/imadnyc/nixpkgs/archive/refs/heads/warp-terminal-initial-linux.zip";
-                  sha256 = "sha256:1blbvznzgcymlbfmr3xw7qnvnq7ncvc60wrzmznvacwjrmbnsw9l";
-                }) {
-                    inherit system;
-                    config.allowUnfree = true;
-                    overlays = [ (self: super: {
-                      warp-terminal = super.warp-terminal.overrideAttrs (super: {
-                        # postFixup = ''
-                        #   wrapProgram $out/bin/warp-terminal --set LD_LIBRARY_PATH ${(pkgs.lib.makeLibraryPath super.runtimeDependencies)}
-                        # '';
-                      });
-                    })];
-                };
-            };
           };
           overlays = [
             (final: prev: {
