@@ -167,7 +167,7 @@ plugin=org.kde.plasma.notifications
 
 [Containments][255][Applets][263][Configuration]
 PreloadWeight=100
-popupHeight=432
+popupHeight=428
 popupWidth=324
 
 [Containments][255][Applets][264]
@@ -314,7 +314,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][265][Applets][279][Configuration]
-PreloadWeight=89
+PreloadWeight=100
 
 [Containments][265][Applets][280][Configuration]
 PreloadWeight=42

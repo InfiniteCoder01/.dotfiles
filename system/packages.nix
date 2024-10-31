@@ -1,4 +1,4 @@
-{ pkgs, pkgs-stable, ... }: {
+{ pkgs, pkgs-stable, zen-browser, ... }: {
   environment.systemPackages = with pkgs; [
     # Save
     pkgs-stable.dotbot
@@ -60,6 +60,7 @@
     firefox
     chromium
     brave
+    zen-browser.packages.${system}.default
     libreoffice
     gitkraken
     (wrapOBS {
@@ -105,6 +106,7 @@
     krita
     inkscape
     blender
+    kdePackages.kdenlive frei0r
     vlc
     # ondsel
     # (appimageTools.wrapType2 rec {

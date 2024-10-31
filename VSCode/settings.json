@@ -45,4 +45,5 @@
         "workbench.action.tasks.configureTaskRunner",
         "workbench.action.tasks.runTask"
     ],
+    "git.openRepositoryInParentFolders": "never",
 }

@@ -40,6 +40,7 @@ alias xla="eza --icons always --long --all"
 alias xt="eza --icons always --tree"
 alias xta="eza --icons always --tree --all"
 
+autoload zmv
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
