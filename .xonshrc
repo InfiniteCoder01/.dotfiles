@@ -1,0 +1,24 @@
+# XONSH WEBCONFIG START
+$XONSH_COLOR_STYLE = 'dracula'
+# XONSH WEBCONFIG END
+
+$VISUAL = "hx"
+$EDITOR = "$VISUAL"
+
+# xpip load fzf-completions
+# xontrib load kitty
+# xontrib load direnv
+
+execx($(starship init xonsh))
+execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
+
+aliases['y'] = 'yazi'
+aliases['clear-desktop-cache'] = 'sudo rm -rf /usr/share/mime/mime.cache /usr/share/applications/mimeinfo.cache ~/.local/share/applications/mimeinfo.cache ~/.local/share/mime/mime.cache'
+aliases['flake-new'] = 'wget https://gist.githubusercontent.com/InfiniteCoder01/e3b8f14405114a7cff1618d807612545/raw/flake.nix -O flake.nix'
+
+aliases['x'] = 'eza --icons always'
+aliases['xa'] = 'eza --icons always --all'
+aliases['xl'] = 'eza --icons always --long'
+aliases['xla'] = 'eza --icons always --long --all'
+aliases['xt'] = 'eza --icons always --tree'
+aliases['xta'] = 'eza --icons always --tree --all'

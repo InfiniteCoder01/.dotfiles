@@ -108,32 +108,7 @@
     blender
     kdePackages.kdenlive frei0r
     vlc
-    # ondsel
-    # (appimageTools.wrapType2 rec {
-    #   pname = "ondsel-es";
-    #   version = "weekly";
-    #
-    #   src = fetchurl {
-    #     url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.0/Ondsel_ES_2024.2.0.37191-Linux-x86_64.AppImage";
-    #     sha256 = "";
-    #   };
-    #
-    #   extraInstallCommands = let
-    #     appimageContents = appimageTools.extractType2 { inherit pname version src; };
-    #   in ''
-    #     install -Dm444 ${appimageContents}/com.ondsel.ES.desktop -t $out/share/applications/
-    #     install -Dm444 ${appimageContents}/Ondsel.svg -t $out/share/pixmaps/
-    #   '';
-    #
-    #   extraPkgs = pkgs: [ pkgs.python313 ];
-    #
-    #   meta = with lib; {
-    #     homepage = "https://www.ondsel.com";
-    #     license = lib.licenses.lgpl2Plus;
-    #     maintainers = with lib.maintainers; [ viric gebner AndersonTorres ];
-    #     platforms = lib.platforms.linux;
-    #   };
-    # })
+    freecad
 
     # kicad-testing
     prusa-slicer
@@ -144,6 +119,7 @@
     telegram-desktop
 
     # Libraries, environments and build systems
+    bear
     gcc
     rustup
     go
@@ -152,11 +128,12 @@
     nil
     nix-direnv
     python3
+    rustpython
     carapace
 
     appimage-run
     winetricks
-    wineWowPackages.stable
+    wineWow64Packages.full
     wl-clipboard
 
     avrdude
@@ -196,8 +173,9 @@
 
   # Shells
   programs.zsh.enable = true;
-  environment.shells = with pkgs; [ zsh nushell ];
-  users.defaultUserShell = pkgs.zsh;
+  programs.xonsh.enable = true;
+  environment.shells = with pkgs; [ xonsh zsh ];
+  users.defaultUserShell = pkgs.xonsh;
 
   documentation = {
     dev.enable = true;

@@ -252,7 +252,7 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=432
+popupHeight=434
 popupWidth=432
 wallpaperplugin=org.kde.image
 
@@ -314,7 +314,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][265][Applets][279][Configuration]
-PreloadWeight=100
+PreloadWeight=97
 
 [Containments][265][Applets][280][Configuration]
 PreloadWeight=42
@@ -346,7 +346,11 @@ immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
+wallpaperplugin=org.kde.slideshow
+
+[Containments][291][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][291][General]
 ToolBoxButtonState=topcenter
@@ -354,7 +358,13 @@ ToolBoxButtonX=499
 ToolBoxButtonY=43
 
 [Containments][291][Wallpaper][org.kde.image][General]
-Image=/mnt/Dev/Art/Wallpapers/wallpaper_minecraft_15th-anniversary/wallpaper_minecraft_15th-anniversary_2560x1440.png
+Image=/mnt/D/Channel/Github/Wallpapers/retro2_live.gif
+SlidePaths=/home/infinitecoder/.local/share/wallpapers/,/nix/store/d8ydiwzy4gn6y384nyw2x0qp7shvsdww-breeze-6.2.2/share/wallpapers/,/run/current-system/sw/share/wallpapers/
+
+[Containments][291][Wallpaper][org.kde.slideshow][General]
+Image=file:///mnt/D/Channel/Wallpapers/various-os-1-4k.png
+SlidePaths=/mnt/D/Channel/Wallpapers/
+UncheckedSlides=/nix/store/d8ydiwzy4gn6y384nyw2x0qp7shvsdww-breeze-6.2.2/share/wallpapers/Next/
 
 [Containments][293]
 activityId=290fbf93-579e-4986-88ff-ea502fc4f4f5
@@ -364,6 +374,9 @@ lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][293][Wallpaper][org.kde.image][General]
+Image=/mnt/D/Channel/Github/Wallpapers/nixos-wallpaper.png
 
 [Containments][8][Applets][21][Configuration]
 PreloadWeight=47

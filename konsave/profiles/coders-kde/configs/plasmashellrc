@@ -2,8 +2,6 @@
 PreloadWeight=42
 
 [KFileDialog Settings]
-Recent Files[$e]=file:$HOME/.dotfiles/konsave/profiles/macos-ventura/icon.png
-Recent URLs[$e]=file:$HOME/.config/konsave/,file:$HOME/,file:$HOME/.config/konsave/profiles/macos-ventura/,file:$HOME/.dotfiles/konsave/profiles/macos-ventura/
 detailViewIconSize=16
 
 [PlasmaViews][Panel 116]
