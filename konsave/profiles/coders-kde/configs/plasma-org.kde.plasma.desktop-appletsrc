@@ -337,10 +337,10 @@ hiddenItems=firewall-applet,TelegramDesktop,Yakuake
 knownItems=org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.bluetooth
 shownItems=org.kde.plasma.battery,org.kde.plasma.bluetooth
 
-[Containments][291]
-ItemGeometries-1920x1080=
+[Containments][294]
+ItemGeometries-1536x864=
 ItemGeometriesHorizontal=
-activityId=290fbf93-579e-4986-88ff-ea502fc4f4f5
+activityId=26498c2f-5502-4d43-8bfb-908f97a61155
 formfactor=0
 immutability=1
 lastScreen=0
@@ -348,35 +348,12 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][291][ConfigDialog]
+[Containments][294][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][291][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=499
-ToolBoxButtonY=43
-
-[Containments][291][Wallpaper][org.kde.image][General]
-Image=/mnt/D/Channel/Github/Wallpapers/retro2_live.gif
-SlidePaths=/home/infinitecoder/.local/share/wallpapers/,/nix/store/d8ydiwzy4gn6y384nyw2x0qp7shvsdww-breeze-6.2.2/share/wallpapers/,/run/current-system/sw/share/wallpapers/
-
-[Containments][291][Wallpaper][org.kde.slideshow][General]
-Image=file:///mnt/D/Channel/Wallpapers/various-os-1-4k.png
+[Containments][294][Wallpaper][org.kde.slideshow][General]
 SlidePaths=/mnt/D/Channel/Wallpapers/
-UncheckedSlides=/nix/store/d8ydiwzy4gn6y384nyw2x0qp7shvsdww-breeze-6.2.2/share/wallpapers/Next/
-
-[Containments][293]
-activityId=290fbf93-579e-4986-88ff-ea502fc4f4f5
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][293][Wallpaper][org.kde.image][General]
-Image=/mnt/D/Channel/Github/Wallpapers/nixos-wallpaper.png
 
 [Containments][8][Applets][21][Configuration]
 PreloadWeight=47

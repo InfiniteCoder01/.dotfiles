@@ -1,4 +1,4 @@
-{ pkgs, pkgs-stable, zen-browser, ... }: {
+{ pkgs, pkgs-stable, ... }: {
   environment.systemPackages = with pkgs; [
     # Save
     pkgs-stable.dotbot
@@ -25,6 +25,7 @@
     unrar
     appimagekit
 
+    picocom
     inetutils
     arp-scan
     qbittorrent
@@ -39,12 +40,9 @@
     fastfetch
     btop
 
-    zellij
     tmux
     yazi
 
-    vim
-    neovim
     helix
 
     cloc
@@ -52,15 +50,12 @@
 
     # Apps
     qpwgraph
-    cutecom
     tigervnc
     rpi-imager
     gparted
     steam
     firefox
     chromium
-    brave
-    zen-browser.packages.${system}.default
     libreoffice
     gitkraken
     (wrapOBS {
@@ -99,7 +94,6 @@
     })
     minetest
 
-
     # Art
     ldtk
     aseprite
@@ -124,12 +118,11 @@
     rustup
     go
     jdk
+    lua54Packages.lua
     lua-language-server
     nil
     nix-direnv
     python3
-    rustpython
-    carapace
 
     appimage-run
     winetricks
@@ -138,7 +131,6 @@
 
     avrdude
     android-tools
-    openrgb-with-all-plugins
   ];
 
   # services.emacs = {
@@ -149,10 +141,6 @@
   #     )
   #   );
   # };
-
-  services.udev.packages = with pkgs; [
-    openrgb-with-all-plugins
-  ];
 
   services.kanata = {
     enable = true;
@@ -165,9 +153,11 @@
       };
     };
   };
+
   # Some fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "CommitMono" ]; })
+    pkgs.nerd-fonts.fira-code
+    pkgs.nerd-fonts.commit-mono
     times-newer-roman
   ];
 
@@ -179,7 +169,6 @@
 
   documentation = {
     dev.enable = true;
-    # man.generateCaches = true;
   };
 
   virtualisation.docker.enable = true;

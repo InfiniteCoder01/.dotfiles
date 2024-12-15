@@ -76,5 +76,5 @@ RollOverDesktops=true
 Scale=1
 
 [org.kde.kdecoration2]
-library=org.kde.kwin.aurorae
-theme=__aurorae__svg__Otto
+library=org.kde.breeze
+theme=Breeze
