@@ -136,13 +136,12 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=832,584
-History Items[$e]=file:$HOME/.dotfiles,file:///mnt/D/Channel/Wallpapers,file:///mnt/D/Channel/Github,file:///mnt/D/Channel/Github/Wallpapers,file:///mnt/Dev/Bots/chatry,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub//TwitchEventSub-rs/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/,file:///mnt/Dev/Tools/codegen/orestaty/,file:///mnt/Dev/Languages/common/breaking-down-complex-language-features,file:///mnt/D/Channel/infinitecoder.org,file:///mnt/Dev/Tools/codegen/orestaty,file:///mnt/Dev/Tools/codegen/,file:///mnt/Dev/Tools/orco/orco,file:///mnt/Dev,file:///mnt/Dev/Games/garbage_collector3,file:///mnt/Dev/Tools/codegen/ldtk-codegen,file:///run/media/infinitecoder/4E21-0000/YUMI/Windows-Installers,file:///mnt/Dev/Tools/build/orco/orco/orco/,file:///mnt/Dev/Languages/Rust/Libraries/ariadne,file:///mnt/Dev/Vendor/SATAN,file:///mnt/Dev/Tools/build/orco/orco,file:$HOME/.dotfiles/,file:///mnt/D/Channel/Github/Emotes/hi,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/datasets/samples,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples/stop,file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads
+DirSelectDialog Size=960,540
+History Items[$e]=file:$HOME/.minetest/mods/melterns/,file:///mnt/Dev/ThirdParty/SATAN//src//arch/x86/vendor//rust-x86/,file:///mnt/Dev/ThirdParty/SATAN//src//arch/x86/vendor/,file:///mnt/Dev/ThirdParty/SATAN/,file:///mnt/Dev/ThirdParty/shell.lua,file:///mnt/Dev/ThirdParty/,file:$HOME/.dotfiles,file:///mnt/D/Channel/Wallpapers,file:///mnt/D/Channel/Github,file:///mnt/D/Channel/Github/Wallpapers,file:///mnt/Dev/Bots/chatry,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/TwitchEventSub-rs/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub//TwitchEventSub-rs/,file:///mnt/Dev/Bots/chatry/addons/TwitchEventSub/,file:///mnt/Dev/Tools/codegen/orestaty/,file:///mnt/Dev/Languages/common/breaking-down-complex-language-features,file:///mnt/D/Channel/infinitecoder.org,file:///mnt/Dev/Tools/codegen/orestaty,file:///mnt/Dev/Tools/codegen/,file:///mnt/Dev/Tools/orco/orco,file:///mnt/Dev,file:///mnt/Dev/Games/garbage_collector3,file:///mnt/Dev/Tools/codegen/ldtk-codegen,file:///run/media/infinitecoder/4E21-0000/YUMI/Windows-Installers,file:///mnt/Dev/Tools/build/orco/orco/orco/,file:///mnt/Dev/Languages/Rust/Libraries/ariadne,file:///mnt/Dev/Vendor/SATAN,file:///mnt/Dev/Tools/build/orco/orco,file:$HOME/.dotfiles/,file:///mnt/D/Channel/Github/Emotes/hi,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/datasets/samples,file:///mnt/Dev/Competitions/pinEye/Fira/DNN/signs/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples,file:///mnt/Dev/Competitions/pinEye/Fira/samples/stop,file:$HOME/.config/Kvantum/Win11OS-light,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads
 
 [General]
 BrowserApplication=firefox.desktop
-ColorScheme=BreezeDark
-ColorSchemeHash=1855af013249ca56f062e72e20ae1e1f53db7c59
+ColorSchemeHash=babca25f3a5cf7ece26a85de212ab43d0a141257
 Name=Breeze Dark
 TerminalApplication=kitty
 TerminalService=kitty.desktop
@@ -178,6 +177,9 @@ Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=140
 View Style=DetailTree
+
+[Sounds]
+Theme=freedesktop
 
 [WM]
 activeBackground=49,54,59

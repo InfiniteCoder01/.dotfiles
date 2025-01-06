@@ -10,7 +10,7 @@ switch-to-activity-a5b298fb-9124-404d-876c-cc2c4ebcb71a=none,none,Switch to acti
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Russian (Belarus)=none,none,Switch keyboard layout to Russian (Belarus)
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
-Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
+Switch to Next Keyboard Layout=Meta+Space,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
 [kaccess]
@@ -259,6 +259,7 @@ activate widget 171=none,none,Activate System Tray Widget
 activate widget 196=Meta,none,Activate Application Dashboard Widget
 activate widget 199=none,none,Activate Application Dashboard Widget
 activate widget 222=none,none,Activate Application Launcher Widget
+activate widget 275=none,none,Activate Lock Keys Status Widget
 activate widget 44=Alt+F1,none,Activate Application Launcher Widget
 activate widget 70=none,none,Activate Application Launcher Widget
 clear-history=none,,Clear Clipboard History

@@ -3,7 +3,7 @@
   imports = [ ./hardware-configuration.nix ];
 
   nix.gc.automatic = true;
-  nix.gc.options = "--delete-older-than 3d"; 
+  nix.gc.options = "--delete-older-than 3d";
   # nix.optimise.automatic = true;
   # nix.settings.auto-optimise-store = true;
   system.autoUpgrade = {
@@ -26,7 +26,8 @@
   boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
   boot.kernelModules = [
     "v4l2loopback"
-    "i2c-dev" "i2c-piix4"
+    "i2c-dev"
+    "i2c-piix4"
   ];
 
   # Networking
@@ -55,7 +56,7 @@
     extraPackages = [ pkgs.mesa.drivers ];
   };
 
-  boot.blacklistedKernelModules = ["nouveau"];
+  boot.blacklistedKernelModules = [ "nouveau" ];
 
   environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -83,7 +84,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -92,7 +93,7 @@
     pulse.enable = true;
     jack.enable = true;
   };
-  
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.infinitecoder = {
     isNormalUser = true;
@@ -112,7 +113,7 @@
   # List packages installed in system profile. To search, run:
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = [];
+  programs.nix-ld.libraries = [ ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

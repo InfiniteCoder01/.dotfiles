@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "rtsx_usb_sdmmc" ];
@@ -14,27 +15,32 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/aecc86dd-bfda-4db0-a513-1af1f2cc862a";
+    {
+      device = "/dev/disk/by-uuid/aecc86dd-bfda-4db0-a513-1af1f2cc862a";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/98F5-714B";
+    {
+      device = "/dev/disk/by-uuid/98F5-714B";
       fsType = "vfat";
     };
 
   fileSystems."/mnt/D" =
-    { device = "/dev/disk/by-label/D";
+    {
+      device = "/dev/disk/by-label/D";
       fsType = "ntfs";
     };
 
   fileSystems."/mnt/Dev" =
-    { device = "/dev/disk/by-label/Dev";
+    {
+      device = "/dev/disk/by-label/Dev";
       fsType = "ext4";
     };
 
   fileSystems."/mnt/Twitch" =
-    { device = "/dev/disk/by-label/Twitch";
+    {
+      device = "/dev/disk/by-label/Twitch";
       fsType = "ext4";
     };
 

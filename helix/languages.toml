@@ -1,21 +1,57 @@
+[language-server.wakatime]
+command = "wakatime-ls"
+
 [language-server.steel-language-server]
 command = "steel-language-server"
+args = []
+
+[language-server.asm-lsp]
+command = "asm-lsp" 
 args = []
 
 [[language]]
 name = "scheme"
 formatter = { command = "raco", args = ["fmt", "-i"] }
 auto-format = true
-language-servers = [ "steel-language-server" ]
+language-servers = [ "steel-language-server", "wakatime" ]
 
 [[language]]
 name = "c"
 indent = { tab-width = 4, unit = "    " }
+language-servers = [ "clangd", "wakatime" ]
 
 [[language]]
 name = "cpp"
 indent = { tab-width = 4, unit = "    " } 
+language-servers = [ "clangd", "wakatime" ]
 
 [[language]]
 name = "bash"
 indent = { tab-width = 4, unit = "t" } 
+language-servers = [ "bash-language-server", "wakatime" ]
+
+[[language]]
+name = "gas"
+file-types = ["asm", "S"]
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "asm-lsp", "wakatime" ]
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "wakatime"]
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "wakatime"]
+
+[[language]]
+name = "nix"
+language-servers = ["nil", "wakatime"]
+
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server", "wakatime"]
+
+[[language]]
+name = "python"
+language-servers = ["ruff", "jedi-language-server", "pylsp", "wakatime"]
