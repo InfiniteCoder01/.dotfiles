@@ -38,20 +38,25 @@ language-servers = [ "asm-lsp", "wakatime" ]
 
 [[language]]
 name = "markdown"
+indent = { tab-width = 4, unit = "    " } 
 language-servers = ["marksman", "wakatime"]
 
 [[language]]
 name = "rust"
+indent = { tab-width = 4, unit = "    " } 
 language-servers = ["rust-analyzer", "wakatime"]
 
 [[language]]
 name = "nix"
+indent = { tab-width = 4, unit = "    " } 
 language-servers = ["nil", "wakatime"]
 
 [[language]]
 name = "lua"
+indent = { tab-width = 4, unit = "    " } 
 language-servers = ["lua-language-server", "wakatime"]
 
 [[language]]
 name = "python"
+indent = { tab-width = 4, unit = "    " } 
 language-servers = ["ruff", "jedi-language-server", "pylsp", "wakatime"]

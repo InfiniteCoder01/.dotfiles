@@ -117,6 +117,7 @@
           krita
           inkscape
           blender
+          blockbench
           pkgs-unstable.kdePackages.kdenlive
           frei0r
           vlc

@@ -33,6 +33,7 @@
   # Networking
   networking.hostName = "InfiniteCoders-System";
   networking.networkmanager.enable = true;
+  networking.firewall.enable = false;
 
   # Bluetooth
   hardware.bluetooth = {
