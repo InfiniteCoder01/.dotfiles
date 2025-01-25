@@ -5,9 +5,15 @@ line-number = "relative"
 mouse = false
 bufferline = "multiple"
 
-[keys.normal]
-esc = ["collapse_selection", "keep_primary_selection"]
-# C-x = ["game-of-life"]
-
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "error"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+C-h = ":bp"
+C-l = ":bn"
+# C-x = ["game-of-life"]

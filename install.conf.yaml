@@ -8,13 +8,12 @@
     ~/.config/plasma-workspace/env/path.sh: path.sh
     ~/.config/nvim: nvim
     ~/.config/helix: helix
+    ~/.cargo/config.toml: cargo/config.toml
     ~/.config/zed: zed
-    ~/.config/konsave: konsave
-    ~/.config/Ondsel: Ondsel
     ~/.config/kitty: kitty
     ~/.config/nushell: nushell
     ~/.config/starship.toml: starship/starship.toml
-    ~/.xonshrc: .xonshrc
+    ~/.xonshrc: xonsh/.xonshrc
 
     # ZSH
     ~/.zshrc: zsh/.zshrc
@@ -40,23 +39,8 @@
 
     # PrusaSlicer
     ~/.config/PrusaSlicer/filament: PrusaSlicer/filament
-    ~/.config/PrusaSlicer/physical_printer: PrusaSlicer/physical_printer
     ~/.config/PrusaSlicer/print: PrusaSlicer/print
     ~/.config/PrusaSlicer/printer: PrusaSlicer/printer
-    ~/.config/PrusaSlicer/PrusaSlicer.ini:
-      force: true
-      path: PrusaSlicer/PrusaSlicer.ini
     ~/.config/PrusaSlicer/sla_material: PrusaSlicer/sla_material
     ~/.config/PrusaSlicer/sla_print: PrusaSlicer/sla_print
     ~/.config/PrusaSlicer/vendor: PrusaSlicer/vendor
-
-    # OBS
-    ~/.config/obs-studio/global.ini:
-      force: true
-      path: obs-studio/global.ini
-    ~/.config/obs-studio/basic/profiles/Main/basic.ini:
-      force: true
-      path: /mnt/D/Channel/Private/OBS/basic/profiles/Main/basic.ini
-    ~/.config/obs-studio/basic/scenes/Streaming.json:
-      force: true
-      path: /mnt/D/Channel/Private/OBS/basic/scenes/Streaming.json

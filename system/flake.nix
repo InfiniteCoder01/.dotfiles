@@ -8,11 +8,14 @@
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-snapd.url = "github:nix-community/nix-snapd";
+    nix-snapd.inputs.nixpkgs.follows = "nixpkgs";
+
     wakatime-ls.url = "github:mrnossiom/wakatime-ls";
     wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, ... }@attrs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
     let
       system = "x86_64-linux";
       pkgs-config = {
@@ -82,6 +85,7 @@
           steam
           firefox
           chromium
+          pkgs-unstable.brave
           libreoffice
           gitkraken
           (pkgs-unstable.wrapOBS {
@@ -92,6 +96,7 @@
             ];
           })
           audacity
+          ollama-rocm
 
           arduino
           pkgs-unstable.arduino-ide
@@ -123,7 +128,7 @@
           vlc
           pkgs-unstable.freecad
 
-          # kicad-testing
+          pkgs-unstable.kicad
           pkgs-unstable.prusa-slicer
           lmms
 
@@ -186,9 +191,9 @@
 
         # Shells
         programs.zsh.enable = true;
-        programs.xonsh.enable = true;
-        environment.shells = with pkgs; [ xonsh zsh ];
-        users.defaultUserShell = pkgs.xonsh;
+        # programs.xonsh.enable = true;
+        environment.shells = with pkgs; [ zsh ];
+        users.defaultUserShell = "/home/infinitecoder/.dotfiles/xonsh/venv/bin/xonsh";
 
         documentation = {
           dev.enable = true;
@@ -203,6 +208,10 @@
           ./configuration.nix
           packages
           nix-index-database.nixosModules.nix-index
+          nix-snapd.nixosModules.default
+          {
+            services.snap.enable = true;
+          }
         ];
       };
     };

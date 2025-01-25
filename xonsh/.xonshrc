@@ -1,3 +1,5 @@
+$PATH.append("/home/infinitecoder/.dotfiles/xonsh/venv/bin")
+
 # XONSH WEBCONFIG START
 $XONSH_COLOR_STYLE = 'dracula'
 # XONSH WEBCONFIG END
@@ -5,9 +7,14 @@ $XONSH_COLOR_STYLE = 'dracula'
 $VISUAL = "hx"
 $EDITOR = "$VISUAL"
 
-# xpip load fzf-completions
-# xontrib load kitty
-# xontrib load direnv
+$fzf_history_binding = "c-r"
+$fzf_ssh_binding = "c-s"
+$fzf_file_binding = "c-t"
+$fzf_dir_binding = "c-g"
+
+xontrib load kitty
+xontrib load direnv
+xontrib load fzf-completions
 
 execx($(starship init xonsh))
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
