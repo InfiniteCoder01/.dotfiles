@@ -151,6 +151,7 @@
           nil
           nix-direnv
           python3
+          python312Packages.python-magic # Xonsh onepath fix
 
           appimage-run
           winetricks

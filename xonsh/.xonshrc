@@ -1,11 +1,14 @@
+import sys
+
 $PATH.append("/home/infinitecoder/.dotfiles/xonsh/venv/bin")
+sys.path.append($(nix eval --raw 'nixpkgs#python312Packages.python-magic.outPath') + '/lib/python3.12/site-packages')
 
 # XONSH WEBCONFIG START
 $XONSH_COLOR_STYLE = 'dracula'
 # XONSH WEBCONFIG END
 
-$VISUAL = "hx"
-$EDITOR = "$VISUAL"
+$EDITOR = "hx"
+$VISUAL = $EDITOR
 
 $fzf_history_binding = "c-r"
 $fzf_ssh_binding = "c-s"
@@ -15,11 +18,25 @@ $fzf_dir_binding = "c-g"
 xontrib load kitty
 xontrib load direnv
 xontrib load fzf-completions
+xontrib load readable-traceback
+xontrib load onepath
+
+$XONTRIB_ONEPATH_ACTIONS['text/'] = $EDITOR
 
 execx($(starship init xonsh))
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
 
-aliases['y'] = 'yazi'
+def _y(args):
+    tmp = $(mktemp -t "yazi-cwd.XXXXXX")
+    args.append(f"--cwd-file={tmp}")
+    $[yazi @(args)]
+    with open(tmp) as f:
+        cwd = f.read().strip()
+    if cwd and cwd != $PWD:
+        cd @(cwd)
+    rm -f -- @(tmp)
+
+aliases["y"] = _y
 aliases['clear-desktop-cache'] = 'sudo rm -rf /usr/share/mime/mime.cache /usr/share/applications/mimeinfo.cache ~/.local/share/applications/mimeinfo.cache ~/.local/share/mime/mime.cache'
 aliases['flake-new'] = 'wget https://gist.githubusercontent.com/InfiniteCoder01/e3b8f14405114a7cff1618d807612545/raw/flake.nix -O flake.nix'
 
