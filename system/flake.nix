@@ -28,6 +28,7 @@
     rec {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
       packages = {
+        nixpkgs.config.allowUnfree = true;
         environment.systemPackages = with pkgs; [
           # Save
           dotbot
@@ -72,6 +73,8 @@
           tmux
           yazi
 
+          warp-plus
+
           pkgs-unstable.helix
 
           cloc
@@ -82,9 +85,6 @@
           tigervnc
           pkgs-unstable.rpi-imager
           gparted
-          steam
-          firefox
-          chromium
           pkgs-unstable.brave
           libreoffice
           gitkraken
@@ -100,8 +100,6 @@
 
           arduino
           pkgs-unstable.arduino-ide
-          pkgs-unstable.vscode
-          pkgs-unstable.zed-editor
 
           # Quick fix for my overlay, which requires openssl
           (symlinkJoin {
@@ -170,6 +168,18 @@
         #     )
         #   );
         # };
+        environment.sessionVariables = {
+          PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";
+        };
+
+        programs.steam.enable = true;
+
+        programs.nh = {
+          enable = true;
+          clean.enable = true;
+          clean.extraArgs = "--keep-since 4d --keep 3";
+          flake = "/home/infinitecoder/.dotfiles/system";
+        };
 
         services.kanata = {
           enable = true;

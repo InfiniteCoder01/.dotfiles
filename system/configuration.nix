@@ -2,10 +2,6 @@
 {
   imports = [ ./hardware-configuration.nix ];
 
-  nix.gc.automatic = true;
-  nix.gc.options = "--delete-older-than 3d";
-  # nix.optimise.automatic = true;
-  # nix.settings.auto-optimise-store = true;
   system.autoUpgrade = {
     enable = true;
     flake = self.outPath;
