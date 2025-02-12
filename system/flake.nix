@@ -2,7 +2,7 @@
   description = "InfiniteCoder's system";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11-small";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
@@ -32,14 +32,10 @@
         environment.systemPackages = with pkgs; [
           # Save
           dotbot
-          konsave
 
           # CLI Tools
           starship
           kitty
-
-          man-pages
-          man-pages-posix
 
           caligula
           trashy
@@ -62,8 +58,6 @@
           wget
           git
           gh
-          cloudflared
-          twitch-cli
 
           graphicsmagick
 
@@ -91,14 +85,10 @@
           (pkgs-unstable.wrapOBS {
             plugins = with pkgs-unstable.obs-studio-plugins; [
               obs-multi-rtmp
-              droidcam-obs
-              obs-backgroundremoval
             ];
           })
           audacity
-          ollama-rocm
 
-          arduino
           pkgs-unstable.arduino-ide
 
           # Quick fix for my overlay, which requires openssl
@@ -115,7 +105,6 @@
           pkgs-unstable.luanti
 
           # Art
-          ldtk
           aseprite
           krita
           inkscape
@@ -126,8 +115,8 @@
           vlc
           pkgs-unstable.freecad
 
-          pkgs-unstable.kicad
           pkgs-unstable.prusa-slicer
+          pkgs.orca-slicer
           lmms
 
           # Social
@@ -137,7 +126,6 @@
           # Libraries, environments and build systems
           wakatime-ls.packages.${system}.default
           gdb
-          bear
           gcc
           rustup
           go
@@ -152,8 +140,7 @@
           python312Packages.python-magic # Xonsh onepath fix
 
           appimage-run
-          winetricks
-          wineWow64Packages.full
+          wineWowPackages.minimal
           wl-clipboard
 
           avrdude
@@ -168,6 +155,25 @@
         #     )
         #   );
         # };
+
+        services.ollama = {
+          package = pkgs-unstable.ollama-rocm;
+          enable = true;
+          acceleration = "rocm";
+        };
+
+        services.open-webui = {
+          package = pkgs.open-webui;
+          enable = true;
+          environment = {
+            ANONYMIZED_TELEMETRY = "False";
+            DO_NOT_TRACK = "True";
+            SCARF_NO_ANALYTICS = "True";
+            OLLAMA_API_BASE_URL = "http://127.0.0.1:11434/api";
+            OLLAMA_BASE_URL = "http://127.0.0.1:11434";
+          };
+        };
+
         environment.sessionVariables = {
           PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";
         };
@@ -197,7 +203,6 @@
         fonts.packages = with pkgs-unstable; [
           nerd-fonts.fira-code
           nerd-fonts.commit-mono
-          times-newer-roman
         ];
 
         # Shells
@@ -205,10 +210,6 @@
         # programs.xonsh.enable = true;
         environment.shells = with pkgs; [ zsh ];
         users.defaultUserShell = "/home/infinitecoder/.dotfiles/xonsh/venv/bin/xonsh";
-
-        documentation = {
-          dev.enable = true;
-        };
 
         virtualisation.docker.enable = true;
       };
