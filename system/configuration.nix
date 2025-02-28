@@ -1,18 +1,14 @@
-{ self, config, pkgs, ... }:
+{ config, pkgs, ... }:
 {
   imports = [ ./hardware-configuration.nix ];
 
-  system.autoUpgrade = {
-    enable = true;
-    flake = self.outPath;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L" # print build logs
-    ];
-    dates = "02:00";
-    randomizedDelaySec = "45min";
-  };
+  nix.settings.substituters = [
+    "https://nix-community.cachix.org"
+  ];
+  nix.settings.trusted-public-keys = [
+    # Compare to the key published at https://nix-community.org/cache
+    "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -53,11 +49,25 @@
     extraPackages = [ pkgs.mesa.drivers ];
   };
 
-  boot.blacklistedKernelModules = [ "nouveau" ];
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = ["nvidia"];
 
-  environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
+    prime = {
+      nvidiaBusId = "PCI:1:0:0";
+      amdgpuBusId = "PCI:4:0:0";
+    };
+  };
+
+  # environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  # environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
 
   # i18n & l10n
   time.timeZone = "Europe/Minsk";
@@ -81,7 +91,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
+  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

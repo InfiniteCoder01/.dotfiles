@@ -21,6 +21,18 @@
       pkgs-config = {
         inherit system;
         config.allowUnfree = true;
+        overlays = [
+          (final: prev: {
+            prismlauncher-unwrapped = prev.prismlauncher-unwrapped.overrideAttrs {
+              src = pkgs.fetchFromGitHub {
+                owner = "Diegiwg";
+                repo = "PrismLauncher-Cracked";
+                tag = "9.2";
+                hash = "sha256-/5xtzKed3r84lIMMDVrQE8jqvTUzHTdsWyPIySw/NGs=";
+              };
+            };
+          })
+        ]; 
       };
       pkgs = import nixpkgs pkgs-config;
       pkgs-unstable = import nixpkgs-unstable pkgs-config;
@@ -32,6 +44,7 @@
         environment.systemPackages = with pkgs; [
           # Save
           dotbot
+          nix-output-monitor
 
           # CLI Tools
           starship
@@ -61,7 +74,7 @@
 
           graphicsmagick
 
-          pkgs-unstable.fastfetch
+          fastfetch
           btop
 
           tmux
@@ -70,6 +83,9 @@
           warp-plus
 
           pkgs-unstable.helix
+          pkgs-unstable.arduino-ide
+          pkgs-unstable.vscode
+          pkgs-unstable.platformio
 
           cloc
           direnv
@@ -77,50 +93,48 @@
           # Apps
           qpwgraph
           tigervnc
-          pkgs-unstable.rpi-imager
+          rpi-imager
           gparted
-          pkgs-unstable.brave
+          brave
           libreoffice
           gitkraken
-          (pkgs-unstable.wrapOBS {
-            plugins = with pkgs-unstable.obs-studio-plugins; [
+          (wrapOBS {
+            plugins = with obs-studio-plugins; [
               obs-multi-rtmp
             ];
           })
           audacity
 
-          pkgs-unstable.arduino-ide
-
           # Quick fix for my overlay, which requires openssl
           (symlinkJoin {
             name = "godot_4+openssl";
             paths = [ pkgs-unstable.godot_4 ];
-            buildInputs = [ pkgs.makeWrapper ];
+            buildInputs = [ makeWrapper ];
             postBuild = ''
               wrapProgram $out/bin/godot4 \
                 --set LD_LIBRARY_PATH ${lib.makeLibraryPath [ openssl libgcc.lib ]}:\$LD_LIBRARY_PATH
             '';
-            # inherit (pkgs.emacs) meta;
           })
           pkgs-unstable.luanti
+          pkgs.prismlauncher
 
           # Art
           aseprite
-          krita
-          inkscape
-          blender
-          blockbench
-          pkgs-unstable.kdePackages.kdenlive
+          # krita
+          # inkscape
+          # blender
+          # blockbench
+          kdePackages.kdenlive
           frei0r
           vlc
           pkgs-unstable.freecad
 
           pkgs-unstable.prusa-slicer
-          pkgs.orca-slicer
-          lmms
+          pkgs-unstable.orca-slicer
+  #          lmms
 
           # Social
-          pkgs-unstable.discord
+          discord
           telegram-desktop
 
           # Libraries, environments and build systems
@@ -128,6 +142,7 @@
           gdb
           gcc
           rustup
+          zig
           go
           jdk
           gradle
@@ -143,8 +158,8 @@
           wineWowPackages.minimal
           wl-clipboard
 
-          avrdude
-          android-tools
+#          avrdude
+#          android-tools
         ];
 
         # services.emacs = {
@@ -157,9 +172,8 @@
         # };
 
         services.ollama = {
-          package = pkgs-unstable.ollama-rocm;
           enable = true;
-          acceleration = "rocm";
+          acceleration = "cuda";
         };
 
         services.open-webui = {
@@ -199,10 +213,15 @@
           };
         };
 
+        services.udev.packages = [ 
+          pkgs-unstable.platformio-core.udev
+        ];
+
         # Some fonts
-        fonts.packages = with pkgs-unstable; [
-          nerd-fonts.fira-code
-          nerd-fonts.commit-mono
+        fonts.packages = with pkgs; [
+          (nerdfonts.override { fonts = [ "FiraCode" "CommitMono" ]; })
+          fira-code
+          commit-mono
         ];
 
         # Shells
@@ -213,17 +232,13 @@
 
         virtualisation.docker.enable = true;
       };
-      nixosConfigurations."InfiniteCoders-System" = nixpkgs-unstable.lib.nixosSystem {
+      nixosConfigurations."InfiniteCoders-System" = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = attrs;
         modules = [
           ./configuration.nix
           packages
           nix-index-database.nixosModules.nix-index
-          nix-snapd.nixosModules.default
-          {
-            services.snap.enable = true;
-          }
         ];
       };
     };

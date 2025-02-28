@@ -39,11 +39,14 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "GapStyle VS",
     "[cpp]": {
-        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+        "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "cmake.pinnedCommands": [
         "workbench.action.tasks.configureTaskRunner",
         "workbench.action.tasks.runTask"
     ],
     "git.openRepositoryInParentFolders": "never",
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "security.workspace.trust.enabled": false,
+    // "platformio-ide.useBuiltinPIOCore": false,
 }
