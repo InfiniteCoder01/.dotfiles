@@ -65,9 +65,9 @@
     };
   };
 
-  # environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  # environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
+  environment.variables.__EGL_VENDOR_LIBRARY_FILENAMES = "/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
 
   # i18n & l10n
   time.timeZone = "Europe/Minsk";

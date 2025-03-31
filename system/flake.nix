@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -15,27 +14,14 @@
     wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
+  outputs = { self, nixpkgs, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
     let
       system = "x86_64-linux";
       pkgs-config = {
         inherit system;
         config.allowUnfree = true;
-        overlays = [
-          (final: prev: {
-            prismlauncher-unwrapped = prev.prismlauncher-unwrapped.overrideAttrs {
-              src = pkgs.fetchFromGitHub {
-                owner = "Diegiwg";
-                repo = "PrismLauncher-Cracked";
-                tag = "9.2";
-                hash = "sha256-/5xtzKed3r84lIMMDVrQE8jqvTUzHTdsWyPIySw/NGs=";
-              };
-            };
-          })
-        ]; 
       };
       pkgs = import nixpkgs pkgs-config;
-      pkgs-unstable = import nixpkgs-unstable pkgs-config;
     in
     rec {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
@@ -69,6 +55,7 @@
           arp-scan
           qbittorrent
           wget
+          lazygit
           git
           gh
 
@@ -82,10 +69,11 @@
 
           warp-plus
 
-          pkgs-unstable.helix
-          pkgs-unstable.arduino-ide
-          pkgs-unstable.vscode
-          pkgs-unstable.platformio
+          helix
+          arduino
+          arduino-ide
+          vscode
+          platformio
 
           cloc
           direnv
@@ -95,7 +83,7 @@
           tigervnc
           rpi-imager
           gparted
-          brave
+          chromium
           libreoffice
           gitkraken
           (wrapOBS {
@@ -108,30 +96,30 @@
           # Quick fix for my overlay, which requires openssl
           (symlinkJoin {
             name = "godot_4+openssl";
-            paths = [ pkgs-unstable.godot_4 ];
+            paths = [ godot_4 ];
             buildInputs = [ makeWrapper ];
             postBuild = ''
               wrapProgram $out/bin/godot4 \
                 --set LD_LIBRARY_PATH ${lib.makeLibraryPath [ openssl libgcc.lib ]}:\$LD_LIBRARY_PATH
             '';
           })
-          pkgs-unstable.luanti
-          pkgs.prismlauncher
+          minetest
+          prismlauncher
 
           # Art
           aseprite
-          # krita
-          # inkscape
-          # blender
-          # blockbench
+          krita
+          inkscape
+          blender
+          blockbench
           kdePackages.kdenlive
           frei0r
           vlc
-          pkgs-unstable.freecad
+          freecad
 
-          pkgs-unstable.prusa-slicer
-          pkgs-unstable.orca-slicer
-  #          lmms
+          prusa-slicer
+          orca-slicer
+          lmms
 
           # Social
           discord
@@ -139,6 +127,7 @@
 
           # Libraries, environments and build systems
           wakatime-ls.packages.${system}.default
+          yarn
           gdb
           gcc
           rustup
@@ -158,8 +147,8 @@
           wineWowPackages.minimal
           wl-clipboard
 
-#          avrdude
-#          android-tools
+          avrdude
+          android-tools
         ];
 
         # services.emacs = {
@@ -214,7 +203,7 @@
         };
 
         services.udev.packages = [ 
-          pkgs-unstable.platformio-core.udev
+          pkgs.platformio-core.udev
         ];
 
         # Some fonts
