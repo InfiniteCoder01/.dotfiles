@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hostname, ... }:
 {
   imports = [ ./hardware-configuration.nix ];
 
@@ -23,34 +23,16 @@
   ];
 
   # Networking
-  networking.hostName = "InfiniteCoders-System";
+  networking.hostName = hostname;
   networking.networkmanager.enable = true;
   networking.firewall.enable = false;
-
-  # Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-    settings = {
-      General = {
-        Name = "Infinite's System";
-        ControllerMode = "dual";
-        FastConnectable = "true";
-        Experimental = "true";
-      };
-      Policy = { AutoEnable = "true"; };
-      LE = { EnableAdvMonInterleaveScan = "true"; };
-    };
-  };
+  networking.networkmanager.wifi.powersave = false;
 
   # GPU
   hardware.graphics = {
     enable = true;
     extraPackages = [ pkgs.mesa.drivers ];
   };
-
-  # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
     modesetting.enable = true;
@@ -71,15 +53,16 @@
 
   # i18n & l10n
   time.timeZone = "Europe/Minsk";
+  time.hardwareClockInLocalTime = true;
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # Console
+  console = {
+    earlySetup = true;
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
+    packages = with pkgs; [ terminus_font ];
+    keyMap = "us";
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -106,11 +89,7 @@
     isNormalUser = true;
     description = "InfiniteCoder";
     extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" "docker" "uinput" ];
-    packages = with pkgs; [
-      kate
-      yakuake
-      partition-manager
-    ];
+    packages = [];
   };
 
   # Enable automatic login for the user.

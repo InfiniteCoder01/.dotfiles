@@ -17,6 +17,7 @@
   outputs = { self, nixpkgs, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
     let
       system = "x86_64-linux";
+      hostname = "InfiniteCoder";
       pkgs-config = {
         inherit system;
         config.allowUnfree = true;
@@ -28,13 +29,9 @@
       packages = {
         nixpkgs.config.allowUnfree = true;
         environment.systemPackages = with pkgs; [
-          # Save
-          dotbot
-          nix-output-monitor
-
           # CLI Tools
           starship
-          kitty
+          ghostty
 
           caligula
           trashy
@@ -69,6 +66,7 @@
 
           warp-plus
 
+          # IDE
           helix
           arduino
           arduino-ide
@@ -132,6 +130,7 @@
           gcc
           rustup
           zig
+          zls
           go
           jdk
           gradle
@@ -151,6 +150,7 @@
           android-tools
         ];
 
+        programs.sway.enable = true;
         # services.emacs = {
         #   enable = true;
         #   package = with pkgs; (
@@ -160,22 +160,22 @@
         #   );
         # };
 
-        services.ollama = {
-          enable = true;
-          acceleration = "cuda";
-        };
+        # services.ollama = {
+        #   enable = true;
+        #   acceleration = "cuda";
+        # };
 
-        services.open-webui = {
-          package = pkgs.open-webui;
-          enable = true;
-          environment = {
-            ANONYMIZED_TELEMETRY = "False";
-            DO_NOT_TRACK = "True";
-            SCARF_NO_ANALYTICS = "True";
-            OLLAMA_API_BASE_URL = "http://127.0.0.1:11434/api";
-            OLLAMA_BASE_URL = "http://127.0.0.1:11434";
-          };
-        };
+        # services.open-webui = {
+        #   package = pkgs.open-webui;
+        #   enable = true;
+        #   environment = {
+        #     ANONYMIZED_TELEMETRY = "False";
+        #     DO_NOT_TRACK = "True";
+        #     SCARF_NO_ANALYTICS = "True";
+        #     OLLAMA_API_BASE_URL = "http://127.0.0.1:11434/api";
+        #     OLLAMA_BASE_URL = "http://127.0.0.1:11434";
+        #   };
+        # };
 
         environment.sessionVariables = {
           PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";
@@ -221,9 +221,9 @@
 
         virtualisation.docker.enable = true;
       };
-      nixosConfigurations."InfiniteCoders-System" = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = attrs;
+        specialArgs = attrs // { inherit hostname; };
         modules = [
           ./configuration.nix
           packages
