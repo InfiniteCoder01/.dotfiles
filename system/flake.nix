@@ -148,9 +148,16 @@
 
           avrdude
           android-tools
+
+          xwayland-satellite
+          fuzzel
+          niri
         ];
 
+        # programs.niri.enable = true;
         programs.sway.enable = true;
+        programs.waybar.enable = true;
+
         # services.emacs = {
         #   enable = true;
         #   package = with pkgs; (

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+./link.sh ~/.config/niri niri
 ./link.sh ~/.config/sway sway
+./link.sh ~/.config/waybar waybar
 ./link.sh ~/.config/nvim nvim
 ./link.sh ~/.config/helix helix
 ./link.sh ~/.cargo/config.toml cargo/config.toml

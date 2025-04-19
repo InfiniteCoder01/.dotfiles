@@ -1,0 +1,85 @@
+{
+  "niri/window": {
+    "format": "<span color=\"#24273a\" style=\"italic\">{}</span>"
+  },
+  "tray": {
+    "spacing": 5
+  },
+  "clock": {
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+      	"months": "<span color='#bb9af7'><b>{}</b></span>",  // Purple
+      	"days": "<span color='#7aa2f7'><b>{}</b></span>",    // Blue
+      	"weeks": "<span color='#9ece6a'><b>W{}</b></span>",  // Green
+      	"weekdays": "<span color='#e0af68'><b>{}</b></span>",// Yellow
+      	"today": "<span background='#2ac3de' color='#1a1b26'><b><u>{}</u></b></span>" // Cyan background with dark text
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+    "format": "{:%a %d %b | %I:%M %p}", //12 hour format
+    "format-alt": "  {:%Y-%m-%d  %H:%M:%S}",
+    "interval": 1
+  },
+
+  "backlight": {
+    "format": "{icon} {percent: >3}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-down": "brightnessctl -c backlight set 5%-",
+    "on-scroll-up": "brightnessctl -c backlight set +5%",
+    "on-click": ""
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}   {capacity: >3}%",
+    "format-alt": "{icon}   {time}",
+    "format-charging": " {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "format": "⚠  Disabled",
+    "format-wifi": "   WiFi ({signalStrength}%)",
+    "format-ethernet": "  Wired",
+    "format-disconnected": "⚠  Disconnected",
+    "tooltip-format-wifi": "   WiFi ({signalStrength}%)",
+    "tooltip-format-ethernet": "  Wired",
+    "tooltip-format-disconnected": "⚠  Disconnected",
+    "on-click": "ghostty -e nmtui"
+    // "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "format": "{icon}   {volume: >3}%",
+    "format-bluetooth": "{icon}   {volume: >3}%",
+    "format-muted": " muted",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "on-click": "qpwgraph",
+    // "on-scroll-up": "pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob",
+    // "on-scroll-down": "pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob"
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+  },
+}

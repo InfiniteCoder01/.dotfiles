@@ -18,6 +18,8 @@ set $term ghostty
 # Your preferred application launcher
 set $menu wmenu-run
 
+for_window [class="chatry"] floating enable, move absolute position centered, resize set 1920 px 1080 px
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
@@ -203,24 +205,14 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    bindsym Print exec flameshot gui
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
