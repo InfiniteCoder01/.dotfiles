@@ -12,6 +12,9 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.device = "nodev";
+  # boot.loader.grub.useOSProber = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # V4L2 Loopback
@@ -28,12 +31,17 @@
   networking.firewall.enable = false;
   networking.networkmanager.wifi.powersave = false;
 
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+
   # GPU
   hardware.graphics = {
     enable = true;
     extraPackages = [ pkgs.mesa.drivers ];
   };
 
+  services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;

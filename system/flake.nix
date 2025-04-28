@@ -149,11 +149,20 @@
           avrdude
           android-tools
 
+          # DE
           xwayland-satellite
           fuzzel
           niri
+          nautilus
+          file-roller
+          kdePackages.gwenview
         ];
 
+        xdg.portal = {
+          enable = true;
+        };
+
+        services.gvfs.enable = true;
         # programs.niri.enable = true;
         programs.sway.enable = true;
         programs.waybar.enable = true;

@@ -31,13 +31,6 @@ environment {
 
 screenshot-path null
 
-// Chatry
-window-rule {
-    match app-id="chatry"
-    open-floating true
-    open-maximized true
-}
-
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
@@ -57,19 +50,7 @@ window-rule {
     open-floating true
 }
 
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
-}
-
-// Example: enable rounded corners for all windows.
+// Enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
     geometry-corner-radius 4
@@ -92,6 +73,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T { spawn "ghostty"; }
+    Mod+E { spawn "nautilus"; }
     Mod+D { spawn "fuzzel"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
