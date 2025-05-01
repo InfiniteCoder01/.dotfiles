@@ -41,13 +41,13 @@
     extraPackages = [ pkgs.mesa.drivers ];
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  # services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
+    open = false;
+    nvidiaSettings = true;
     modesetting.enable = true;
     powerManagement.enable = true;
     powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.production;
     prime = {
       nvidiaBusId = "PCI:1:0:0";

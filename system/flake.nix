@@ -21,6 +21,7 @@
       pkgs-config = {
         inherit system;
         config.allowUnfree = true;
+        config.pulseaudio = true;
       };
       pkgs = import nixpkgs pkgs-config;
     in
@@ -145,53 +146,32 @@
           appimage-run
           wineWowPackages.minimal
           wl-clipboard
+          xclip
 
           avrdude
           android-tools
 
-          # DE
-          xwayland-satellite
-          fuzzel
-          niri
-          nautilus
+          kupfer
+          xfce.xfce4-dict
           file-roller
-          kdePackages.gwenview
         ];
 
-        xdg.portal = {
-          enable = true;
+        programs.thunar.plugins = with pkgs.xfce; [
+          thunar-archive-plugin
+          thunar-volman
+        ];
+
+        services.xserver = {
+          enable = true;   
+          desktopManager = {
+            xterm.enable = false;
+            xfce = {
+              enable = true;
+              # noDesktop = true;
+              # enableXfwm = false;
+            };
+          };
         };
-
-        services.gvfs.enable = true;
-        # programs.niri.enable = true;
-        programs.sway.enable = true;
-        programs.waybar.enable = true;
-
-        # services.emacs = {
-        #   enable = true;
-        #   package = with pkgs; (
-        #     (emacsPackagesFor emacs).emacsWithPackages (
-        #       epkgs: [ epkgs.vterm ]
-        #     )
-        #   );
-        # };
-
-        # services.ollama = {
-        #   enable = true;
-        #   acceleration = "cuda";
-        # };
-
-        # services.open-webui = {
-        #   package = pkgs.open-webui;
-        #   enable = true;
-        #   environment = {
-        #     ANONYMIZED_TELEMETRY = "False";
-        #     DO_NOT_TRACK = "True";
-        #     SCARF_NO_ANALYTICS = "True";
-        #     OLLAMA_API_BASE_URL = "http://127.0.0.1:11434/api";
-        #     OLLAMA_BASE_URL = "http://127.0.0.1:11434";
-        #   };
-        # };
 
         environment.sessionVariables = {
           PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";

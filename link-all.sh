@@ -11,6 +11,7 @@
 ./link.sh ~/.config/nushell nushell
 ./link.sh ~/.config/starship.toml starship/starship.toml
 ./link.sh ~/.xonshrc xonsh/.xonshrc
+./link.sh ~/.config/xfce4 xfce4
 
 # ZSH
 ./link.sh ~/.zshrc zsh/.zshrc
