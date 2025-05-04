@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-desktop" version="1.0">
   <property name="backdrop" type="empty">
@@ -521,4 +521,5 @@
     <property name="window-width" type="int" value="659"/>
     <property name="window-height" type="int" value="554"/>
   </property>
+  <property name="last-settings-migration-version" type="uint" value="1"/>
 </channel>

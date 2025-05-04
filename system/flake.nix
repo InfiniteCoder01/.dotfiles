@@ -2,7 +2,8 @@
   description = "InfiniteCoder's system";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -14,7 +15,7 @@
     wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
     let
       system = "x86_64-linux";
       hostname = "InfiniteCoder";
@@ -24,6 +25,7 @@
         config.pulseaudio = true;
       };
       pkgs = import nixpkgs pkgs-config;
+      pkgs-unstable = import nixpkgs-unstable pkgs-config;
     in
     rec {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
@@ -46,7 +48,6 @@
 
           unzip
           unrar
-          appimagekit
 
           picocom
           inetutils
@@ -65,10 +66,8 @@
           tmux
           yazi
 
-          warp-plus
-
           # IDE
-          helix
+          pkgs-unstable.helix
           arduino
           arduino-ide
           vscode
@@ -93,17 +92,15 @@
           audacity
 
           # Quick fix for my overlay, which requires openssl
-          (symlinkJoin {
-            name = "godot_4+openssl";
-            paths = [ godot_4 ];
-            buildInputs = [ makeWrapper ];
-            postBuild = ''
-              wrapProgram $out/bin/godot4 \
-                --set LD_LIBRARY_PATH ${lib.makeLibraryPath [ openssl libgcc.lib ]}:\$LD_LIBRARY_PATH
-            '';
-          })
+          pkgs-unstable.godot
           minetest
           prismlauncher
+          (retroarch.withCores (cores: with cores; [
+            quicknes
+            snes9x
+            mgba
+            genesis-plus-gx
+          ]))
 
           # Art
           aseprite
@@ -204,9 +201,8 @@
 
         # Some fonts
         fonts.packages = with pkgs; [
-          (nerdfonts.override { fonts = [ "FiraCode" "CommitMono" ]; })
-          fira-code
-          commit-mono
+          nerd-fonts.fira-code
+          nerd-fonts.commit-mono
         ];
 
         # Shells
