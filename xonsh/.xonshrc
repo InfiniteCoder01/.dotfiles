@@ -1,6 +1,7 @@
 import sys
 
 $PATH.append("/home/infinitecoder/.dotfiles/xonsh/venv/bin")
+$PATH.append("/home/infinitecoder/.cargo/bin")
 
 # XONSH WEBCONFIG START
 $XONSH_COLOR_STYLE = 'dracula'

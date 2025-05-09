@@ -45,6 +45,7 @@
           zoxide
           file
           ffmpeg
+          dysk
 
           unzip
           unrar
