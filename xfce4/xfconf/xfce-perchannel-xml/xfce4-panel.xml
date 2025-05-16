@@ -51,7 +51,7 @@
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="bool" value="false"/>
       <property name="show-labels" type="bool" value="false"/>
-      <property name="sort-order" type="uint" value="0"/>
+      <property name="sort-order" type="uint" value="4"/>
       <property name="include-all-monitors" type="bool" value="true"/>
       <property name="flat-buttons" type="bool" value="false"/>
       <property name="show-handle" type="bool" value="false"/>
@@ -71,6 +71,7 @@
     </property>
     <property name="plugin-15" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="configuring wi-fi network connection “tp-link_49f2_5g”…"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="no network connection"/>
         <value type="string" value="preparing wi-fi network connection “tp-link_49f2_5g”…"/>
@@ -78,6 +79,8 @@
         <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (74%)"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="obs"/>
+        <value type="string" value="steam"/>
         <value type="string" value="vlc"/>
         <value type="string" value="TelegramDesktop"/>
         <value type="string" value="blueman"/>

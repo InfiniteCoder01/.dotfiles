@@ -512,6 +512,11 @@
           <property name="last-image" type="string" value="/nix/store/lk3lbl0v51qxnsdfj00c08b46v8nr97g-xfdesktop-4.18.1/share/backgrounds/xfce/xfce-shapes.svg"/>
         </property>
       </property>
+      <property name="monitoreDP" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/mnt/D/Channel/Wallpapers/python-dev.png"/>
+        </property>
+      </property>
     </property>
   </property>
   <property name="desktop-icons" type="empty">

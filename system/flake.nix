@@ -83,7 +83,7 @@
           rpi-imager
           gparted
           chromium
-          libreoffice
+          # libreoffice
           gitkraken
           (wrapOBS {
             plugins = with obs-studio-plugins; [
@@ -92,7 +92,6 @@
           })
           audacity
 
-          # Quick fix for my overlay, which requires openssl
           pkgs-unstable.godot
           minetest
           prismlauncher
@@ -107,7 +106,7 @@
           aseprite
           krita
           inkscape
-          blender
+          # blender
           blockbench
           kdePackages.kdenlive
           frei0r
@@ -173,6 +172,10 @@
 
         environment.sessionVariables = {
           PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";
+        };
+
+        services.ollama = {
+          enable = true;
         };
 
         programs.steam.enable = true;
