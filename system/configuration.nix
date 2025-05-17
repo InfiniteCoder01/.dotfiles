@@ -28,25 +28,34 @@
   # Networking
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
-  networking.firewall.enable = false;
   networking.networkmanager.wifi.powersave = false;
+  networking.firewall.enable = false;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
   # GPU
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [ nvidia-vaapi-driver ];
-  };
-
-  services.xserver.videoDrivers = ["amdgpu"];
-  hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    open = false;
-    modesetting.enable = false;
-    powerManagement.finegrained = true;
+  services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
+  hardware = {
+    graphics.enable = true;
+    amdgpu.initrd.enable = true;
+    nvidia = {
+      open = false;
+      modesetting.enable = false;
+      powerManagement = {
+        enable = true;
+        finegrained = true;
+      };
+      prime = {
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
+        nvidiaBusId = "PCI:1:0:0";
+        amdgpuBusId = "PCI:4:0:0";
+      };
+    };
   };
 
   # i18n & l10n
@@ -57,9 +66,9 @@
   # Console
   console = {
     earlySetup = true;
+    useXkbConfig = true;
     font = "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
     packages = with pkgs; [ terminus_font ];
-    keyMap = "us";
   };
 
   # Configure keymap in X11
