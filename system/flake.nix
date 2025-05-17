@@ -2,7 +2,7 @@
   description = "InfiniteCoder's system";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
@@ -12,7 +12,7 @@
     nix-snapd.inputs.nixpkgs.follows = "nixpkgs";
 
     wakatime-ls.url = "github:mrnossiom/wakatime-ls";
-    wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
+    wakatime-ls.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
@@ -83,7 +83,7 @@
           rpi-imager
           gparted
           chromium
-          # libreoffice
+          libreoffice
           gitkraken
           (wrapOBS {
             plugins = with obs-studio-plugins; [
@@ -95,18 +95,20 @@
           pkgs-unstable.godot
           minetest
           prismlauncher
-          (retroarch.withCores (cores: with cores; [
-            quicknes
-            snes9x
-            mgba
-            genesis-plus-gx
-          ]))
+          (retroarch.override {
+            cores = with libretro; [
+              quicknes
+              snes9x
+              mgba
+              genesis-plus-gx
+            ];
+          })
 
           # Art
           aseprite
           krita
           inkscape
-          # blender
+          blender
           blockbench
           kdePackages.kdenlive
           frei0r
@@ -136,6 +138,7 @@
           lua-language-server
           bash-language-server
           nil
+          pyright
           nix-direnv
           python3
           python312Packages.python-magic # Xonsh onepath fix
@@ -205,8 +208,7 @@
 
         # Some fonts
         fonts.packages = with pkgs; [
-          nerd-fonts.fira-code
-          nerd-fonts.commit-mono
+          (nerdfonts.override { fonts = [ "FiraCode" "CommitMono" ]; })
         ];
 
         # Shells

@@ -71,6 +71,7 @@
     </property>
     <property name="plugin-15" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (79%)"/>
         <value type="string" value="configuring wi-fi network connection “tp-link_49f2_5g”…"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="no network connection"/>

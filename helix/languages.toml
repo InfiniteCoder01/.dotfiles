@@ -5,6 +5,11 @@ command = "wakatime-ls"
 command = "steel-language-server"
 args = []
 
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+config = {}
+
 [language-server.asm-lsp]
 command = "asm-lsp" 
 args = []
@@ -59,4 +64,4 @@ language-servers = ["lua-language-server", "wakatime"]
 [[language]]
 name = "python"
 indent = { tab-width = 4, unit = "    " } 
-language-servers = ["ruff", "jedi-language-server", "pylsp", "wakatime"]
+language-servers = ["pyright", "wakatime"]
