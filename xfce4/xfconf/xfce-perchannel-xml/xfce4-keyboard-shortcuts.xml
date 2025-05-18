@@ -57,7 +57,6 @@
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Super&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;s" type="string" value="xfce4-screenshooter -r"/>
-      <property name="&lt;Super&gt;r" type="string" value="kupfer"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
