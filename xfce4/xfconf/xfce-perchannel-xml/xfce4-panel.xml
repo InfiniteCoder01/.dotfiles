@@ -71,6 +71,12 @@
     </property>
     <property name="plugin-15" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “tp-link_49f2” active: tp-link_49f2 (76%)"/>
+        <value type="string" value="wi-fi network connection “tp-link_49f2” active: tp-link_49f2 (80%)"/>
+        <value type="string" value="wi-fi network connection “tp-link_49f2” active: tp-link_49f2 (72%)"/>
+        <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (78%)"/>
+        <value type="string" value="requesting a wi-fi network address for “pinmodeasus”…"/>
+        <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (82%)"/>
         <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (80%)"/>
         <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (79%)"/>
         <value type="string" value="configuring wi-fi network connection “tp-link_49f2_5g”…"/>

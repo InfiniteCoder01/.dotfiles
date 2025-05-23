@@ -41,11 +41,13 @@
           eza
           bat
           fzf
+          fd
           ripgrep
           zoxide
           file
           ffmpeg
           dysk
+          dust
 
           unzip
           unrar
@@ -65,6 +67,7 @@
           btop
 
           tmux
+          zellij
           yazi
 
           # IDE
@@ -143,6 +146,7 @@
           python3
           python312Packages.python-magic # Xonsh onepath fix
 
+          steam-run
           appimage-run
           wineWowPackages.minimal
           wl-clipboard
