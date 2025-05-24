@@ -2,7 +2,7 @@
   description = "InfiniteCoder's system";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
@@ -96,16 +96,14 @@
           audacity
 
           pkgs-unstable.godot
-          minetest
+          luanti
           prismlauncher
-          (retroarch.override {
-            cores = with libretro; [
-              quicknes
-              snes9x
-              mgba
-              genesis-plus-gx
-            ];
-          })
+          (retroarch.withCores (cores: with cores; [
+            quicknes
+            snes9x
+            mgba
+            genesis-plus-gx
+          ]))
 
           # Art
           aseprite
@@ -211,8 +209,9 @@
         ];
 
         # Some fonts
-        fonts.packages = with pkgs; [
-          (nerdfonts.override { fonts = [ "FiraCode" "CommitMono" ]; })
+        fonts.packages = with pkgs.nerd-fonts; [
+          fira-code
+          commit-mono
         ];
 
         # Shells

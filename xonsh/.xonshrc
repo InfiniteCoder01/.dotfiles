@@ -15,6 +15,7 @@ $fzf_ssh_binding = "c-s"
 $fzf_file_binding = "c-t"
 $fzf_dir_binding = "c-g"
 
+xontrib load vox
 xontrib load kitty
 xontrib load direnv
 xontrib load fzf-completions
