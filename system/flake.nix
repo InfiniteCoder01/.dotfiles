@@ -25,7 +25,9 @@
         config.pulseaudio = true;
       };
       pkgs = import nixpkgs pkgs-config;
-      pkgs-unstable = import nixpkgs-unstable pkgs-config;
+      pkgs-unstable = import nixpkgs-unstable pkgs-config // {
+        config.cudaSupport = true;
+      };
     in
     rec {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
@@ -49,6 +51,7 @@
           dysk
           dust
 
+          zip
           unzip
           unrar
 
@@ -181,6 +184,11 @@
 
         services.ollama = {
           enable = true;
+          acceleration = "cuda";
+          environmentVariables = {
+            OLLAMA_MODELS="/mnt/D/ollama";
+          };
+          package = pkgs-unstable.ollama;
         };
 
         programs.steam.enable = true;
