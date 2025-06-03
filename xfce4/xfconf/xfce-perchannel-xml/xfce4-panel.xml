@@ -60,6 +60,7 @@
       <property name="digital-layout" type="uint" value="3"/>
       <property name="digital-time-font" type="string" value="TeX Gyre Adventor 14"/>
       <property name="digital-time-format" type="string" value="%I:%M %p"/>
+      <property name="timezone" type="string" value="Europe/Minsk"/>
     </property>
     <property name="plugin-7" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
