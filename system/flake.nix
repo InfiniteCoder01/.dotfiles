@@ -25,7 +25,8 @@
         config.pulseaudio = true;
       };
       pkgs = import nixpkgs pkgs-config;
-      pkgs-unstable = import nixpkgs-unstable pkgs-config // {
+      pkgs-unstable = import nixpkgs-unstable pkgs-config;
+      pkgs-cuda = import nixpkgs pkgs-config // {
         config.cudaSupport = true;
       };
     in
@@ -188,7 +189,7 @@
           environmentVariables = {
             OLLAMA_MODELS="/mnt/D/ollama";
           };
-          package = pkgs-unstable.ollama;
+          package = pkgs-cuda.ollama-cuda;
         };
 
         programs.steam.enable = true;
