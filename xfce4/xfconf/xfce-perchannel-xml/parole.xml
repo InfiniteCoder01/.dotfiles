@@ -5,10 +5,12 @@
     <property name="font" type="string" value="Sans Bold 20"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/mnt/D/Channel/Videos/Tools/pixamo"/>
+    <property name="last-used-media" type="string" value="/home/infinitecoder/Downloads/Telegram Desktop"/>
   </property>
   <property name="window" type="empty">
-    <property name="maximized" type="bool" value="false"/>
+    <property name="maximized" type="bool" value="true"/>
+    <property name="width" type="int" value="760"/>
+    <property name="height" type="int" value="420"/>
   </property>
   <property name="audio" type="empty">
     <property name="volume" type="int" value="50"/>

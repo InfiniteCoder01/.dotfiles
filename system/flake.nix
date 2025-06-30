@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -12,10 +11,10 @@
     nix-snapd.inputs.nixpkgs.follows = "nixpkgs";
 
     wakatime-ls.url = "github:mrnossiom/wakatime-ls";
-    wakatime-ls.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
+  outputs = { self, nixpkgs, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
     let
       system = "x86_64-linux";
       hostname = "InfiniteCoder";
@@ -25,7 +24,6 @@
         config.pulseaudio = true;
       };
       pkgs = import nixpkgs pkgs-config;
-      pkgs-unstable = import nixpkgs-unstable pkgs-config;
       pkgs-cuda = import nixpkgs pkgs-config // {
         config.cudaSupport = true;
       };
@@ -75,7 +73,7 @@
           yazi
 
           # IDE
-          pkgs-unstable.helix
+          helix
           arduino
           arduino-ide
           vscode
@@ -92,14 +90,14 @@
           chromium
           libreoffice
           gitkraken
-          (wrapOBS {
+          (pkgs-cuda.wrapOBS {
             plugins = with obs-studio-plugins; [
               obs-multi-rtmp
             ];
           })
           audacity
 
-          pkgs-unstable.godot
+          godot
           luanti
           prismlauncher
           (retroarch.withCores (cores: with cores; [
