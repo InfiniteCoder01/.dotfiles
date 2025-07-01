@@ -72,6 +72,7 @@
     </property>
     <property name="plugin-15" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="a pipewire graph qt gui interface"/>
         <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (65%)"/>
         <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (76%)"/>
         <value type="string" value="requesting a wi-fi network address for “tp-link_49f2_5g”…"/>
@@ -94,6 +95,7 @@
         <value type="string" value="wi-fi network connection “tp-link_49f2_5g” active: tp-link_49f2_5g (74%)"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="qpwgraph"/>
         <value type="string" value="obs"/>
         <value type="string" value="steam"/>
         <value type="string" value="vlc"/>
