@@ -49,6 +49,7 @@
           ffmpeg
           dysk
           dust
+          httpie
 
           zip
           unzip
@@ -93,6 +94,8 @@
           (pkgs-cuda.wrapOBS {
             plugins = with obs-studio-plugins; [
               obs-multi-rtmp
+              advanced-scene-switcher
+              obs-move-transition
             ];
           })
           audacity
@@ -135,7 +138,7 @@
           zig
           zls
           go
-          jdk
+          jdk24
           gradle
           lua54Packages.lua
           lua-language-server
@@ -145,6 +148,7 @@
           nix-direnv
           python3
           python312Packages.python-magic # Xonsh onepath fix
+          nodejs_24
 
           steam-run
           appimage-run
@@ -155,27 +159,11 @@
           avrdude
           android-tools
 
-          kupfer
-          xfce.xfce4-dict
-          file-roller
+          kdePackages.gwenview
         ];
 
-        programs.thunar.plugins = with pkgs.xfce; [
-          thunar-archive-plugin
-          thunar-volman
-        ];
-
-        services.xserver = {
-          enable = true;   
-          desktopManager = {
-            xterm.enable = false;
-            xfce = {
-              enable = true;
-              # noDesktop = true;
-              # enableXfwm = false;
-            };
-          };
-        };
+        services.displayManager.cosmic-greeter.enable = true;
+        services.desktopManager.cosmic.enable = true;
 
         environment.sessionVariables = {
           PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";
@@ -213,6 +201,7 @@
 
         services.udev.packages = [ 
           pkgs.platformio-core.udev
+          pkgs.android-udev-rules
         ];
 
         # Some fonts
