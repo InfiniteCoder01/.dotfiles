@@ -39,7 +39,6 @@ def _y(args):
     rm -f -- @(tmp)
 
 aliases["y"] = _y
-aliases['clear-desktop-cache'] = 'sudo rm -rf /usr/share/mime/mime.cache /usr/share/applications/mimeinfo.cache ~/.local/share/applications/mimeinfo.cache ~/.local/share/mime/mime.cache'
 aliases['flake-new'] = 'wget https://gist.githubusercontent.com/InfiniteCoder01/e3b8f14405114a7cff1618d807612545/raw/flake.nix -O flake.nix'
 
 aliases['x'] = 'eza --icons always'
