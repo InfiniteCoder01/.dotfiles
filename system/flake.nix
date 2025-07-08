@@ -7,14 +7,11 @@
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
-    nix-snapd.url = "github:nix-community/nix-snapd";
-    nix-snapd.inputs.nixpkgs.follows = "nixpkgs";
-
     wakatime-ls.url = "github:mrnossiom/wakatime-ls";
     wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nix-index-database, wakatime-ls, nix-snapd, ... }@attrs:
+  outputs = { self, nixpkgs, nix-index-database, wakatime-ls, ... }@attrs:
     let
       system = "x86_64-linux";
       hostname = "InfiniteCoder";
@@ -38,7 +35,6 @@
           ghostty
 
           caligula
-          trashy
           eza
           bat
           fzf
@@ -81,7 +77,6 @@
           platformio
 
           cloc
-          direnv
 
           # Apps
           qpwgraph
@@ -99,6 +94,9 @@
             ];
           })
           audacity
+
+          vlc
+          kdePackages.gwenview
 
           godot
           luanti
@@ -121,7 +119,6 @@
           vlc
           freecad
 
-          prusa-slicer
           orca-slicer
           lmms
 
@@ -154,16 +151,17 @@
           appimage-run
           wineWowPackages.minimal
           wl-clipboard
-          xclip
 
           avrdude
           android-tools
 
-          kdePackages.gwenview
+          wl-clip-persist
+          ulauncher
+          flameshot
+          waybar
         ];
 
-        services.displayManager.cosmic-greeter.enable = true;
-        services.desktopManager.cosmic.enable = true;
+        programs.sway.enable = true;
 
         environment.sessionVariables = {
           PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";
@@ -222,9 +220,9 @@
         inherit system;
         specialArgs = attrs // { inherit hostname; };
         modules = [
-          ./configuration.nix
-          packages
           nix-index-database.nixosModules.nix-index
+          packages
+          ./configuration.nix
         ];
       };
     };

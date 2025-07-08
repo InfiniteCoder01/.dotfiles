@@ -1,10 +1,33 @@
 {
-  "niri/window": {
-    "format": "<span color=\"#24273a\" style=\"italic\">{}</span>"
+  "backlight": {
+    "format": "{icon} {percent: >3}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-down": "brightnessctl -c backlight set 5%-",
+    "on-scroll-up": "brightnessctl -c backlight set +5%",
+    "on-click": ""
   },
-  "tray": {
-    "spacing": 5
+  "pulseaudio": {
+    "format": "{icon}  {volume: >3}%",
+    "format-bluetooth": "{icon}  {volume: >3}%",
+    "format-muted": " muted",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "on-click": "qpwgraph",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
   },
+  "sway/language": {
+      "format": "⌨ {}",
+      "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+  },
+
   "clock": {
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -28,21 +51,27 @@
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down"
     },
-    "format": "{:%a %d %b | %I:%M %p}", //12 hour format
-    "format-alt": "  {:%Y-%m-%d  %H:%M:%S}",
+    "format": "{:%a %d %b, %I:%M %p}", //12 hour format
+    "format-alt": " {:%Y-%m-%d  %H:%M:%S}",
     "interval": 1
   },
 
-  "backlight": {
-    "format": "{icon} {percent: >3}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "on-scroll-down": "brightnessctl -c backlight set 5%-",
-    "on-scroll-up": "brightnessctl -c backlight set +5%",
-    "on-click": ""
+  "tray": {
+    "spacing": 3
+  },
+  "network": {
+    "format": "⚠ Disabled",
+    "format-wifi": "  WiFi ({signalStrength}%)",
+    "format-ethernet": "  Wired",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip-format-wifi": "  WiFi ({signalStrength}%)",
+    "tooltip-format-ethernet": "  Wired",
+    "tooltip-format-disconnected": "⚠ Disconnected",
+    "on-click": "ghostty -e nmtui"
   },
   "battery": {
     "states": {
-      // "good": 95,
+      "good": 95,
       "warning": 30,
       "critical": 15
     },
@@ -51,35 +80,5 @@
     "format-charging": " {capacity}%",
     "format-plugged": "  {capacity}%",
     "format-icons": ["", "", "", "", ""]
-  },
-  "network": {
-    "format": "⚠  Disabled",
-    "format-wifi": "   WiFi ({signalStrength}%)",
-    "format-ethernet": "  Wired",
-    "format-disconnected": "⚠  Disconnected",
-    "tooltip-format-wifi": "   WiFi ({signalStrength}%)",
-    "tooltip-format-ethernet": "  Wired",
-    "tooltip-format-disconnected": "⚠  Disconnected",
-    "on-click": "ghostty -e nmtui"
-    // "on-click": "nm-connection-editor"
-  },
-  "pulseaudio": {
-    "format": "{icon}   {volume: >3}%",
-    "format-bluetooth": "{icon}   {volume: >3}%",
-    "format-muted": " muted",
-    "format-icons": {
-      "headphones": "",
-      "handsfree": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", ""]
-    },
-    "on-click": "qpwgraph",
-    // "on-scroll-up": "pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob",
-    // "on-scroll-down": "pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob"
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
   },
 }

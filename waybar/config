@@ -2,20 +2,17 @@
 	"layer": "top", // Waybar at top layer
 	"position": "top", // Waybar position (top|bottom|left|right)
 	"height": 30,
-	"margin": "0 0 0 0",
+	"spacing": 4,
 	"modules-left": [
-		"niri/workspaces",
-		"niri/window",
-		"niri/mode",
+		"sway/language",
+		"backlight",
+		"pulseaudio",
 	],
 	"modules-center": ["clock"],
 	"modules-right": [
 		"tray",
-		"backlight",
-		"pulseaudio",
-		"niri/language",
-		"battery",
 		"network",
+		"battery",
 	],
 	"include": ["~/.config/waybar/modules.json"],
 }

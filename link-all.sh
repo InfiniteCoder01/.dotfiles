@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
 
-./link.sh ~/.config/niri niri
 ./link.sh ~/.config/sway sway
 ./link.sh ~/.config/waybar waybar
 ./link.sh ~/.config/nvim nvim
 ./link.sh ~/.config/helix helix
-./link.sh ~/.cargo/config.toml cargo/config.toml
 ./link.sh ~/.config/zed zed
-./link.sh ~/.config/kitty kitty
-./link.sh ~/.config/nushell nushell
 ./link.sh ~/.config/starship.toml starship/starship.toml
 ./link.sh ~/.xonshrc xonsh/.xonshrc
-./link.sh ~/.config/xfce4 xfce4
 
 # ZSH
 ./link.sh ~/.zshrc zsh/.zshrc
