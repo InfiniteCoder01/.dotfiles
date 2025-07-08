@@ -95,7 +95,7 @@
           })
           audacity
 
-          vlc
+          mpv
           kdePackages.gwenview
 
           godot

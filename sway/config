@@ -29,6 +29,7 @@ exec wl-clip-persist
 
 ### Key bindings
 bindsym $mod+T exec ghostty
+bindsym $mod+E exec ghostty -e yazi
 bindsym $mod+R exec ulauncher-toggle
 bindsym $mod+Q kill
 bindsym $mod+F floating toggle

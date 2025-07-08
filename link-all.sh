@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+./link.sh ~/.config/mimeapps.list mimeapps.list
 ./link.sh ~/.config/sway sway
 ./link.sh ~/.config/waybar waybar
 ./link.sh ~/.config/nvim nvim
