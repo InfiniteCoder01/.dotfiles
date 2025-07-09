@@ -23,6 +23,9 @@ input "type:keyboard" {
     xkb_layout us,ru
     xkb_options grp:win_space_toggle
 }
+
+input * xkb_numlock enabled
+
 ### Startup
 exec ulauncher
 exec wl-clip-persist
@@ -74,16 +77,16 @@ bindsym $mod+KP_2 workspace number 8
 bindsym $mod+KP_3 workspace number 9
 bindsym $mod+KP_0 workspace number 10
 # Move focused container to workspace
-bindsym $mod+Shift+KP_7 move container to workspace number 1
-bindsym $mod+Shift+KP_8 move container to workspace number 2
-bindsym $mod+Shift+KP_9 move container to workspace number 3
-bindsym $mod+Shift+KP_4 move container to workspace number 4
-bindsym $mod+Shift+KP_5 move container to workspace number 5
-bindsym $mod+Shift+KP_6 move container to workspace number 6
-bindsym $mod+Shift+KP_1 move container to workspace number 7
-bindsym $mod+Shift+KP_2 move container to workspace number 8
-bindsym $mod+Shift+KP_3 move container to workspace number 9
-bindsym $mod+Shift+KP_0 move container to workspace number 10
+bindsym $mod+Ctrl+KP_7 move container to workspace number 1
+bindsym $mod+Ctrl+KP_8 move container to workspace number 2
+bindsym $mod+Ctrl+KP_9 move container to workspace number 3
+bindsym $mod+Ctrl+KP_4 move container to workspace number 4
+bindsym $mod+Ctrl+KP_5 move container to workspace number 5
+bindsym $mod+Ctrl+KP_6 move container to workspace number 6
+bindsym $mod+Ctrl+KP_1 move container to workspace number 7
+bindsym $mod+Ctrl+KP_2 move container to workspace number 8
+bindsym $mod+Ctrl+KP_3 move container to workspace number 9
+bindsym $mod+Ctrl+KP_0 move container to workspace number 10
 
 ## Scratchpad
 bindsym $mod+Shift+minus move scratchpad
