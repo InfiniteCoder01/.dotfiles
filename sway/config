@@ -10,9 +10,11 @@ set $right L
 
 workspace_layout tabbed
 
-for_window [app_id="ghostty"] floating enable
-for_window [app_id="ulauncher"] border none
-for_window [class="chatry"] floating enable, move absolute position centered, resize set 1920 px 1080 px
+for_window {
+    [app_id="ghostty"] floating enable
+    [app_id="ulauncher"] border none
+    [class="chatry"] floating enable, resize set width 100ppt height 100ppt
+}
 
 ### Output configuration
 output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
@@ -36,6 +38,7 @@ bindsym $mod+E exec ghostty -e yazi
 bindsym $mod+R exec ulauncher-toggle
 bindsym $mod+Q kill
 bindsym $mod+F floating toggle
+bindsym $mod+C focus mode_toggle
 bindsym $mod+Shift+C reload
 bindsym Mod4+Shift+S exec QT_QPA_PLATFORM=xcb flameshot gui
 

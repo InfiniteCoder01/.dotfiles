@@ -91,6 +91,7 @@
               obs-multi-rtmp
               advanced-scene-switcher
               obs-move-transition
+              obs-vkcapture
             ];
           })
           audacity
