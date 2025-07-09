@@ -8,19 +8,24 @@ set $down J
 set $up K
 set $right L
 
-workspace_layout tabbed
-
-for_window {
-    [app_id="ghostty"] floating enable
-    [app_id="ulauncher"] border none
-    [class="chatry"] floating enable, sticky enable, resize set width 100ppt height 100ppt
-}
-
 ### Output configuration
 output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 exec swayidle -w \
          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
+workspace 1 output HDMI-A-1
+workspace 2 output eDP-1
+workspace 3 output eDP-1
+workspace 4 output HDMI-A-1
+workspace 5 output eDP-1
+workspace 6 output eDP-1
+workspace 7 output HDMI-A-1
+workspace 8 output eDP-1
+workspace 9 output eDP-1
+
+workspace_layout tabbed
+
+### Input configuration
 input "type:keyboard" {
     xkb_layout us,ru
     xkb_options grp:win_space_toggle
@@ -31,6 +36,12 @@ input * xkb_numlock enabled
 ### Startup
 exec ulauncher
 exec wl-clip-persist
+
+for_window {
+    [app_id="ghostty"] floating enable
+    [app_id="ulauncher"] border none
+    [class="chatry"] floating enable, sticky enable, resize set width 100ppt height 100ppt
+}
 
 ### Key bindings
 bindsym $mod+T exec ghostty
