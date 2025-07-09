@@ -13,7 +13,7 @@ workspace_layout tabbed
 for_window {
     [app_id="ghostty"] floating enable
     [app_id="ulauncher"] border none
-    [class="chatry"] floating enable, resize set width 100ppt height 100ppt
+    [class="chatry"] floating enable, sticky enable, resize set width 100ppt height 100ppt
 }
 
 ### Output configuration
