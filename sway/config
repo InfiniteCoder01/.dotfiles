@@ -25,6 +25,11 @@ workspace 9 output eDP-1
 
 workspace_layout tabbed
 
+output {
+    eDP-1 pos 1024,0
+    HDMI-A-1 pos 0,0
+}
+
 ### Input configuration
 input "type:keyboard" {
     xkb_layout us,ru
