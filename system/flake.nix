@@ -46,6 +46,7 @@
           dysk
           dust
           httpie
+          kew
 
           zip
           unzip
