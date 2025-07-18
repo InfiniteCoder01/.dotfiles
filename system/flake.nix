@@ -47,6 +47,7 @@
           dust
           httpie
           kew
+          exiftool
 
           zip
           unzip
