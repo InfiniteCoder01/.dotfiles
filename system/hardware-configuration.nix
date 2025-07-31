@@ -48,6 +48,24 @@
       fsType = "ext4";
     };
 
+  fileSystems."/mnt/sda1" = {
+    device = "/dev/sda1";
+    fsType = "auto";
+    options = [ "defaults" "user" "rw" "utf8" "noauto" "umask=000" ];
+  };
+
+  fileSystems."/mnt/sdb1" = {
+    device = "/dev/sdb1";
+    fsType = "auto";
+    options = [ "defaults" "user" "rw" "utf8" "noauto" "umask=000" ];
+  };
+
+  fileSystems."/mnt/sdc1" = {
+    device = "/dev/sdc1";
+    fsType = "auto";
+    options = [ "defaults" "user" "rw" "utf8" "noauto" "umask=000" ];
+  };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

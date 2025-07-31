@@ -34,6 +34,7 @@
           starship
           ghostty
 
+          any-nix-shell
           caligula
           eza
           bat
@@ -61,6 +62,7 @@
           lazygit
           git
           gh
+          jq
 
           graphicsmagick
 
@@ -122,7 +124,7 @@
           vlc
           freecad
 
-          orca-slicer
+          super-slicer-beta
           lmms
 
           # Social
@@ -143,6 +145,7 @@
           lua54Packages.lua
           lua-language-server
           bash-language-server
+          typescript-language-server
           nil
           pyright
           nix-direnv
@@ -152,7 +155,7 @@
 
           steam-run
           appimage-run
-          wineWowPackages.minimal
+          wineWowPackages.full
           wl-clipboard
 
           avrdude
