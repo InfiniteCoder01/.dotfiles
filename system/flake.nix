@@ -87,7 +87,7 @@
           tigervnc
           rpi-imager
           gparted
-          chromium
+          firefox
           libreoffice
           gitkraken
           (pkgs-cuda.wrapOBS {
@@ -162,6 +162,7 @@
           android-tools
 
           wl-clip-persist
+          xdg-terminal-exec
           ulauncher
           flameshot
           waybar

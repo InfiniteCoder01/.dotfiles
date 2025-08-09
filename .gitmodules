@@ -25,3 +25,6 @@
 [submodule "tmux/.tmux/plugins/tmux"]
 	path = tmux/.tmux/plugins/tmux
 	url = https://github.com/catppuccin/tmux
+[submodule "dwl"]
+	path = dwl
+	url = https://codeberg.org/dwl/dwl.git
