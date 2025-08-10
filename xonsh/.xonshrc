@@ -4,9 +4,11 @@ $PATH.append("/home/infinitecoder/.dotfiles/xonsh/venv/bin")
 $PATH.append("/home/infinitecoder/.cargo/bin")
 $XONSH_HISTORY_BACKEND = 'sqlite'
 
-# XONSH WEBCONFIG START
-$XONSH_COLOR_STYLE = 'dracula'
-# XONSH WEBCONFIG END
+from xonsh.tools import register_custom_style
+register_custom_style("fixed", {
+    "BACKGROUND_INTENSE_BLACK": "#000000",
+}, base="default")
+$XONSH_COLOR_STYLE="fixed"
 
 $EDITOR = "hx"
 $VISUAL = $EDITOR
@@ -53,3 +55,4 @@ aliases['xl'] = 'eza --icons always --long'
 aliases['xla'] = 'eza --icons always --long --all'
 aliases['xt'] = 'eza --icons always --tree'
 aliases['xta'] = 'eza --icons always --tree --all'
+aliases['shh'] = '@($args) all>/dev/null &'
