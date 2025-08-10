@@ -3,7 +3,7 @@
 ./link.sh ~/.config/mimeapps.list mimeapps.list
 ./link.sh ~/.config/sway sway
 ./link.sh ~/.config/waybar waybar
-./link.sh ~/.config/nvim nvim
+./link.sh ~/.config/kitty kitty
 ./link.sh ~/.config/helix helix
 ./link.sh ~/.config/zed zed
 ./link.sh ~/.config/starship.toml starship/starship.toml

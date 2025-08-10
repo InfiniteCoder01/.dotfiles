@@ -32,7 +32,7 @@
         environment.systemPackages = with pkgs; [
           # CLI Tools
           starship
-          ghostty
+          kitty
 
           any-nix-shell
           caligula
@@ -164,8 +164,9 @@
           wl-clip-persist
           xdg-terminal-exec
           ulauncher
-          flameshot
+          shotman
           waybar
+          swaybg
         ];
 
         programs.sway.enable = true;

@@ -10,7 +10,7 @@ $XONSH_COLOR_STYLE = 'dracula'
 
 $EDITOR = "hx"
 $VISUAL = $EDITOR
-$SHELL = "xonsh" # Fix for nix develop + zellij
+$SHELL = "xonsh" # Fix nix develop
 
 $fzf_history_binding = "c-r"
 $fzf_ssh_binding = "c-s"
@@ -21,6 +21,7 @@ xontrib load vox
 xontrib load kitty
 xontrib load fzf-completions
 xontrib load readable-traceback
+xontrib load term_integration
 
 if 'PYTHON_MAGIC_PATH' in ${...}:
     sys.path.extend($PYTHON_MAGIC_PATH)
@@ -30,6 +31,8 @@ if 'PYTHON_MAGIC_PATH' in ${...}:
 execx($(starship init xonsh))
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
 execx($(any-nix-shell xonsh --info-right))
+
+$TITLE = "{cwd_base}"
 
 def _y(args):
     tmp = $(mktemp -t "yazi-cwd.XXXXXX")

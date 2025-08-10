@@ -9,7 +9,7 @@ set $up K
 set $right L
 
 ### Output configuration
-output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/infinitecoder/stream/wallpaper.png fill
 exec swayidle -w \
          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
@@ -44,22 +44,23 @@ input "type:keyboard" {
 input * xkb_numlock enabled
 
 ### Startup
-exec ulauncher
 exec wl-clip-persist
 
 for_window {
     [app_id="ulauncher"] border none
     [class="chatry"] floating enable, sticky enable, move absolute position 0 0, resize set width 1920 height 1080
+    [app_id="term-everywhere"] sticky enable
 }
 assign [class="chatry"] output eDP-1
+assign [app_id="term-everywhere"] output eDP-1
 assign [app_id="com.obsproject.Studio"] workspace 7
 
 ### Key bindings
 ## Apps
-bindsym $mod+T exec ghostty
-bindsym $mod+E exec ghostty -e yazi
-bindsym $mod+R exec ulauncher-toggle
-bindsym Mod4+Shift+S exec QT_QPA_PLATFORM=xcb flameshot gui
+bindsym $mod+T exec kitty
+bindsym F12 exec kitten quick-access-terminal
+bindsym $mod+E exec kitty yazi
+bindsym Mod4+Shift+S exec shotman --capture region --copy
 bindsym $mod+Q kill
 bindsym $mod+Shift+C reload
 
