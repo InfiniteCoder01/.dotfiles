@@ -49,6 +49,7 @@
           httpie
           kew
           exiftool
+          xxd
 
           zip
           unzip
@@ -133,25 +134,18 @@
 
           # Libraries, environments and build systems
           wakatime-ls.packages.${system}.default
-          yarn
           gdb
-          gcc
+
+          clang-tools pkg-config
           rustup
-          zig
-          zls
-          go
-          jdk24
-          gradle
-          lua54Packages.lua
-          lua-language-server
+          zig zls
+          bun typescript-language-server
+          jdk24 gradle
+          lua54Packages.lua lua-language-server
           bash-language-server
-          typescript-language-server
           nil
-          pyright
-          nix-direnv
-          python3
+          python3 pyright
           python312Packages.python-magic # Xonsh onepath fix
-          nodejs_24
 
           steam-run
           appimage-run

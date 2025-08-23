@@ -1,10 +1,12 @@
 # BEGIN_KITTY_THEME
-# Gruvbox Material Dark Soft
+# GitHub Dark High Contrast
 include current-theme.conf
 # END_KITTY_THEME
 
 font_size 15.0
 enabled_layouts tall
+window_padding_width 6
+enable_audio_bell false
 
 map alt+n new_window_with_cwd
 map alt+h neighboring_window left
@@ -15,3 +17,7 @@ map alt+j neighboring_window down
 map alt+shift+j move_window down
 map alt+k neighboring_window up
 map alt+shift+k move_window up
+map alt+= resize_window wider
+map alt+- resize_window narrower
+map alt+shift+= resize_window taller
+map alt+shift+- resize_window shorter

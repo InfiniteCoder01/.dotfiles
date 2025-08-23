@@ -1,5 +1,7 @@
 include catppuccin-frappe
 
+seat seat0 xcursor_theme Future-cyan-cursors 32
+
 set $mod Mod4
 
 # Home row direction keys, like vim
@@ -44,7 +46,8 @@ input "type:keyboard" {
 input * xkb_numlock enabled
 
 ### Startup
-exec wl-clip-persist
+exec wl-clip-persist --clipboard both
+exec ulauncher --hide-window
 
 for_window {
     [app_id="ulauncher"] border none
@@ -58,6 +61,7 @@ assign [app_id="com.obsproject.Studio"] workspace 7
 ### Key bindings
 ## Apps
 bindsym $mod+T exec kitty
+bindsym $mod+R exec ulauncher-toggle
 bindsym F12 exec kitten quick-access-terminal -o focus_policy=on-demand
 bindsym $mod+E exec kitty yazi
 bindsym Mod4+Shift+S exec shotman --capture region --copy
@@ -66,13 +70,15 @@ bindsym $mod+Shift+C reload
 
 ## Layouts
 bindsym $mod+F floating toggle
+bindsym $mod+D focus mode_toggle
+floating_modifier $mod normal
 
 bindsym $mod+S gaps right current set 450; gaps bottom current set 100
 bindsym $mod+Ctrl+S gaps outer current set 0
 
-bindsym $mod+D focus mode_toggle
+bindsym $mod+V layout splith
+bindsym $mod+Ctrl+V layout tabbed
 
-floating_modifier $mod normal
 
 ## Moving around
 # Move your focus around
