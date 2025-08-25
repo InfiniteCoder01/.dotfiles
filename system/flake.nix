@@ -137,7 +137,7 @@
           gdb
 
           clang-tools pkg-config
-          rustup
+          rustup gcc # gcc for cc
           zig zls
           bun typescript-language-server
           jdk24 gradle
