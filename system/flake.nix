@@ -140,7 +140,7 @@
           rustup gcc # gcc for cc
           zig zls
           bun typescript-language-server
-          jdk24 gradle
+          jdk24 gradle jdt-language-server kotlin-language-server
           lua54Packages.lua lua-language-server
           bash-language-server
           nil

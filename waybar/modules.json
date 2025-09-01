@@ -67,7 +67,7 @@
     "tooltip-format-wifi": "  WiFi ({signalStrength}%)",
     "tooltip-format-ethernet": "  Wired",
     "tooltip-format-disconnected": "⚠ Disconnected",
-    "on-click": "ghostty -e nmtui"
+    "on-click": "kitty -e nmtui"
   },
   "battery": {
     "states": {

@@ -62,7 +62,7 @@ assign [app_id="com.obsproject.Studio"] workspace 7
 ## Apps
 bindsym $mod+T exec kitty
 bindsym $mod+R exec ulauncher-toggle
-bindsym F12 exec kitten quick-access-terminal -o focus_policy=on-demand
+bindsym F12 exec kitten quick-access-terminal
 bindsym $mod+E exec kitty yazi
 bindsym Mod4+Shift+S exec shotman --capture region --copy
 bindsym $mod+Q kill

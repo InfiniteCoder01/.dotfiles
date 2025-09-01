@@ -65,3 +65,18 @@ language-servers = ["lua-language-server", "wakatime"]
 name = "python"
 indent = { tab-width = 4, unit = "    " } 
 language-servers = ["pyright", "wakatime"]
+
+[[language]]
+name = "kotlin"
+indent = { tab-width = 4, unit = "    " } 
+language-servers = ["kotlin-language-server", "wakatime"]
+
+[[language]]
+name = "java"
+indent = { tab-width = 4, unit = "    " } 
+language-servers = ["jdtls", "wakatime"]
+
+[[language]]
+name = "javascript"
+indent = { tab-width = 4, unit = "    " } 
+language-servers = ["typescript-language-server", "wakatime"]
