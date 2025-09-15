@@ -14,6 +14,10 @@ config = {}
 command = "asm-lsp" 
 args = []
 
+[language-server.rust-analyzer]
+config = { rustc.source = "discover" }
+
+
 [[language]]
 name = "scheme"
 formatter = { command = "raco", args = ["fmt", "-i"] }

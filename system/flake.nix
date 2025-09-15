@@ -93,10 +93,10 @@
           gitkraken
           (pkgs-cuda.wrapOBS {
             plugins = with obs-studio-plugins; [
+              wlrobs
               obs-multi-rtmp
               advanced-scene-switcher
               obs-move-transition
-              obs-vkcapture
             ];
           })
           audacity

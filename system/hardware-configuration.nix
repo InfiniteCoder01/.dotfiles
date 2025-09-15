@@ -66,6 +66,12 @@
     options = [ "defaults" "user" "rw" "utf8" "noauto" "umask=000" ];
   };
 
+  fileSystems."/mnt/mmcblk0" = {
+    device = "/dev/mmcblk0p1";
+    fsType = "auto";
+    options = [ "defaults" "user" "rw" "utf8" "noauto" "umask=000" ];
+  };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
