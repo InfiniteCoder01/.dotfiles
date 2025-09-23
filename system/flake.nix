@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -11,7 +12,7 @@
     wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nix-index-database, wakatime-ls, ... }@attrs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, ... }@attrs:
     let
       system = "x86_64-linux";
       hostname = "InfiniteCoder";
@@ -21,6 +22,7 @@
         config.pulseaudio = true;
       };
       pkgs = import nixpkgs pkgs-config;
+      pkgs-unstable = import nixpkgs-unstable pkgs-config;
       pkgs-cuda = import nixpkgs pkgs-config // {
         config.cudaSupport = true;
       };
@@ -80,11 +82,12 @@
           arduino-ide
           vscode
           platformio
+          jetbrains.idea-community-bin
 
           cloc
 
           # Apps
-          qpwgraph
+          pkgs-unstable.pulsemeeter
           tigervnc
           rpi-imager
           gparted
@@ -140,7 +143,7 @@
           rustup gcc # gcc for cc
           zig zls
           bun typescript-language-server
-          jdk24 gradle jdt-language-server kotlin-language-server
+          jdk24 maven jdt-language-server kotlin-language-server
           lua54Packages.lua lua-language-server
           bash-language-server
           nil

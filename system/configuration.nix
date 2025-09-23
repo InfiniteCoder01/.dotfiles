@@ -62,7 +62,7 @@
     v4l2loopback
   ];
   boot.extraModprobeConfig = ''
-    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+    options v4l2loopback video_nr=9 card_label="OBS Cam" exclusive_caps=1
   '';
   security.polkit.enable = true;
 
@@ -87,6 +87,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.udisks2.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -104,7 +105,7 @@
     isNormalUser = true;
     description = "InfiniteCoder";
     extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" "docker" "uinput" ];
-    packages = [];
+    packages = with pkgs; [ udiskie ];
   };
 
   # Enable automatic login for the user.

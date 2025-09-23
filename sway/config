@@ -39,7 +39,7 @@ input "type:pointer" {
 }
 
 input "type:keyboard" {
-    xkb_layout us,ru
+    xkb_layout us,ru,by
     xkb_options grp:win_space_toggle
 }
 
@@ -48,6 +48,7 @@ input * xkb_numlock enabled
 ### Startup
 exec wl-clip-persist --clipboard both
 exec ulauncher --hide-window
+exec udiskie --automount --notify
 
 for_window {
     [app_id="ulauncher"] border none
