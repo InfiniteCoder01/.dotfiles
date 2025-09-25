@@ -49,6 +49,7 @@ input * xkb_numlock enabled
 exec wl-clip-persist --clipboard both
 exec ulauncher --hide-window
 exec udiskie --automount --notify
+exec sonusmix
 
 for_window {
     [app_id="ulauncher"] border none
@@ -74,11 +75,11 @@ bindsym $mod+F floating toggle
 bindsym $mod+D focus mode_toggle
 floating_modifier $mod normal
 
-bindsym $mod+S gaps right current set 450; gaps bottom current set 100
-bindsym $mod+Ctrl+S gaps outer current set 0
+bindsym $mod+G gaps right current set 450; gaps bottom current set 100
+bindsym $mod+Shift+G gaps outer current set 0
 
 bindsym $mod+V layout splith
-bindsym $mod+Ctrl+V layout tabbed
+bindsym $mod+Shift+V layout tabbed
 
 
 ## Moving around
