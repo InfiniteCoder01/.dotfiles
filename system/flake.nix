@@ -84,7 +84,7 @@
           cloc
 
           # Apps
-          sonusmix
+          qpwgraph
           tigervnc
           rpi-imager
           gparted
