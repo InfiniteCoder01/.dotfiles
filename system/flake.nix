@@ -20,9 +20,6 @@
         config.allowUnfree = true;
       };
       pkgs = import nixpkgs pkgs-config;
-      pkgs-cuda = import nixpkgs pkgs-config // {
-        config.cudaSupport = true;
-      };
     in
     rec {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
@@ -91,15 +88,6 @@
           (wrapFirefox (firefox-unwrapped.override { pipewireSupport = true;}) {})
           libreoffice
           gitkraken
-          (pkgs-cuda.wrapOBS {
-            plugins = with obs-studio-plugins; [
-              obs-vaapi
-              obs-vkcapture
-              obs-multi-rtmp
-              advanced-scene-switcher
-              obs-move-transition
-            ];
-          })
           v4l-utils
           audacity
 
@@ -158,26 +146,32 @@
           android-tools
 
           wl-clip-persist
-          xdg-terminal-exec
           ulauncher
           shotman
           waybar
           swaybg
         ];
 
+        programs.obs-studio = {
+          enable = true;
+          enableVirtualCamera = true;
+          plugins = with pkgs.obs-studio-plugins; [
+            obs-vaapi
+            obs-vkcapture
+            obs-multi-rtmp
+            advanced-scene-switcher
+            obs-move-transition
+          ];
+        };
+
         programs.sway.enable = true;
+          xdg.portal = {
+          enable = true;
+          wlr.enable = true;
+        };
 
         environment.sessionVariables = {
           PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";
-        };
-
-        services.ollama = {
-          enable = true;
-          acceleration = "cuda";
-          environmentVariables = {
-            OLLAMA_MODELS="/mnt/D/ollama";
-          };
-          package = pkgs-cuda.ollama-cuda;
         };
 
         programs.steam.enable = true;

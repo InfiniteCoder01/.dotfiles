@@ -58,15 +58,6 @@
     };
   };
 
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
-  ];
-  boot.kernelModules = [ "v4l2loopback" ];
-  boot.extraModprobeConfig = ''
-    options v4l2loopback video_nr=9 card_label="OBS Cam" exclusive_caps=1
-  '';
-  security.polkit.enable = true;
-
   # l10n & i18n
   time.timeZone = "Europe/Minsk";
   time.hardwareClockInLocalTime = true;
