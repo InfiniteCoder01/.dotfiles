@@ -88,17 +88,19 @@
           tigervnc
           rpi-imager
           gparted
-          firefox
+          (wrapFirefox (firefox-unwrapped.override { pipewireSupport = true;}) {})
           libreoffice
           gitkraken
           (pkgs-cuda.wrapOBS {
             plugins = with obs-studio-plugins; [
-              wlrobs
+              obs-vaapi
+              obs-vkcapture
               obs-multi-rtmp
               advanced-scene-switcher
               obs-move-transition
             ];
           })
+          v4l-utils
           audacity
 
           mpv
