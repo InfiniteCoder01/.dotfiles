@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -11,7 +12,7 @@
     wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nix-index-database, wakatime-ls, ... }@attrs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, ... }@attrs:
     let
       system = "x86_64-linux";
       hostname = "InfiniteCoder";
@@ -20,6 +21,7 @@
         config.allowUnfree = true;
       };
       pkgs = import nixpkgs pkgs-config;
+      pkgs-unstable = import nixpkgs-unstable pkgs-config;
     in
     rec {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
@@ -115,7 +117,7 @@
           vlc
           freecad
 
-          super-slicer-beta
+          pkgs-unstable.prusa-slicer
           lmms
 
           # Social
@@ -126,7 +128,7 @@
           wakatime-ls.packages.${system}.default
           gdb
 
-          clang-tools pkg-config
+          clang-tools pkgconf
           rustup gcc # gcc for cc
           zig zls
           bun typescript-language-server
@@ -165,10 +167,6 @@
         };
 
         programs.sway.enable = true;
-          xdg.portal = {
-          enable = true;
-          wlr.enable = true;
-        };
 
         environment.sessionVariables = {
           PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";

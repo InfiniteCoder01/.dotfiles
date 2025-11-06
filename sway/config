@@ -35,11 +35,11 @@ output {
 ### Input configuration
 input "type:pointer" {
     accel_profile "flat"
-    pointer_accel -0.2
+    pointer_accel -0.4
 }
 
 input "type:keyboard" {
-    xkb_layout us,ru,by
+    xkb_layout us,ru
     xkb_options grp:win_space_toggle
 }
 
@@ -76,10 +76,6 @@ floating_modifier $mod normal
 
 bindsym $mod+G gaps right current set 450; gaps bottom current set 100
 bindsym $mod+Shift+G gaps outer current set 0
-
-bindsym $mod+V layout splith
-bindsym $mod+Shift+V layout tabbed
-
 
 ## Moving around
 # Move your focus around
