@@ -1,7 +1,8 @@
 {
-	"layer": "top", // Waybar at top layer
-	"position": "top", // Waybar position (top|bottom|left|right)
+	"layer": "top",
+	"position": "top",
 	"height": 30,
+	"padding": 0,
 	"spacing": 4,
 	"modules-left": [
 		"sway/language",

@@ -45,6 +45,9 @@ input "type:keyboard" {
 
 input * xkb_numlock enabled
 
+# Remove all borders
+default_border none
+
 ### Startup
 exec wl-clip-persist --clipboard both
 exec ulauncher --hide-window
@@ -68,13 +71,15 @@ bindsym $mod+E exec kitty yazi
 bindsym Mod4+Shift+S exec shotman --capture region --copy
 bindsym $mod+Q kill
 bindsym $mod+Shift+C reload
+bindsym $mod+Grave exec pkill -SIGUSR1 waybar
 
 ## Layouts
 bindsym $mod+F floating toggle
 bindsym $mod+D focus mode_toggle
 floating_modifier $mod normal
 
-bindsym $mod+G gaps right current set 450; gaps bottom current set 100
+# bindsym $mod+G gaps right current set 450; gaps bottom current set 100
+bindsym $mod+G gaps bottom current set 100
 bindsym $mod+Shift+G gaps outer current set 0
 
 ## Moving around

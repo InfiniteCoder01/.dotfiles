@@ -7,5 +7,5 @@
 
 window#waybar {
   background-color: shade(@base, 0.9);
-  border: 2px solid alpha(@crust, 0.3);
+  border: none;
 }

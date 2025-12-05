@@ -55,22 +55,18 @@
 
           picocom
           inetutils
-          arp-scan
+          nmap
           qbittorrent
           wget
           lazygit
           git
           gh
           jq
-
-          graphicsmagick
-
           fastfetch
           btop
-
-          tmux
-          zellij
           yazi
+
+          graphicsmagick
 
           # IDE
           helix
@@ -118,6 +114,7 @@
           freecad
 
           pkgs-unstable.prusa-slicer
+          orca-slicer
           lmms
 
           # Social
@@ -200,8 +197,8 @@
 
         # Some fonts
         fonts.packages = with pkgs.nerd-fonts; [
-          fira-code
           commit-mono
+          profont
         ];
 
         # Shells
