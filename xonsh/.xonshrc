@@ -20,15 +20,8 @@ $fzf_file_binding = "c-t"
 $fzf_dir_binding = "c-g"
 
 xontrib load vox
-xontrib load kitty
 xontrib load fzf-completions
 xontrib load readable-traceback
-xontrib load term_integration
-
-if 'PYTHON_MAGIC_PATH' in ${...}:
-    sys.path.extend($PYTHON_MAGIC_PATH)
-    xontrib load onepath
-    $XONTRIB_ONEPATH_ACTIONS['text/'] = $EDITOR
 
 execx($(starship init xonsh))
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')

@@ -36,8 +36,8 @@
   services.blueman.enable = true;
 
   # GPU
-  boot.blacklistedKernelModules = ["nvidia"];
-  services.xserver.videoDrivers = ["modesetting" "amdgpu"]; # "nvidia"
+  # boot.blacklistedKernelModules = ["nvidia"];
+  services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
   hardware = {
     graphics.enable = true;
     amdgpu.initrd.enable = true;

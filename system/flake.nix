@@ -2,7 +2,7 @@
   description = "InfiniteCoder's system";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
@@ -33,7 +33,6 @@
           kitty
 
           any-nix-shell
-          caligula
           eza
           bat
           fzf
@@ -44,7 +43,6 @@
           ffmpeg
           dysk
           dust
-          httpie
           kew
           exiftool
           xxd
@@ -53,7 +51,6 @@
           unzip
           unrar
 
-          picocom
           inetutils
           nmap
           qbittorrent
@@ -61,7 +58,6 @@
           lazygit
           git
           gh
-          jq
           fastfetch
           btop
           yazi
@@ -70,20 +66,16 @@
 
           # IDE
           helix
-          arduino
           arduino-ide
           vscode
-          platformio
-          jetbrains.idea-community-bin
+          # jetbrains.idea-community-bin
 
           cloc
 
           # Apps
           qpwgraph
           tigervnc
-          rpi-imager
-          gparted
-          (wrapFirefox (firefox-unwrapped.override { pipewireSupport = true;}) {})
+          firefox
           libreoffice
           gitkraken
           v4l-utils
@@ -96,10 +88,7 @@
           luanti
           prismlauncher
           (retroarch.withCores (cores: with cores; [
-            quicknes
-            snes9x
             mgba
-            genesis-plus-gx
           ]))
 
           # Art
@@ -108,13 +97,9 @@
           inkscape
           blender
           blockbench
-          kdePackages.kdenlive
-          frei0r
-          vlc
           freecad
 
           pkgs-unstable.prusa-slicer
-          orca-slicer
           lmms
 
           # Social
@@ -129,12 +114,11 @@
           rustup gcc # gcc for cc
           zig zls
           bun typescript-language-server
-          pkgs-unstable.javaPackages.compiler.openjdk25 maven jdt-language-server kotlin-language-server
+          pkgs-unstable.javaPackages.compiler.openjdk25 maven jdt-language-server
           lua54Packages.lua lua-language-server
           bash-language-server
           nil
           python3 pyright
-          python312Packages.python-magic # Xonsh onepath fix
 
           steam-run
           appimage-run
@@ -155,8 +139,6 @@
           enable = true;
           enableVirtualCamera = true;
           plugins = with pkgs.obs-studio-plugins; [
-            obs-vaapi
-            obs-vkcapture
             obs-multi-rtmp
             advanced-scene-switcher
             obs-move-transition
@@ -174,7 +156,7 @@
         programs.nh = {
           enable = true;
           clean.enable = true;
-          clean.extraArgs = "--keep-since 4d --keep 3";
+          clean.extraArgs = "--keep-since 4d --keep 1";
           flake = "/home/infinitecoder/.dotfiles/system";
         };
 
@@ -192,9 +174,7 @@
 
         services.udev.packages = [ 
           pkgs.platformio-core.udev
-          pkgs.android-udev-rules
         ];
-
         # Some fonts
         fonts.packages = with pkgs.nerd-fonts; [
           commit-mono
@@ -202,10 +182,7 @@
         ];
 
         # Shells
-        programs.zsh.enable = true;
-        # programs.xonsh.enable = true;
-        environment.shells = with pkgs; [ zsh ];
-        users.defaultUserShell = "/home/infinitecoder/.dotfiles/xonsh/venv/bin/xonsh";
+        users.users.infinitecoder.shell = "/home/infinitecoder/.dotfiles/xonsh/venv/bin/xonsh";
 
         virtualisation.docker.enable = true;
       };
