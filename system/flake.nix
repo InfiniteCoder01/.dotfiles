@@ -110,8 +110,8 @@
           wakatime-ls.packages.${system}.default
           gdb
 
-          clang-tools pkgconf
-          rustup gcc # gcc for cc
+          clang clang-tools pkgconf
+          rustup
           zig zls
           bun typescript-language-server
           pkgs-unstable.javaPackages.compiler.openjdk25 maven jdt-language-server

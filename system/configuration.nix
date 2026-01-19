@@ -8,12 +8,12 @@
         "https://cache.nixos.org/"
         "https://nix-community.cachix.org"
         "https://llama-cpp.cachix.org"
-        "https://cuda-maintainers.cachix.org"
+        "https://cache.nixos-cuda.org"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "llama-cpp.cachix.org-1:H75X+w83wUKTIPSO1KWy9ADUrzThyGs8P5tmAbkWhQc="
-        "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
+        "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
       ];
     };
   };
@@ -107,7 +107,10 @@
   # List packages installed in system profile. To search, run:
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = [ ];
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc zlib zstd openssl
+    linuxPackages.nvidia_x11
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
