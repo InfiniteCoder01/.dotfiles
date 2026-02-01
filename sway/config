@@ -47,6 +47,7 @@ input * xkb_numlock enabled
 
 # Remove all borders
 default_border none
+titlebar_border_thickness 0
 
 ### Startup
 exec wl-clip-persist --clipboard both
