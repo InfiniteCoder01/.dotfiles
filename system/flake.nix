@@ -108,7 +108,7 @@
 
           # Libraries, environments and build systems
           wakatime-ls.packages.${system}.default
-          gdb
+          gnumake gdb
 
           clang clang-tools pkgconf
           rustup

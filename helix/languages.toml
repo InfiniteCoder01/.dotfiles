@@ -11,7 +11,7 @@ args = ["--stdio"]
 config = {}
 
 [language-server.asm-lsp]
-command = "asm-lsp" 
+command = "asm-lsp"
 args = []
 
 [language-server.rust-analyzer]
