@@ -1,4 +1,4 @@
-{ config, pkgs, hostname, ... }:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     wl-clipboard
@@ -39,6 +39,7 @@
     # XDG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = "gtk2";
+    GTK_USE_PORTAL = 1;
     # WLR_DRM_DEVICES = "/dev/dri/card0";
   };
 }

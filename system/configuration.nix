@@ -18,6 +18,8 @@
     };
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
@@ -36,8 +38,8 @@
   services.blueman.enable = true;
 
   # GPU
-  # boot.blacklistedKernelModules = ["nvidia"];
-  services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
+  # services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
+  services.xserver.videoDrivers = ["modesetting" "amdgpu"]; # nvidia has many issues
   hardware = {
     graphics = {
       enable = true;
@@ -47,12 +49,9 @@
     nvidia = {
       open = false;
       modesetting.enable = false;
-      powerManagement = {
-        enable = true;
-        finegrained = false;
-      };
+      dynamicBoost.enable = true;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
       prime = {
         offload = {
           enable = true;
