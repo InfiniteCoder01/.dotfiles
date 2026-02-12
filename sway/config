@@ -1,5 +1,13 @@
 include catppuccin-frappe
 
+set $gnome-schema /org/gnome/desktop/interface
+exec_always {
+  dconf write $gnome-schema/gtk-theme 'Qogir'
+  dconf write $gnome-schema/icon-theme 'Qogir'
+  dconf write $gnome-schema/gtk-application-prefer-dark-theme true
+  dconf write $gnome-schema/cursor-theme 'Future-cyan-cursors'
+}
+
 seat seat0 xcursor_theme Future-cyan-cursors 32
 
 set $mod Mod4

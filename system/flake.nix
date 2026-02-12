@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -12,7 +13,7 @@
     wakatime-ls.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nix-index-database, wakatime-ls, ... }@attrs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, determinate, nix-index-database, wakatime-ls, ... }@attrs:
     let
       system = "x86_64-linux";
       hostname = "InfiniteCoder";
@@ -123,16 +124,9 @@
           steam-run
           appimage-run
           wineWowPackages.full
-          wl-clipboard
 
           avrdude
           android-tools
-
-          wl-clip-persist
-          ulauncher
-          shotman
-          waybar
-          swaybg
         ];
 
         programs.obs-studio = {
@@ -145,13 +139,11 @@
           ];
         };
 
-        programs.sway.enable = true;
-
-        environment.sessionVariables = {
-          PYTHON_MAGIC_PATH = "${pkgs.python312Packages.python-magic.outPath}/lib/python3.12/site-packages";
-        };
-
+        services.printing.enable = true;
+        services.udisks2.enable = true;
         programs.steam.enable = true;
+        services.flatpak.enable = true;
+        virtualisation.docker.enable = true;
 
         programs.nh = {
           enable = true;
@@ -175,6 +167,7 @@
         services.udev.packages = [ 
           pkgs.platformio-core.udev
         ];
+
         # Some fonts
         fonts.packages = with pkgs.nerd-fonts; [
           commit-mono
@@ -183,16 +176,16 @@
 
         # Shells
         users.users.infinitecoder.shell = "/home/infinitecoder/.dotfiles/xonsh/venv/bin/xonsh";
-
-        virtualisation.docker.enable = true;
       };
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = attrs // { inherit hostname; };
         modules = [
+          determinate.nixosModules.default
           nix-index-database.nixosModules.nix-index
           packages
           ./configuration.nix
+          ./desktop.nix
         ];
       };
     };

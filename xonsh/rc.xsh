@@ -1,7 +1,10 @@
 import sys
 
+$CARGO_HOME = $XDG_DATA_HOME + '/cargo'
+$RUSTUP_HOME = $XDG_DATA_HOME + '/rustup'
+$WAKATIME_HOME = $XDG_CONFIG_HOME + '/wakatime'
 $PATH.append("/home/infinitecoder/.dotfiles/xonsh/venv/bin")
-$PATH.append("/home/infinitecoder/.cargo/bin")
+$PATH.append($CARGO_HOME + '/bin')
 $XONSH_HISTORY_BACKEND = 'sqlite'
 
 from xonsh.tools import register_custom_style

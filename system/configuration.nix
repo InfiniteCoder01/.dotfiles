@@ -39,7 +39,10 @@
   # boot.blacklistedKernelModules = ["nvidia"];
   services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
   hardware = {
-    graphics.enable = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
     amdgpu.initrd.enable = true;
     nvidia = {
       open = false;
@@ -48,6 +51,8 @@
         enable = true;
         finegrained = false;
       };
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
       prime = {
         offload = {
           enable = true;
@@ -78,9 +83,14 @@
     variant = "";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.udisks2.enable = true;
+  # More nix stuff
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc zlib zstd openssl
+    linuxPackages.nvidia_x11
+  ];
+
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;
@@ -99,18 +109,6 @@
     extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" "docker" "uinput" ];
     packages = with pkgs; [ udiskie ];
   };
-
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "infinitecoder";
-
-  # List packages installed in system profile. To search, run:
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    stdenv.cc.cc zlib zstd openssl
-    linuxPackages.nvidia_x11
-  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

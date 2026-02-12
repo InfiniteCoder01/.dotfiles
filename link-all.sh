@@ -7,7 +7,7 @@
 ./link.sh ~/.config/helix helix
 ./link.sh ~/.config/zed zed
 ./link.sh ~/.config/starship.toml starship/starship.toml
-./link.sh ~/.xonshrc xonsh/.xonshrc
+./link.sh ~/.config/xonsh xonsh
 
 # ZSH
 ./link.sh ~/.zshrc zsh/.zshrc
