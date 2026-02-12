@@ -1,8 +1,9 @@
-{ config, pkgs, hostname, ... }:
+{ config, pkgs, hostname, nixpkgs, ... }:
 {
   imports = [ ./hardware-configuration.nix ];
 
   nix = {
+    registry.nixpkgs.flake = nixpkgs;
     settings = {
       substituters = [
         "https://cache.nixos.org/"
@@ -39,7 +40,6 @@
 
   # GPU
   # services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
-  services.xserver.videoDrivers = ["modesetting" "amdgpu"]; # nvidia has many issues
   hardware = {
     graphics = {
       enable = true;

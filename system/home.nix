@@ -1,4 +1,4 @@
-{ wakatime-ls, pkgs, pkgs-unstable, ... }:
+{ wakatime-ls, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     # CLI Tools
@@ -40,8 +40,6 @@
     # IDE
     helix
     arduino-ide
-    vscode
-    # jetbrains.idea-community-bin
 
     cloc
 
@@ -70,7 +68,7 @@
     blockbench
     freecad
 
-    orca-slicer
+    prusa-slicer
     lmms
 
     # Social
@@ -78,7 +76,7 @@
     telegram-desktop
 
     # Libraries, environments and build systems
-    wakatime-ls.packages.${system}.default
+    wakatime-ls.packages.${stdenv.hostPlatform.system}.default
     gnumake gdb
 
     clang clang-tools pkgconf
@@ -99,21 +97,21 @@
     android-tools
   ];
 
-  programs.obs-studio = {
-    enable = true;
-    enableVirtualCamera = true;
-    plugins = with pkgs.obs-studio-plugins; [
-      obs-multi-rtmp
-      advanced-scene-switcher
-      obs-move-transition
-    ];
-  };
+  # programs.obs-studio = {
+  #   enable = true;
+  #   enableVirtualCamera = true;
+  #   plugins = with pkgs.obs-studio-plugins; [
+  #     obs-multi-rtmp
+  #     advanced-scene-switcher
+  #     obs-move-transition
+  #   ];
+  # };
 
-  services.printing.enable = true;
-  services.udisks2.enable = true;
-  programs.steam.enable = true;
-  services.flatpak.enable = true;
-  virtualisation.docker.enable = true;
+  # services.printing.enable = true;
+  # services.udisks2.enable = true;
+  # programs.steam.enable = true;
+  # services.flatpak.enable = true;
+  # virtualisation.docker.enable = true;
 
   programs.nh = {
     enable = true;
