@@ -35,6 +35,3 @@
 ./link.sh ~/.config/PrusaSlicer/filament PrusaSlicer/filament
 ./link.sh ~/.config/PrusaSlicer/print PrusaSlicer/print
 ./link.sh ~/.config/PrusaSlicer/printer PrusaSlicer/printer
-./link.sh ~/.config/PrusaSlicer/sla_material PrusaSlicer/sla_material
-./link.sh ~/.config/PrusaSlicer/sla_print PrusaSlicer/sla_print
-./link.sh ~/.config/PrusaSlicer/vendor PrusaSlicer/vendor
