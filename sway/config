@@ -63,7 +63,7 @@ default_border none
 titlebar_border_thickness 0
 
 ### Startup
-exec wl-clip-persist --clipboard both
+exec wl-clip-persist --clipboard regular
 exec ulauncher --hide-window
 exec udiskie --automount --notify
 
