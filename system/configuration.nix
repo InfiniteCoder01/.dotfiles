@@ -27,6 +27,7 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_lqx;
 
   # Networking
   networking.hostName = hostname;
@@ -39,7 +40,7 @@
   services.blueman.enable = true;
 
   # GPU
-  # services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
+  services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
   hardware = {
     graphics = {
       enable = true;
@@ -49,6 +50,10 @@
     nvidia = {
       open = false;
       modesetting.enable = false;
+      powerManagement = {
+        enable = true;
+        finegrained = false;
+      };
       dynamicBoost.enable = true;
       nvidiaSettings = true;
       package = config.boot.kernelPackages.nvidiaPackages.beta;
