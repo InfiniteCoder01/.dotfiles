@@ -70,8 +70,8 @@ exec udiskie --automount --notify
 for_window {
     [app_id="ulauncher"] border none
     [class="chatry"] floating enable, sticky enable, resize set width 1920 height 1080, move absolute position 1024 0
-    [app_id="term-everywhere"] sticky enable
 }
+
 assign [class="chatry"] output eDP-1
 assign [app_id="term-everywhere"] output eDP-1
 assign [app_id="com.obsproject.Studio"] workspace 7
@@ -80,7 +80,7 @@ assign [app_id="com.obsproject.Studio"] workspace 7
 ## Apps
 bindsym $mod+T exec kitty
 bindsym $mod+R exec ulauncher-toggle
-bindsym F12 exec kitten quick-access-terminal
+bindsym F12 exec kitten panel -1 --toggle-visibility --focus-policy exclusive -c ~/.config/kitty/toggleterm.conf --layer overlay --edge center-sized --lines 30 --columns 96
 bindsym $mod+E exec kitty yazi
 bindsym Mod4+Shift+S exec shotman --capture region --copy
 bindsym $mod+Q kill

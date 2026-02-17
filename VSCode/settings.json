@@ -1,4 +1,7 @@
 {
+    // "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.hideCursorInOverviewRuler": true,
     "editor.inlayHints.enabled": "off",
     "security.workspace.trust.untrustedFiles": "open",
     "commentbars.quickPresets": [
@@ -37,7 +40,7 @@
     "editor.formatOnSave": true,
     "editor.fontSize": 21,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "GapStyle VS",
+    "workbench.colorTheme": "Gruvbox Dark Soft",
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
@@ -48,5 +51,11 @@
     "git.openRepositoryInParentFolders": "never",
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
     "security.workspace.trust.enabled": false,
+    "window.customTitleBarVisibility": "never",
+    "workbench.editor.showTabs": "none",
+    "workbench.editor.editorActionsLocation": "hidden",
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
     // "platformio-ide.useBuiltinPIOCore": false,
 }

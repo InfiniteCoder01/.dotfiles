@@ -57,7 +57,7 @@ language-servers = ["rust-analyzer", "wakatime"]
 
 [[language]]
 name = "nix"
-indent = { tab-width = 4, unit = "    " } 
+indent = { tab-width = 2, unit = "  " } 
 language-servers = ["nil", "wakatime"]
 
 [[language]]
@@ -84,3 +84,12 @@ language-servers = ["jdtls", "wakatime"]
 name = "javascript"
 indent = { tab-width = 4, unit = "    " } 
 language-servers = ["typescript-language-server", "wakatime"]
+
+[[grammar]]
+name = "mcfunction"
+source = { git = "https://github.com/misode/tree-sitter-mcfunction", rev = "master" }
+
+[[language]]
+name = "mcfunction"
+scope = "source.mcfunction"
+file-types = ["mcfunction"]

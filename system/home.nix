@@ -97,21 +97,21 @@
     android-tools
   ];
 
-  # programs.obs-studio = {
-  #   enable = true;
-  #   enableVirtualCamera = true;
-  #   plugins = with pkgs.obs-studio-plugins; [
-  #     obs-multi-rtmp
-  #     advanced-scene-switcher
-  #     obs-move-transition
-  #   ];
-  # };
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      obs-multi-rtmp
+      advanced-scene-switcher
+      obs-move-transition
+    ];
+  };
 
-  # services.printing.enable = true;
-  # services.udisks2.enable = true;
-  # programs.steam.enable = true;
-  # services.flatpak.enable = true;
-  # virtualisation.docker.enable = true;
+  services.printing.enable = true;
+  services.udisks2.enable = true;
+  programs.steam.enable = true;
+  services.flatpak.enable = true;
+  virtualisation.docker.enable = true;
 
   programs.nh = {
     enable = true;
