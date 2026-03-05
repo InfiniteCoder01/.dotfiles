@@ -7,6 +7,7 @@ rec {
     shotman
     waybar
     swaybg
+    swaynotificationcenter
   ];
 
   services.dbus.enable = true;

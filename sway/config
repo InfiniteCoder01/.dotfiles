@@ -94,6 +94,7 @@ bar {
 exec wl-clip-persist --clipboard regular
 exec ulauncher --hide-window
 exec udiskie --automount --notify
+exec swaync
 
 for_window {
     [app_id="ulauncher"] border none; shadows disable
@@ -116,6 +117,7 @@ bindsym --to-code {
     $mod+Q kill
     $mod+Shift+C reload
     $mod+Grave exec pkill -SIGUSR1 waybar
+    $mod+N exec swaync-client -t
 
     ## Layouts
     $mod+F floating toggle

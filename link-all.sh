@@ -2,6 +2,7 @@
 
 ./link.sh ~/.config/mimeapps.list mimeapps.list
 ./link.sh ~/.config/sway sway
+./link.sh ~/.config/swaync swaync
 ./link.sh ~/.config/waybar waybar
 ./link.sh ~/.config/kitty kitty
 ./link.sh ~/.config/helix helix
