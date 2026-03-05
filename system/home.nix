@@ -97,6 +97,10 @@
     android-tools
   ];
 
+  environment.sessionVariables = {
+    JAVA_HOME = "${pkgs.javaPackages.compiler.openjdk25}";
+  };
+
   programs.obs-studio = {
     enable = true;
     enableVirtualCamera = true;
@@ -138,6 +142,7 @@
 
   # Some fonts
   fonts.packages = with pkgs.nerd-fonts; [
+    pkgs.commit-mono
     commit-mono
     profont
   ];

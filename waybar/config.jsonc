@@ -5,13 +5,14 @@
 	"padding": 0,
 	"spacing": 4,
 	"modules-left": [
+		"sway/window",
 		"sway/language",
 		"backlight",
 		"pulseaudio",
 	],
 	"modules-center": ["clock"],
 	"modules-right": [
-		"tray",
+		"group/tray",
 		"network",
 		"battery",
 	],

@@ -1,11 +1,112 @@
-@import "frappe.css";
+@define-color base-bg #010101;
+@define-color base-text #ffffff;
+@define-color highlight-bg rgba(255, 255, 255, 0.4);
+@define-color highlight-border rgba(255, 255, 255, 0.0);
+@define-color urgent-bg rgba(255, 125, 125, .5);
+@define-color urgent-text #ffffff;
+@define-color urgent-border #ff7e71;
+@define-color inactive-text alpha(@base-text, 0.5);
 
 * {
-  color: @text;
-  padding: 0 3px;
+    font-family: 'CommitMono', bold, 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    font-size: 18px;
+    transition-duration: 0.1s;
+    border-color: rgba(0,0,0,0)
+}
+.module {
+    padding: 0px 7px;
+    border-radius: 55px;
+}
+:focus {
+    background-color: @highlight-bg;
+    border-color: @highlight-bg;
+    border-radius: 55px;
+    box-shadow: inset 0px -2px @highlight-border;
+}
+:hover {
+    background-color: @highlight-bg;
+    border-color: @highlight-bg;
+    border-radius: 55px;
+    box-shadow: inset 0px -2px @highlight-border;
+}
+tooltip {
+    background-color: @base-bg;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px @highlight-border;
+    padding: 15px;
+    margin: 10px;
+}
+window {
+    color: @base-text;
+    border-bottom: 2px #0fffff;
 }
 
 window#waybar {
-  background-color: shade(@base, 0.9);
-  border: none;
+    background: transparent;
+}
+window#waybar.solo,
+window#waybar.stacked,
+window#waybar.tabbed,
+window#waybar.tiled {
+    background-color: @base-bg;
+}
+
+image {
+    padding: 0px 14px;
+}
+*.disconnected, *.deactivated, *.disabled {
+    color: @inactive-text;
+}
+@keyframes neutral {
+    from {
+        border-color: #0000ff;
+    }
+    to {
+        border-color: #00ff00;
+        border-width: 30px
+    }
+}
+@keyframes blink {
+    to {
+        background-color: @urgent-bg;
+        box-shadow: inset 0px -3px @urgent-border;
+        color: @urgent-text;
+    }
+}
+
+/* ============
+ *   MODULES
+ * ============ */
+#battery.critical:not(.charging) {
+    /* Using steps() instead of linear as a timing function to limit cpu usage */
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#drawer:hover {
+    background-color: #ff0000;
+}
+keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.7);
+}
+#tray {
+    padding: 0px;
+    margin: 0px;
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#window {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
 }

@@ -17,6 +17,14 @@ args = []
 [language-server.rust-analyzer]
 config = { rustc.source = "discover" }
 
+[language-server.jdtls]
+command = "jdtls-wrapper"
+# args = ["--jvm-arg=-javaagent:/lombok.jar"]
+
+[language-server.jdtls.config]
+java.inlayHints.parameterNames.enabled = "all"
+extendedClientCapabilities.classFileContentsSupport = true
+
 
 [[language]]
 name = "scheme"

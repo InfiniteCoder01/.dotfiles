@@ -1,4 +1,4 @@
-{ config, pkgs, hostname, nixpkgs, ... }:
+{ config, pkgs, hostname, nixpkgs, lib, ... }:
 {
   imports = [ ./hardware-configuration.nix ];
 
@@ -39,6 +39,8 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
+  services.speechd.enable = false;
+
   # GPU
   services.xserver.videoDrivers = ["modesetting" "amdgpu" "nvidia"];
   hardware = {
@@ -58,20 +60,27 @@
       nvidiaSettings = true;
       package = config.boot.kernelPackages.nvidiaPackages.beta;
       prime = {
-        offload = {
-          enable = true;
-          enableOffloadCmd = true;
-        };
+        sync.enable = true;
         nvidiaBusId = "PCI:1:0:0";
         amdgpuBusId = "PCI:4:0:0";
       };
     };
   };
 
+  specialisation.on-the-go.configuration = {
+    system.nixos.tags = [ "on-the-go" ];
+    hardware.nvidia = {
+      prime.offload.enable = lib.mkForce true;
+      prime.offload.enableOffloadCmd = lib.mkForce true;
+      prime.sync.enable = lib.mkForce false;
+    };
+  };
+
   # l10n & i18n
   time.timeZone = "Europe/Minsk";
   time.hardwareClockInLocalTime = true;
-  i18n.defaultLocale = "en_US.UTF-8";
+  # i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "be_BY.UTF-8";
 
   # Console
   console = {

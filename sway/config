@@ -1,5 +1,3 @@
-include catppuccin-frappe
-
 exec_always {
   dconf write /org/gnome/desktop/interface/gtk-theme "'Qogir'"
   dconf write /org/gnome/desktop/interface/icon-theme "'Qogir'"
@@ -18,7 +16,7 @@ set $up K
 set $right L
 
 ### Output configuration
-output * bg /home/infinitecoder/stream/wallpaper.png fill
+output * bg /home/infinitecoder/stream/wallpaper.jpg fill
 # exec swayidle -w \
 #          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
@@ -58,9 +56,39 @@ input "type:touchpad" {
 
 input * xkb_numlock enabled
 
+# SwayFX
+shadows enable
+shadows_on_csd enable
+corner_radius 10
+
 # Remove all borders
 default_border none
+font pango:CommitMono Medium 0.001
 titlebar_border_thickness 0
+titlebar_padding 0
+
+### Theme (Adwaita-ish)
+set $adw-bg         #2e3436
+set $adw-fg         #ffffff
+set $adw-fg-dim     #aaaaaa
+set $adw-blue       #4a90d2
+set $adw-gray       #3c3f41
+set $adw-border-dim #1e2426
+set $adw-red        #cc0000
+
+# Window colors (class:border background text indicator)
+# target                title           bg      text        indicator  border
+client.focused          $adw-blue       $adw-bg $adw-fg     $adw-blue
+client.focused_inactive $adw-gray       $adw-bg $adw-fg-dim $adw-gray
+client.unfocused        $adw-border-dim $adw-bg $adw-fg-dim $adw-border-dim
+client.urgent           $adw-red        $adw-bg $adw-fg     $adw-red
+client.placeholder      $adw-border-dim $adw-bg $adw-fg-dim $adw-border-dim
+client.background       $adw-bg
+
+### Status Bar
+bar {
+    swaybar_command waybar
+}
 
 ### Startup
 exec wl-clip-persist --clipboard regular
@@ -68,7 +96,7 @@ exec ulauncher --hide-window
 exec udiskie --automount --notify
 
 for_window {
-    [app_id="ulauncher"] border none
+    [app_id="ulauncher"] border none; shadows disable
     [class="chatry"] floating enable, sticky enable, resize set width 1920 height 1080, move absolute position 1024 0
 }
 
@@ -77,100 +105,86 @@ assign [app_id="term-everywhere"] output eDP-1
 assign [app_id="com.obsproject.Studio"] workspace 7
 
 ### Key bindings
-## Apps
-bindsym $mod+T exec kitty
-bindsym $mod+R exec ulauncher-toggle
-bindsym F12 exec kitten panel -1 --toggle-visibility --focus-policy exclusive -c ~/.config/kitty/toggleterm.conf --layer overlay --edge center-sized --lines 30 --columns 96
-bindsym $mod+E exec kitty yazi
-bindsym Mod4+Shift+S exec shotman --capture region --copy
-bindsym $mod+Q kill
-bindsym $mod+Shift+C reload
-bindsym $mod+Grave exec pkill -SIGUSR1 waybar
-
-## Layouts
-bindsym $mod+F floating toggle
-bindsym $mod+D focus mode_toggle
 floating_modifier $mod normal
+bindsym --to-code {
+    ## Apps
+    $mod+T exec kitty
+    $mod+R exec ulauncher-toggle
+    F12 exec kitten panel -1 --toggle-visibility --focus-policy exclusive -c ~/.config/kitty/toggleterm.conf --layer overlay --edge center-sized --lines 30 --columns 96
+    $mod+E exec kitty yazi
+    Mod4+Shift+S exec shotman --capture region --copy
+    $mod+Q kill
+    $mod+Shift+C reload
+    $mod+Grave exec pkill -SIGUSR1 waybar
 
-# bindsym $mod+G gaps right current set 450; gaps bottom current set 100
-bindsym $mod+G gaps bottom current set 100
-bindsym $mod+Shift+G gaps outer current set 0
+    ## Layouts
+    $mod+F floating toggle
+    $mod+D focus mode_toggle
 
-## Moving around
-# Move your focus around
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
-# Or use $mod+[up|down|left|right]
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+    # $mod+G gaps right current set 450; gaps bottom current set 100
+    $mod+G gaps bottom current set 100
+    $mod+Shift+G gaps outer current set 0
 
-# Move the focused window with the same, but add Shift
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
-# Ditto, with arrow keys
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+    ## Moving around
+    # Move your focus around
+    $mod+$left focus left
+    $mod+$down focus down
+    $mod+$up focus up
+    $mod+$right focus right
+    # Or use $mod+[up|down|left|right]
+    $mod+Left focus left
+    $mod+Down focus down
+    $mod+Up focus up
+    $mod+Right focus right
 
-## Workspaces
-# Switch to workspace
-bindsym $mod+KP_7 workspace number 1
-bindsym $mod+KP_8 workspace number 2
-bindsym $mod+KP_9 workspace number 3
-bindsym $mod+KP_4 workspace number 4
-bindsym $mod+KP_5 workspace number 5
-bindsym $mod+KP_6 workspace number 6
-bindsym $mod+KP_1 workspace number 7
-bindsym $mod+KP_2 workspace number 8
-bindsym $mod+KP_3 workspace number 9
-bindsym $mod+KP_0 workspace number 10
-# Move focused container to workspace
-bindsym $mod+Shift+KP_Home move container to workspace number 1
-bindsym $mod+Shift+KP_Up move container to workspace number 2
-bindsym $mod+Shift+KP_Prior move container to workspace number 3
-bindsym $mod+Shift+KP_Left move container to workspace number 4
-bindsym $mod+Shift+KP_Begin move container to workspace number 5
-bindsym $mod+Shift+KP_Right move container to workspace number 6
-bindsym $mod+Shift+KP_End move container to workspace number 7
-bindsym $mod+Shift+KP_Down move container to workspace number 8
-bindsym $mod+Shift+KP_Next move container to workspace number 9
-bindsym $mod+Shift+KP_Insert move container to workspace number 10
+    # Move the focused window with the same, but add Shift
+    $mod+Shift+$left move left
+    $mod+Shift+$down move down
+    $mod+Shift+$up move up
+    $mod+Shift+$right move right
+    # Ditto, with arrow keys
+    $mod+Shift+Left move left
+    $mod+Shift+Down move down
+    $mod+Shift+Up move up
+    $mod+Shift+Right move right
 
-## Scratchpad
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+    ## Workspaces
+    # Switch to workspace
+    $mod+KP_7 workspace number 1
+    $mod+KP_8 workspace number 2
+    $mod+KP_9 workspace number 3
+    $mod+KP_4 workspace number 4
+    $mod+KP_5 workspace number 5
+    $mod+KP_6 workspace number 6
+    $mod+KP_1 workspace number 7
+    $mod+KP_2 workspace number 8
+    $mod+KP_3 workspace number 9
+    $mod+KP_0 workspace number 10
+    # Move focused container to workspace
+    $mod+Shift+KP_Home move container to workspace number 1
+    $mod+Shift+KP_Up move container to workspace number 2
+    $mod+Shift+KP_Prior move container to workspace number 3
+    $mod+Shift+KP_Left move container to workspace number 4
+    $mod+Shift+KP_Begin move container to workspace number 5
+    $mod+Shift+KP_Right move container to workspace number 6
+    $mod+Shift+KP_End move container to workspace number 7
+    $mod+Shift+KP_Down move container to workspace number 8
+    $mod+Shift+KP_Next move container to workspace number 9
+    $mod+Shift+KP_Insert move container to workspace number 10
 
-## Utilities
-# Special keys to adjust volume via PulseAudio
-bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
-# Special keys to adjust brightness via brightnessctl
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    ## Scratchpad
+    $mod+Shift+minus move scratchpad
+    $mod+minus scratchpad show
 
-### Status Bar
-bar {
-    swaybar_command waybar
+    ## Utilities
+    # Special keys to adjust volume via PulseAudio
+    --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+    --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+    --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+    --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+    # Special keys to adjust brightness via brightnessctl
+    --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+    --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 }
-
-### Theme
-font pango:CommitMono Medium 11
-
-# target                 title     bg    text   indicator  border
-client.focused           $lavender $base $text  $rosewater $lavender
-client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
-client.unfocused         $overlay0 $base $text  $rosewater $overlay0
-client.urgent            $peach    $base $peach $overlay0  $peach
-client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
-client.background        $base
 
 include /etc/sway/config.d/*

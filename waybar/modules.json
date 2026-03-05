@@ -1,10 +1,12 @@
 {
+  "sway/window": {
+      "format": ""
+  },
   "backlight": {
     "format": "{icon} {percent: >3}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
     "on-scroll-down": "brightnessctl -c backlight set 5%-",
-    "on-scroll-up": "brightnessctl -c backlight set +5%",
-    "on-click": ""
+    "on-scroll-up": "brightnessctl -c backlight set +5%"
   },
   "pulseaudio": {
     "format": "{icon}  {volume: >3}%",
@@ -19,7 +21,6 @@
       "car": "",
       "default": ["", ""]
     },
-    "on-click": "qpwgraph",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
   },
@@ -56,8 +57,16 @@
     "interval": 1
   },
 
-  "tray": {
-    "spacing": 3
+  "custom/tray#drawer": {
+    "format": "☰"
+  },
+  "group/tray": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 250,
+      "transition-left-to-right": false,
+    },
+    "modules": [ "custom/tray#drawer", "tray" ]
   },
   "network": {
     "format": "⚠ Disabled",

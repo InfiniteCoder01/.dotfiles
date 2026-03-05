@@ -3,6 +3,7 @@ import sys
 $CARGO_HOME = $XDG_DATA_HOME + '/cargo'
 $RUSTUP_HOME = $XDG_DATA_HOME + '/rustup'
 $WAKATIME_HOME = $XDG_CONFIG_HOME + '/wakatime'
+# $MAVEN_OPTS = '-Dmaven.repo.local=' + $XDG_DATA_HOME + '/maven/repository'
 $CUDA_CACHE_PATH = $XDG_CACHE_HOME + '/nv'
 $PATH.append("/home/infinitecoder/.dotfiles/xonsh/venv/bin")
 $PATH.append($CARGO_HOME + '/bin')
