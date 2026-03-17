@@ -23,6 +23,7 @@
     ffmpeg
     kew
     graphicsmagick
+    warp-plus
 
     zip
     unzip
@@ -50,9 +51,6 @@
     libreoffice
     audacity
 
-    mpv
-    kdePackages.gwenview
-
     godot
     luanti
     prismlauncher
@@ -72,7 +70,7 @@
     lmms
 
     # Social
-    discord
+    legcord
     telegram-desktop
 
     # Libraries, environments and build systems
@@ -95,6 +93,9 @@
 
     avrdude
     android-tools
+
+    kdePackages.breeze
+    kdePackages.breeze-gtk
   ];
 
   environment.sessionVariables = {

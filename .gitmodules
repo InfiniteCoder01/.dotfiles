@@ -14,16 +14,16 @@
 	path = emacs/.emacs.d
 	url = https://github.com/doomemacs/doomemacs
 [submodule "tmux/.tmux/plugins/tpm"]
-	path = tmux/.tmux/plugins/tpm
+	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 [submodule "tmux/.tmux/plugins/tmux-cpu"]
-	path = tmux/.tmux/plugins/tmux-cpu
+	path = tmux/plugins/tmux-cpu
 	url = https://github.com/tmux-plugins/tmux-cpu
 [submodule "tmux/.tmux/plugins/tmux-battery"]
-	path = tmux/.tmux/plugins/tmux-battery
+	path = tmux/plugins/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery
 [submodule "tmux/.tmux/plugins/tmux"]
-	path = tmux/.tmux/plugins/tmux
+	path = tmux/plugins/tmux
 	url = https://github.com/catppuccin/tmux
 [submodule "dwl"]
 	path = dwl

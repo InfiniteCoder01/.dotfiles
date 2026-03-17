@@ -3,6 +3,7 @@
   imports = [ ./hardware-configuration.nix ];
 
   nix = {
+    package = pkgs.lixPackageSets.stable.lix;
     registry.nixpkgs.flake = nixpkgs;
     settings = {
       substituters = [
@@ -28,6 +29,7 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_lqx;
+  boot.tmp.cleanOnBoot = true;
 
   # Networking
   networking.hostName = hostname;
@@ -109,10 +111,12 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
+    audio.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
+    wireplumber.enable = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

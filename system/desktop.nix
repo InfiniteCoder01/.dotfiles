@@ -8,7 +8,23 @@ rec {
     waybar
     swaybg
     swaynotificationcenter
+
+    # Opinioated (probably shouldn't be forced, you can remove them)
+    lxappearance
+    kdePackages.gwenview
+    mpv
   ];
+
+  qt = {
+    enable = true;
+    style = "adwaita";
+    platformTheme = "gnome";
+  };
+
+  environment.sessionVariables = {
+    GTK_USE_PORTAL = "1";
+    NIXOS_OZONE_WL = "1";
+  };
 
   services.dbus.enable = true;
   xdg.portal = {
@@ -16,7 +32,6 @@ rec {
     wlr.enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
     ];
     config.common.default = "*";
   };
@@ -37,12 +52,19 @@ rec {
     };
   };
 
-  environment.sessionVariables = {
-    # XDG_DATA_DIRS = "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
-    QT_QPA_PLATFORM = "wayland-egl";
-    QT_QPA_PLATFORMTHEME = "gtk2";
-    QT_WAYLAND_FORCE_DPI = "physical";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
-    GTK_USE_PORTAL = 1;
+  xdg.mime.defaultApplications = {
+    "image/png" = "org.kde.gwenview.desktop";
+    "image/jpeg" = "org.kde.gwenview.desktop";
+    "image/webp" = "org.kde.gwenview.desktop";
+    "image/svg+xml" = "org.kde.gwenview.desktop";
+    "image/bmp" = "org.kde.gwenview.desktop";
+    "image/gif" = "org.kde.gwenview.desktop";
+    "video/mp4" = "mpv.desktop";
+    "video/x-matroska" = "mpv.desktop";
+    "video/webm" = "mpv.desktop";
+    "video/quicktime" = "mpv.desktop";
+    "video/x-msvideo" = "mpv.desktop";
+    "video/x-flv" = "mpv.desktop";
+    "application/x-mpegurl" = "mpv.desktop";
   };
 }
