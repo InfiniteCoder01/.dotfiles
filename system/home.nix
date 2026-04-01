@@ -70,7 +70,6 @@
     lmms
 
     # Social
-    legcord
     telegram-desktop
 
     # Libraries, environments and build systems
@@ -85,7 +84,7 @@
     lua54Packages.lua lua-language-server
     bash-language-server
     nil
-    python3 pyright
+    (python3.withPackages (ps: with ps; [ numpy ])) pyright
 
     steam-run
     appimage-run

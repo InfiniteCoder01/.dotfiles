@@ -23,7 +23,7 @@ rec {
 
   environment.sessionVariables = {
     GTK_USE_PORTAL = "1";
-    NIXOS_OZONE_WL = "1";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };
 
   services.dbus.enable = true;
@@ -66,5 +66,6 @@ rec {
     "video/x-msvideo" = "mpv.desktop";
     "video/x-flv" = "mpv.desktop";
     "application/x-mpegurl" = "mpv.desktop";
+    "x-scheme-handler/discord" = "legcord.desktop";
   };
 }

@@ -28,7 +28,6 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_lqx;
   boot.tmp.cleanOnBoot = true;
 
   # Networking
