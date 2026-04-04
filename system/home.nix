@@ -40,6 +40,7 @@
 
     # IDE
     helix
+    vscode
     arduino-ide
 
     cloc
