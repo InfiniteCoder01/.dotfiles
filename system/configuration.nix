@@ -3,9 +3,9 @@
   imports = [ ./hardware-configuration.nix ];
 
   nix = {
-    package = pkgs.lixPackageSets.stable.lix;
     registry.nixpkgs.flake = nixpkgs;
     settings = {
+      extra-sandbox-paths = [ "/nix/source" ];
       substituters = [
         "https://cache.nixos.org/"
         "https://nix-community.cachix.org"
@@ -28,7 +28,7 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages-rt;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.tmp.cleanOnBoot = true;
 
   # Networking

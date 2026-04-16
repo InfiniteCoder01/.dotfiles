@@ -128,6 +128,8 @@ bindsym --to-code {
     $mod+Shift+G gaps outer current set 0
 
     ## Moving around
+    Alt+Tab focus next
+    $mod+Tab focus next
     # Move your focus around
     $mod+$left focus left
     $mod+$down focus down

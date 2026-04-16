@@ -100,6 +100,7 @@
 
   environment.sessionVariables = {
     JAVA_HOME = "${pkgs.javaPackages.compiler.openjdk25}";
+    VSCODE_PORTABLE = "$XDG_DATA_HOME/vscode";
   };
 
   programs.obs-studio = {
@@ -117,13 +118,6 @@
   programs.steam.enable = true;
   services.flatpak.enable = true;
   virtualisation.docker.enable = true;
-
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 1";
-    flake = "/home/infinitecoder/.dotfiles/system";
-  };
 
   services.kanata = {
     enable = true;

@@ -21,9 +21,12 @@ rec {
     platformTheme = "gnome";
   };
 
-  environment.sessionVariables = {
+  environment.sessionVariables = rec {
     GTK_USE_PORTAL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
+
+    XDG_BIN_HOME = "$HOME/.local/bin";
+    PATH = [ "${XDG_BIN_HOME}" ];
   };
 
   services.dbus.enable = true;
