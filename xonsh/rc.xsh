@@ -54,3 +54,5 @@ aliases['xla'] = 'eza --icons always --long --all'
 aliases['xt'] = 'eza --icons always --tree'
 aliases['xta'] = 'eza --icons always --tree --all'
 aliases['shh'] = '(@($args) all>/dev/null &)'
+
+aliases['nix'] = 'nix -L'

@@ -1,10 +1,11 @@
-{ wakatime-ls, pkgs, ... }:
+{ wakatime-ls, pkgs, pkgs-unstable, ... }:
 {
   environment.systemPackages = with pkgs; [
     # CLI Tools
     starship
     kitty
     any-nix-shell
+    cntr
 
     eza
     yazi
@@ -74,7 +75,7 @@
     telegram-desktop
 
     # Libraries, environments and build systems
-    wakatime-ls.packages.${stdenv.hostPlatform.system}.default
+    wakatime-ls.packages.${pkgs.stdenv.hostPlatform.system}.default
     gnumake gdb
 
     clang clang-tools pkgconf
@@ -94,6 +95,8 @@
     avrdude
     android-tools
 
+    claude-code
+
     kdePackages.breeze
     kdePackages.breeze-gtk
   ];
@@ -101,6 +104,11 @@
   environment.sessionVariables = {
     JAVA_HOME = "${pkgs.javaPackages.compiler.openjdk25}";
     VSCODE_PORTABLE = "$XDG_DATA_HOME/vscode";
+  };
+
+  services.ollama = {
+    enable = true;
+    package = pkgs.unstable.ollama;
   };
 
   programs.obs-studio = {

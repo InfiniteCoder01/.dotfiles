@@ -5,7 +5,6 @@
   nix = {
     registry.nixpkgs.flake = nixpkgs;
     settings = {
-      extra-sandbox-paths = [ "/nix/source" ];
       substituters = [
         "https://cache.nixos.org/"
         "https://nix-community.cachix.org"
