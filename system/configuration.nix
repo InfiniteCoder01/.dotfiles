@@ -79,7 +79,6 @@
 
   # l10n & i18n
   time.timeZone = "Europe/Minsk";
-  time.hardwareClockInLocalTime = true;
   # i18n.defaultLocale = "en_US.UTF-8";
   i18n.defaultLocale = "be_BY.UTF-8";
 

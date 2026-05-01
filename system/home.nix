@@ -1,4 +1,4 @@
-{ wakatime-ls, pkgs, pkgs-unstable, ... }:
+{ wakatime-ls, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     # CLI Tools
@@ -73,6 +73,7 @@
 
     # Social
     telegram-desktop
+    discord
 
     # Libraries, environments and build systems
     wakatime-ls.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -96,6 +97,7 @@
     android-tools
 
     claude-code
+    litellm
 
     kdePackages.breeze
     kdePackages.breeze-gtk

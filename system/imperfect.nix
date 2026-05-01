@@ -12,7 +12,8 @@
   options.imperfect-source.path = lib.mkOption {
     default = "/nix/source";
     description = ''
-      Path to store mutable source code of imperfect packages in. MUST be created manually.
+      Path to store mutable source code of imperfect packages in.
+      MUST be created manually, make it "0770 root nixbld", or replace root by your user.
     '';
   };
 
@@ -25,6 +26,7 @@
 
   # Impl
   config = lib.mkMerge [{
+    _module.args = { inherit (config) imperfect; };
     imperfect = lib.makeExtensible (final: {
       hashPath = path: filter: let
         # Recursive helper
@@ -88,8 +90,8 @@
     });
   } (lib.mkIf config.imperfect-source.enable {
       nix.settings.extra-sandbox-paths = [ config.imperfect-source.path ];
-      systemd.tmpfiles.rules = [
-        "d ${config.imperfect-source.path} 0775 root nixbld -"
-      ];
+      # systemd.tmpfiles.rules = [
+      #   "d ${config.imperfect-source.path} 0775 root nixbld -"
+      # ];
   })];
 }
