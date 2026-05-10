@@ -54,7 +54,7 @@
     audacity
 
     godot
-    luanti
+    # luanti
     prismlauncher
     (retroarch.withCores (cores: with cores; [
       mgba

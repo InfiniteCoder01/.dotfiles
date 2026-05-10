@@ -25,12 +25,22 @@ rec {
     GTK_USE_PORTAL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
 
-    XDG_CACHE_HOME  = "$HOME/.cache";
+    XDG_CACHE_HOME = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
-    XDG_DATA_HOME   = "$HOME/.local/share";
-    XDG_STATE_HOME  = "$HOME/.local/state";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
     XDG_BIN_HOME = "$HOME/.local/bin";
-    PATH = [ "${XDG_BIN_HOME}" ];
+    PATH = ["${XDG_BIN_HOME}"];
+
+    # XDG base directory patches
+    CARGO_HOME = "${XDG_DATA_HOME}/cargo";
+    RUSTUP_HOME = "${XDG_DATA_HOME}/rustup";
+    WAKATIME_HOME = "${XDG_CONFIG_HOME}/wakatime";
+    CUDA_CACHE_PATH = "${XDG_CACHE_HOME}/nv";
+    GRADLE_USER_HOME = "${XDG_DATA_HOME}/gradle";
+    _JAVA_OPTIONS = "-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java";
+    WORKON_HOME = "${XDG_DATA_HOME}/virtualenvs";
+    XDG_CONFIG_DIR = XDG_CONFIG_HOME; # PulseAudio
   };
 
   services.dbus.enable = true;

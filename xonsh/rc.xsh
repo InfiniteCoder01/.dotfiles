@@ -1,10 +1,5 @@
 import sys
 
-$CARGO_HOME = $XDG_DATA_HOME + "/cargo"
-$RUSTUP_HOME = $XDG_DATA_HOME + "/rustup"
-$WAKATIME_HOME = $XDG_CONFIG_HOME + "/wakatime"
-# $MAVEN_OPTS = "-Dmaven.repo.local=" + $XDG_DATA_HOME + "/maven/repository"
-$CUDA_CACHE_PATH = $XDG_CACHE_HOME + "/nv"
 $PATH.insert(0, "/home/infinitecoder/.dotfiles/xonsh/venv/bin")
 $PATH.append($CARGO_HOME + "/bin")
 
@@ -16,7 +11,6 @@ $XONSH_COLOR_STYLE="fixed"
 
 $EDITOR = "hx"
 $VISUAL = $EDITOR
-$SHELL = "xonsh" # Fix nix develop
 
 $fzf_history_binding = "c-r"
 $fzf_ssh_binding = "c-s"
